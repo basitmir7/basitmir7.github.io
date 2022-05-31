@@ -439,33 +439,6 @@ header {
   }
   .colorlib-navbar-brand {
     float: left;
-    .colorlib-logo {
-      font-size: 20px;
-      text-transform: uppercase;
-      color: $brand-black;
-      font-weight: 400;
-      letter-spacing: 5px;
-      padding: 7px;
-      border: 1px solid $brand-black;
-      display: block;
-      text-align: center;
-      background: $brand-black;
-      span {
-        display: block;
-        margin-bottom: 0;
-        line-height: 1.2;
-        color: $brand-white;
-      }
-      &:hover {
-        text-decoration: none !important;
-        // color: $brand-black !important;
-      }
-      &:active,
-      &:focus {
-        outline: none;
-        text-decoration: none;
-      }
-    }
   }
 }
 

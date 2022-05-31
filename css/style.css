@@ -1,3 +1,7 @@
+:root {
+  scroll-behavior: smooth;
+}
+
 @font-face {
   font-family: "icomoon";
   src: url("../fonts/icomoon/icomoon.eot?srf3rx");
@@ -9,7 +13,7 @@
   font-weight: normal;
   font-style: normal;
 }
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Nunito+Sans:wght@700&display=swap");
 /* =======================================================
 *
 * 	Template Style 
@@ -23,6 +27,7 @@ body {
   font-weight: 400;
   background: #fafafa;
   color: gray;
+  webkit-font-smoothing: antialiased;
 }
 body.menu-show {
   overflow: hidden;
@@ -43,14 +48,14 @@ body.menu-show {
 }
 
 a {
-  color: #ca82f8;
+  color: rgb(245, 92, 89);
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
 }
 a:hover {
   text-decoration: underline;
-  color: #ca82f8;
+  color: rgb(245, 92, 89);
 }
 a:focus,
 a:active {
@@ -256,7 +261,7 @@ h6 {
   text-decoration: none;
 }
 #colorlib-main-nav ul li.active a {
-  color: #ca82f8;
+  color: rgb(245, 92, 89);
 }
 #colorlib-main-nav .form-group {
   margin-bottom: 40px;
@@ -385,33 +390,23 @@ header {
 header .colorlib-navbar-brand {
   float: left;
 }
-header .colorlib-navbar-brand .colorlib-logo {
-  text-align: end;
-  font-size: 20px;
-  text-transform: uppercase;
-  color: #000;
-  font-weight: 400;
-  letter-spacing: 5px;
-  padding: 7px;
-  border: 1px solid #000;
-  display: block;
-  text-align: center;
-  background: #000;
-  text-align: end;
+header .colorlib-navbar-brand {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+
+  overflow: hidden;
+
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
-header .colorlib-navbar-brand .colorlib-logo span {
-  display: block;
-  margin-bottom: 0;
-  line-height: 1.2;
-  color: #fff;
+header .colorlib-navbar-brand a img {
+  width: 100%;
+  height: 100%;
+  transition: all ease-in-out 300ms;
 }
-header .colorlib-navbar-brand .colorlib-logo:hover {
-  text-decoration: none !important;
-}
-header .colorlib-navbar-brand .colorlib-logo:active,
-header .colorlib-navbar-brand .colorlib-logo:focus {
-  outline: none;
-  text-decoration: none;
+header .colorlib-navbar-brand a img:hover {
+  transform: scale(1.2);
 }
 
 #colorlib-services,
@@ -523,21 +518,41 @@ header .colorlib-navbar-brand .colorlib-logo:focus {
   top: 0;
   left: 0;
   right: 0;
-  font-size: 250px;
+  font-size: 200px;
   color: #f0f0f0;
   font-weight: 700;
+}
+.hobbies-div {
+  padding-left: 15rem;
 }
 @media screen and (max-width: 768px) {
   .bold {
     font-size: 60px;
   }
+  .hobbies-div {
+    padding-left: 0;
+  }
 }
+/* header font color changes */
+.my-header,
+.my-header h2,
+.my-header h2 span {
+  font-weight: 700 !important;
+  font-family: "Nunito Sans", sans-serif;
+}
+.my-header h2 {
+  font-size: 80px;
 
+  background: -webkit-linear-gradient(#f15b74, #ff6021);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .intro-heading {
   margin-bottom: 3em;
 }
 .intro-heading h2 {
-  font-size: 34px;
+  font-size: 47px;
   font-weight: 400;
   line-height: 1.5;
   margin-bottom: 1.5em;
@@ -1222,16 +1237,53 @@ header .colorlib-navbar-brand .colorlib-logo:focus {
   outline: none !important;
 }
 
-.btn-primary {
-  background: #ca82f8;
+/* 3d botton animation */
+
+.scene {
+  width: 100px;
+  height: 50px;
+  perspective: 900px;
+}
+.cube {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: translateZ(-50%);
+  transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transform-style: preserve-3d;
+}
+.cube-face {
+  position: absolute;
+  width: 142px;
+  height: 41px;
+  text-align: center;
+  font-size: 13px;
+  padding-top: 7px;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: rgb(45, 106, 227);
   color: #fff;
-  border: 2px solid #ca82f8;
+}
+.top-face {
+  transform: rotateX(90deg) translateZ(20px);
+}
+.front-face {
+  transform: rotate(0deg) translateZ(20px);
+}
+.cube:hover {
+  transform: rotateX(-90deg);
+}
+
+.btn-primary {
+  background: rgb(245, 92, 89) !important;
+  color: #fff;
+  border: 2px solid rgb(245, 92, 89);
 }
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active {
-  background: #d49af9 !important;
-  border-color: #d49af9 !important;
+  background: rgb(188, 61, 59) !important;
+  border-color: rgb(188, 61, 59) !important;
 }
 .btn-primary.btn-outline {
   background: transparent;
@@ -1241,7 +1293,7 @@ header .colorlib-navbar-brand .colorlib-logo:focus {
 .btn-primary.btn-outline:hover,
 .btn-primary.btn-outline:focus,
 .btn-primary.btn-outline:active {
-  background: #ca82f8;
+  background: rgb(245, 92, 89);
   color: #fff;
 }
 
@@ -1513,6 +1565,9 @@ header .colorlib-navbar-brand .colorlib-logo:focus {
     display: block;
     top: 0px;
   }
+  .sample-work-img {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 500px) {
   .work-entry .work-img .display-t .work-name {
@@ -1558,9 +1613,6 @@ header .colorlib-navbar-brand .colorlib-logo:focus {
   font-size: 16px;
   color: rgba(0, 0, 0, 0.5);
 }
-.contact-info li a {
-  color: #ca82f8;
-}
 
 .form-control {
   -webkit-box-shadow: none;
@@ -1599,7 +1651,10 @@ input[type="text"] {
 
 .colorlib-social-icons i {
   font-size: 24px;
-  color: #ca82f8;
+  color: rgb(245, 92, 89);
+}
+.colorlib-social-icons i:hover {
+  color: rgb(104, 104, 104);
 }
 
 #footer {
