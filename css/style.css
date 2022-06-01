@@ -289,7 +289,7 @@ h6 {
   color: #333333;
 }
 #colorlib-main-nav #search {
-  font-size: 14px;
+  font-size: 14px !important;
   width: 100%;
   padding-right: 3em;
   border: none;
@@ -514,6 +514,7 @@ header .colorlib-navbar-brand a img:hover {
 }
 
 .bold {
+  font-family: "Playfair Display", Georgia, serif;
   position: absolute;
   top: 0;
   left: 0;
@@ -538,7 +539,9 @@ header .colorlib-navbar-brand a img:hover {
 .my-header h2,
 .my-header h2 span {
   font-weight: 700 !important;
-  font-family: "Nunito Sans", sans-serif;
+  /* font-family: "Nunito Sans", sans-serif; */
+  /* font-family: "Karla", Arial, sans-serif; */
+  font-family: "Playfair Display", Georgia, serif;
 }
 .my-header h2 {
   font-size: 80px;

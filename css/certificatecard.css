@@ -1,0 +1,120 @@
+.course-container {
+  margin-bottom: 6rem;
+  cursor: pointer;
+}
+.course {
+  background-color: #fff;
+  /* border-radius: 10px; */
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  max-width: 100%;
+  margin: 20px;
+  overflow: hidden;
+  width: 700px;
+}
+.course-info h2 {
+  font-size: 20px;
+}
+.course-info h6 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.course-preview h6 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  font-size: 22px;
+}
+.course-preview h2 {
+  font-size: 27px;
+}
+.course h6 {
+  opacity: 0.6;
+  margin: 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.course h2 {
+  letter-spacing: 1px;
+  margin: 10px 0;
+}
+
+.course-preview {
+  background: linear-gradient(to bottom, #f15b74, #ff6021);
+  color: #fff;
+  padding: 30px;
+  min-width: 250px;
+}
+
+.course-preview a {
+  color: #fff;
+  display: inline-block;
+  font-size: 12px;
+  opacity: 0.6;
+  margin-top: 30px;
+  text-decoration: none;
+}
+
+.course-info {
+  padding: 30px;
+  position: relative;
+  width: 100%;
+}
+.cp1 {
+  background: linear-gradient(to bottom, #f15b74, #ff6021);
+}
+.cp2 {
+  background: linear-gradient(to top, #f15b74, #ff6021);
+  /* margin-left: 40%; */
+}
+.cp3 {
+  background: linear-gradient(180deg, #f15b74, #ff6021);
+}
+.cp4 {
+  background: linear-gradient(to left, #f15b74, #ff6021);
+}
+.cp5 {
+  background: linear-gradient(90deg, #f15b74, #ff6021);
+}
+
+.c-2 {
+  margin-left: 35%;
+}
+
+.c-4 {
+  margin-left: 35%;
+}
+
+.course-container:hover {
+  transform: scale(1.06);
+}
+
+@media screen and (max-width: 480px) {
+  .social-panel-container.visible {
+    transform: translateX(0px);
+  }
+}
+@media screen and (max-width: 980px) {
+  .c-2 {
+    margin-left: auto;
+  }
+  .c-4 {
+    margin-left: auto;
+  }
+}
+@media screen and (max-width: 770px) {
+  .course {
+    flex-direction: column;
+    width: 85vw;
+  }
+  .course-container {
+  }
+  .course-preview h2 {
+    font-size: 24px;
+  }
+  .course-info h2 {
+    font-size: 18px;
+  }
+  .course-preview h6 {
+    font-size: 18px;
+  }
+}
