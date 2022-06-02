@@ -19,7 +19,7 @@ function togglePlay() {
     });
     body.classList.remove("body-dance");
     musicBtn.innerHTML = "Music Off";
-    musicBtn.style.color = "black";
+    musicBtn.style.color = "rgb(110, 110, 110)";
   } else {
     audio.play();
     [...boldTexts].forEach((boldtext) => {

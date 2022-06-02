@@ -48,7 +48,7 @@
  <link rel="stylesheet" href="./css/card.css"> 
  <link rel="stylesheet" href="./css/certificatecard.css">
  <link rel="stylesheet" href="./css/animation.css">
- 
+ <link rel="stylesheet" href="./css/nightmode.css">
     
 
     <!-- Modernizr JS -->
@@ -61,7 +61,7 @@
   <body>
     <nav id="colorlib-main-nav" role="navigation">
       <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"
-        ><i></i
+        id="menu-btn" ><i></i
       ></a>
       <div class="js-fullheight colorlib-table">
         <div class="colorlib-table-cell js-fullheight">
@@ -82,14 +82,16 @@
           </div>
           <div class="row">
             <div class="col-md-12">
-              <ul>
+              <ul class="sidebar-list" id="sidebar-list">
                 <li class="active"><a href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="work.html">Work</a></li>
 
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
-                <li id="music-button" style="color:black;cursor: pointer; ">Music <i class="icon-music"></i> </li>
+                <li style="    margin-top: 9px; cursor: pointer;" id="night-mode"> Night Mode Off</li>
+                <li id="music-button" style="cursor: pointer;    margin-top: 9px; ">Music </li>
+              
               </ul>
             </div>
           </div>
@@ -627,6 +629,7 @@
     <!-- Main JS (Do not remove) -->
     <script src="js/main.js"></script>
     <script src="./FunctionsJS/animation.js"></script>
+    <script src="./FunctionsJS/nightmode.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </body>
 </html>

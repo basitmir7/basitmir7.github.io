@@ -239,10 +239,12 @@ h6 {
   margin: 0;
   list-style: none;
   text-align: left;
+  color: rgb(110, 110, 110);
+  text-transform: uppercase;
 }
 #colorlib-main-nav ul li a {
   display: block;
-  color: black;
+  color: rgb(110, 110, 110);
   font-size: 14px;
   padding: 10px 0;
   text-transform: uppercase;
@@ -431,6 +433,11 @@ header .colorlib-navbar-brand a img:hover {
   #colorlib-contact,
   #colorlib-about {
     padding: 5em 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  #colorlib-work {
+    margin-top: 32px;
   }
 }
 
