@@ -27,7 +27,7 @@ body {
   font-weight: 400;
   background: #fafafa;
   color: gray;
-  webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
 }
 body.menu-show {
   overflow: hidden;
@@ -1651,13 +1651,14 @@ input[type="text"] {
 .colorlib-social-icons a:focus {
   text-decoration: none !important;
 }
-
+.colorlib-social-icons a i {
+  margin-right: 3px;
+}
 .colorlib-social-icons i {
   font-size: 24px;
-  color: rgb(245, 92, 89);
 }
 .colorlib-social-icons i:hover {
-  color: rgb(104, 104, 104);
+  opacity: 0.7;
 }
 
 #footer {
@@ -1678,10 +1679,7 @@ input[type="text"] {
 #footer p.colorlib-social-icons a:focus {
   text-decoration: none !important;
 }
-#footer p.colorlib-social-icons i {
-  font-size: 24px;
-  color: #ca82f8;
-}
+
 #footer p .block {
   color: #1a1a1a;
   font-size: 14px;
@@ -1703,12 +1701,7 @@ input[type="text"] {
   -ms-border-radius: 30px;
   border-radius: 30px;
 }
-#footer .subscribe .form-control:focus,
-#footer .subscribe .form-control:active {
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  border: 2px solid rgba(202, 130, 248, 0.8);
-}
+
 #footer .subscribe .btn-custom {
   width: 100%;
   padding: 10px 0;
@@ -1721,4 +1714,10 @@ input[type="text"] {
 
 .js .animate-box {
   opacity: 0;
+}
+
+.desc .linkedin-footer:hover {
+  color: #d43f3a !important;
+  text-decoration: underline;
+  cursor: pointer;
 }
