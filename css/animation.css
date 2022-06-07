@@ -37,7 +37,7 @@
 
 @keyframes bodydance {
   50% {
-    background: #1b3649b8;
+    background: #1b3649b8 line;
   }
   75% {
     background: rgba(149, 145, 26, 0.727);
