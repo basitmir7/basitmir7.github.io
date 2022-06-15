@@ -552,7 +552,6 @@ header .colorlib-navbar-brand a img:hover {
 }
 .my-header h2 {
   font-size: 80px;
-
   background: -webkit-linear-gradient(#f15b74, #ff6021);
   -webkit-background-clip: text;
   background-clip: text;
