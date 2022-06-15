@@ -1283,6 +1283,18 @@ header .colorlib-navbar-brand a img:hover {
 .cube:hover {
   transform: rotateX(-90deg);
 }
+.footer-cube-face {
+  position: absolute;
+  width: 100%;
+  height: 41px;
+  text-align: center;
+  font-size: 13px;
+  padding-top: 7px;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: rgb(45, 106, 227);
+  color: #fff;
+}
 
 .btn-primary {
   background: rgb(245, 92, 89) !important;
@@ -1702,11 +1714,14 @@ input[type="text"] {
   font-size: 16px;
   background: #fafafa;
   font-weight: 400;
-  margin-bottom: 5px;
+  margin-bottom: 14px;
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
   -ms-border-radius: 30px;
   border-radius: 30px;
+}
+.subscribe {
+  height: 4rem;
 }
 
 #footer .subscribe .btn-custom {
