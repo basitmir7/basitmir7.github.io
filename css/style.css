@@ -1673,7 +1673,7 @@ input[type="text"] {
   margin-right: 3px;
 }
 .colorlib-social-icons i {
-  font-size: 24px;
+  font-size: 28px;
 }
 .colorlib-social-icons i:hover {
   opacity: 0.7;
@@ -1741,4 +1741,36 @@ input[type="text"] {
   color: #d43f3a !important;
   text-decoration: underline;
   cursor: pointer;
+}
+
+.back-to-top {
+  position: fixed;
+  top: 86%;
+  left: 92%;
+  z-index: 5;
+  display: block;
+  width: 65px;
+  height: 67px;
+  cursor: pointer;
+}
+.back-to-top a {
+  text-decoration: none;
+
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.to-top i {
+  font-size: 35px;
+}
+.back-to-top:hover {
+  box-shadow: 0 10px 10px rgb(0 0 0 / 20%);
+}
+@media screen and (max-width: 750px) {
+  .back-to-top {
+    display: none;
+  }
 }
