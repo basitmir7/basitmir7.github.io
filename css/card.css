@@ -3,13 +3,13 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800");
 
 .gr-1 {
-  background: linear-gradient(170deg, #01e4f8 0%, #1d3ede 100%);
+  background: linear-gradient(170deg, #007ea7 0%, #90caf9 100%);
 }
 .gr-2 {
-  background: linear-gradient(170deg, #b4ec51 0%, #429321 100%);
+  background: linear-gradient(170deg, #007ea7 0%, #90caf9 100%);
 }
 .gr-3 {
-  background: linear-gradient(170deg, #c86dd7 0%, #3023ae 100%);
+  background: linear-gradient(170deg, #007ea7 0%, #90caf9 100%);
 }
 * {
   transition: 0.5s;

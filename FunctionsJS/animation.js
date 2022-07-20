@@ -27,8 +27,8 @@ function togglePlay() {
     });
 
     body.classList.add("body-dance");
-    musicBtn.innerHTML = `Music On <i class="icon-music"></i>`;
-    musicBtn.style.color = "red";
+    musicBtn.innerHTML = `Music On <i class="icon-music" style="color:#fb5353;"></i>`;
+    musicBtn.style.color = "#337ab7";
   }
 }
 

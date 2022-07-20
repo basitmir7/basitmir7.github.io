@@ -48,14 +48,14 @@ body.menu-show {
 }
 
 a {
-  color: rgb(245, 92, 89);
+  color: #78aed3;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
 }
 a:hover {
   text-decoration: underline;
-  color: rgb(245, 92, 89);
+  color: #4f77aa;
 }
 a:focus,
 a:active {
@@ -263,7 +263,7 @@ h6 {
   text-decoration: none;
 }
 #colorlib-main-nav ul li.active a {
-  color: rgb(245, 92, 89);
+  color: #337ab7;
 }
 #colorlib-main-nav .form-group {
   margin-bottom: 40px;
@@ -483,8 +483,13 @@ header .colorlib-navbar-brand a img:hover {
   display: block;
   margin-bottom: 0;
   color: #000;
-  font-size: 50px;
+  font-size: 70px;
   font-family: "Playfair Display", Georgia, serif;
+}
+@media screen and (max-width: 1000px) {
+  .about-desc h2 span {
+    font-size: 50px !important;
+  }
 }
 .about-desc .desc {
   padding-left: 6em;
@@ -526,7 +531,7 @@ header .colorlib-navbar-brand a img:hover {
   top: 0;
   left: 0;
   right: 0;
-  font-size: 200px;
+  font-size: 165px;
   color: #f0f0f0;
   font-weight: 700;
 }
@@ -551,11 +556,18 @@ header .colorlib-navbar-brand a img:hover {
   font-family: "Playfair Display", Georgia, serif;
 }
 .my-header h2 {
-  font-size: 80px;
-  background: -webkit-linear-gradient(#f15b74, #ff6021);
+  font-size: 75px !important;
+  background: -webkit-linear-gradient(#003459, #007ea7);
+
   -webkit-background-clip: text;
+
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+@media screen and (max-width: 1000px) {
+  .my-header h2 {
+    font-size: 50px !important;
+  }
 }
 .intro-heading {
   margin-bottom: 3em;
@@ -1270,7 +1282,7 @@ header .colorlib-navbar-brand a img:hover {
   padding-top: 7px;
   text-transform: uppercase;
   cursor: pointer;
-  background: rgb(45, 106, 227);
+  background: #007ea7;
   color: #fff;
 }
 .top-face {
@@ -1291,20 +1303,20 @@ header .colorlib-navbar-brand a img:hover {
   padding-top: 7px;
   text-transform: uppercase;
   cursor: pointer;
-  background: rgb(45, 106, 227);
+  background: #007ea7;
   color: #fff;
 }
 
 .btn-primary {
-  background: rgb(245, 92, 89) !important;
+  background: #007ea7 !important;
   color: #fff;
-  border: 2px solid rgb(245, 92, 89);
+  border: 2px solid #007ea7;
 }
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active {
-  background: rgb(188, 61, 59) !important;
-  border-color: rgb(188, 61, 59) !important;
+  background: #035773 !important;
+  border-color: #035773 !important;
 }
 .btn-primary.btn-outline {
   background: transparent;
@@ -1738,7 +1750,7 @@ input[type="text"] {
 }
 
 .desc .linkedin-footer:hover {
-  color: #d43f3a !important;
+  color: #4f77aa !important;
   text-decoration: underline;
   cursor: pointer;
 }
