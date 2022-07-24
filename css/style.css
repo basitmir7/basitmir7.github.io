@@ -1786,3 +1786,13 @@ input[type="text"] {
     display: none;
   }
 }
+
+#music-button {
+  float: right;
+  margin-right: 25px;
+  cursor: pointer;
+  margin-top: 9px;
+}
+#music-button i {
+  font-size: 19px;
+}

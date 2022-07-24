@@ -18,7 +18,7 @@ function togglePlay() {
       boldtext.classList.remove("bold-text-animate");
     });
     body.classList.remove("body-dance");
-    musicBtn.innerHTML = "Music Off";
+    musicBtn.innerHTML = `<i class="icon-music"></i>`;
     musicBtn.style.color = "rgb(110, 110, 110)";
   } else {
     audio.play();
@@ -27,8 +27,8 @@ function togglePlay() {
     });
 
     body.classList.add("body-dance");
-    musicBtn.innerHTML = `Music On <i class="icon-music" style="color:#fb5353;"></i>`;
-    musicBtn.style.color = "#337ab7";
+
+    musicBtn.style.color = "#fb5353";
   }
 }
 
