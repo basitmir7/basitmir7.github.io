@@ -25,7 +25,9 @@ body {
   line-height: 1.8;
   font-size: 16px;
   font-weight: 400;
-  background: #fafafa;
+  /* background: #fafafa; */
+  /* background: -webkit-linear-gradient(190deg, #fafafa, #c7d0ee); */
+  background: -webkit-linear-gradient(185deg, #fafafa, #bae0d1c4);
   color: gray;
   -webkit-font-smoothing: antialiased;
 }
@@ -532,7 +534,8 @@ header .colorlib-navbar-brand a img:hover {
   left: 0;
   right: 0;
   font-size: 165px;
-  color: #f0f0f0;
+  /* color: #f0f0f0; */
+  color: #e4e4e4;
   font-weight: 700;
 }
 .hobbies-div {
@@ -1795,4 +1798,8 @@ input[type="text"] {
 }
 #music-button i {
   font-size: 19px;
+}
+
+.nightBody {
+  background: #1b1a1afa !important;
 }

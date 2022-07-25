@@ -11,9 +11,9 @@ const disableDarkMode = () => {
   nightbtn.innerHTML = "Night Mode off";
 
   dayTune.play();
-  body.style.background = "#fafafa";
+  body.classList.remove("nightBody");
   [...boldTexts].forEach((boldtext) => {
-    boldtext.style.color = "#f0f0f0";
+    boldtext.style.color = "#e4e4e4";
   });
   sideBar.style.background = "#fafafa";
   localStorage.setItem("dark-mode", "disabled");
@@ -23,9 +23,9 @@ const enableDarkMode = () => {
   nightbtn.innerHTML = `Night Mode on <i class="icon-moon"></i> `;
 
   nightTune.play();
-  body.style.background = "#1b1a1afa";
+  body.classList.add("nightBody");
   [...boldTexts].forEach((boldtext) => {
-    boldtext.style.color = "#8c8b8b";
+    boldtext.style.color = "#8c8b8b ";
   });
   sideBar.style.background = "rgb(5 4 4 / 98%)";
   localStorage.setItem("dark-mode", "enabled");
