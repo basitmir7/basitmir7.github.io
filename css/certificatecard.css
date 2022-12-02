@@ -75,17 +75,25 @@
 .cp5 {
   background: linear-gradient(90deg, #90caf9, #d3d0cbff);
 }
+.cp6 {
+  background: linear-gradient(45deg, #90caf9, #d3d0cbff);
+}
+.cp7 {
+  background: linear-gradient(to right, #90caf9, #d3d0cbff);
+}
+.cp8 {
+  background: linear-gradient(140deg, #90caf9, #d3d0cbff);
+}
 
-.c-2 {
+.c-2,
+.c-4,
+.c-6,
+.c-8 {
   margin-left: 35%;
 }
 
-.c-4 {
-  margin-left: 35%;
-}
-
-.course-container:hover {
-  transform: scale(1.06);
+.course:hover {
+  outline: 15px solid rgba(214, 214, 214, 0.534);
 }
 
 @media screen and (max-width: 480px) {
@@ -94,10 +102,10 @@
   }
 }
 @media screen and (max-width: 980px) {
-  .c-2 {
-    margin-left: auto;
-  }
-  .c-4 {
+  .c-2,
+  .c-4,
+  .c-6,
+  .c-8 {
     margin-left: auto;
   }
 }
@@ -106,8 +114,7 @@
     flex-direction: column;
     width: 85vw;
   }
-  .course-container {
-  }
+
   .course-preview h2 {
     font-size: 24px;
   }

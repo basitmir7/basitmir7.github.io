@@ -1,5 +1,6 @@
 :root {
   scroll-behavior: smooth;
+  -webkit-text-smoothing: antialiased;
 }
 
 @font-face {
@@ -27,7 +28,7 @@ body {
   font-weight: 400;
   /* background: #fafafa; */
   /* background: -webkit-linear-gradient(190deg, #fafafa, #c7d0ee); */
-  background: -webkit-linear-gradient(185deg, #fafafa, #bae0d1c4);
+  background: rgba(255, 255, 255, 0.895);
   color: gray;
   -webkit-font-smoothing: antialiased;
 }
@@ -395,23 +396,19 @@ header .colorlib-navbar-brand {
   float: left;
 }
 header .colorlib-navbar-brand {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-
   overflow: hidden;
 
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
-header .colorlib-navbar-brand a img {
+/* header .colorlib-navbar-brand a img {
   width: 100%;
   height: 100%;
   transition: all ease-in-out 300ms;
 }
 header .colorlib-navbar-brand a img:hover {
   transform: scale(1.2);
-}
+} */
 
 #colorlib-services,
 #colorlib-contact,
@@ -534,8 +531,8 @@ header .colorlib-navbar-brand a img:hover {
   left: 0;
   right: 0;
   font-size: 165px;
-  /* color: #f0f0f0; */
-  color: #e4e4e4;
+  color: #f0f0f0;
+
   font-weight: 700;
 }
 .hobbies-div {
@@ -1764,25 +1761,22 @@ input[type="text"] {
   left: 92%;
   z-index: 5;
   display: block;
-  width: 65px;
-  height: 67px;
+  width: 50px;
+  height: 50px;
   cursor: pointer;
-}
-.back-to-top a {
-  text-decoration: none;
-
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-items: center;
+  text-decoration: none !important;
+  border-radius: 50%;
+  transition: all ease-in-out 300ms;
 }
 
-.to-top i {
+.back-to-top i {
   font-size: 35px;
 }
 .back-to-top:hover {
   box-shadow: 0 10px 10px rgb(0 0 0 / 20%);
+  outline: 8px solid rgba(179, 179, 179, 0.372);
 }
 @media screen and (max-width: 750px) {
   .back-to-top {
@@ -1802,4 +1796,37 @@ input[type="text"] {
 
 .nightBody {
   background: #1b1a1afa !important;
+}
+
+.profilepic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profilepic img {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+@media screen and (min-width: 980px) {
+  .profilepic {
+    min-height: 45rem;
+  }
+  .profilepic img {
+    height: 250px;
+    width: 250px;
+  }
+}
+@media screen and (max-width: 470px) {
+  body {
+    box-sizing: border-box;
+    padding: 17px;
+    margin: 0;
+  }
+  .course {
+    margin: 0 !important;
+  }
 }
