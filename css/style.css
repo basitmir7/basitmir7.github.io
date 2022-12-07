@@ -3,6 +3,10 @@
   -webkit-text-smoothing: antialiased;
 }
 
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 @font-face {
   font-family: "icomoon";
   src: url("../fonts/icomoon/icomoon.eot?srf3rx");
@@ -37,6 +41,59 @@ body.menu-show {
   position: fixed;
   height: 100%;
   width: 100%;
+}
+/* css for nav-main-hero */
+.nav-hero-main {
+  width: 35%;
+  display: block;
+}
+.nav-hero-main > ul > li > a {
+  color: #484848 !important ;
+}
+.nav-hero-main > ul > li > a:hover {
+  text-decoration: none;
+  color: #141414 !important;
+}
+.nav-hero-main ul li::after {
+  content: "";
+  position: absolute;
+  top: 82%;
+  left: 0;
+  width: 0;
+  height: 1.6px;
+  background: #5a5a5ae5;
+  transition: all ease-in-out 300ms;
+}
+.nav-hero-main ul li:hover::after {
+  width: 100%;
+}
+.nav-hero-main ul li {
+  position: relative;
+}
+.nav-hero-main ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  width: 100%;
+  text-transform: uppercase;
+  margin: 0;
+  padding-top: 7px;
+}
+
+.main-nav-header {
+  display: flex;
+  justify-content: space-between;
+}
+.colorlib-nav-toggle {
+  display: none;
+}
+@media screen and (max-width: 1000px) {
+  .colorlib-nav-toggle {
+    display: block !important;
+  }
+  .nav-hero-main {
+    display: none !important;
+  }
 }
 
 #colorlib-wrapper {
@@ -139,6 +196,7 @@ h6 {
   content: "";
   background: rgba(0, 0, 0, 0.4);
 }
+
 @media screen and (max-width: 768px) {
   #colorlib-page {
     padding-top: 5em;
@@ -530,17 +588,18 @@ header .colorlib-navbar-brand a img:hover {
   top: 0;
   left: 0;
   right: 0;
-  font-size: 165px;
+  font-size: 150px;
   color: #f0f0f0;
 
   font-weight: 700;
 }
 .hobbies-div {
-  padding-left: 15rem;
+  padding: 0 14rem;
+  width: 100%;
 }
 @media screen and (max-width: 768px) {
   .bold {
-    font-size: 60px;
+    font-size: 50px;
   }
   .hobbies-div {
     padding-left: 0;
@@ -1478,6 +1537,8 @@ header .colorlib-navbar-brand a img:hover {
 .colorlib-nav-toggle {
   cursor: pointer;
   text-decoration: none;
+
+  margin: 0 !important;
 }
 .colorlib-nav-toggle.active i::before,
 .colorlib-nav-toggle.active i::after {
@@ -1588,14 +1649,13 @@ header .colorlib-navbar-brand a img:hover {
   float: right;
   z-index: 1003;
   position: relative;
-  display: block;
+
   margin: 0 auto;
   cursor: pointer;
   margin-top: 0;
 }
 @media screen and (max-width: 768px) {
   .colorlib-nav-toggle {
-    display: block;
     top: 0px;
   }
   .sample-work-img {
@@ -1613,6 +1673,12 @@ header .colorlib-navbar-brand a img:hover {
   }
   .work-entry .work-img .display-t .work-name h2 {
     font-size: 10px;
+  }
+  .my-header h2 {
+    font-size: 45px;
+  }
+  .bold {
+    font-size: 45px;
   }
 }
 
