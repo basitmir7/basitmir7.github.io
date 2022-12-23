@@ -46,6 +46,13 @@ body.menu-show {
 .nav-hero-main {
   width: 35%;
   display: block;
+  font-family: "Playfair Display", Georgia, serif;
+}
+.colorlib-table-cell,
+.services h3,
+.hobbies-div > div > p > b {
+  font-family: "Playfair Display", Georgia, serif;
+  text-transform: capitalize !important;
 }
 .nav-hero-main > ul > li > a {
   color: #484848 !important ;
@@ -57,7 +64,7 @@ body.menu-show {
 .nav-hero-main ul li::after {
   content: "";
   position: absolute;
-  top: 82%;
+  top: 85%;
   left: 0;
   width: 0;
   height: 1.6px;
@@ -75,7 +82,7 @@ body.menu-show {
   justify-content: space-between;
   list-style-type: none;
   width: 100%;
-  text-transform: uppercase;
+  text-transform: capitalize;
   margin: 0;
   padding-top: 7px;
 }
@@ -187,7 +194,7 @@ h6 {
   transform: scale(0.99);
   position: relative;
 }
-.menu-show #colorlib-page:after {
+.menu-show #colorlib-page::after {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -212,7 +219,8 @@ h6 {
   width: 360px;
   height: 100%;
   background: white;
-  z-index: 1002;
+  box-shadow: 0 7px 29px #37373791;
+  z-index: 50;
   text-align: center;
   visibility: hidden;
   opacity: 0;
@@ -925,6 +933,7 @@ header .colorlib-navbar-brand a img:hover {
   -webkit-flex-wrap: wrap;
   -moz-flex-wrap: wrap;
   width: 100%;
+  margin-top: 12rem;
 }
 .services-flex .one-third {
   width: 55%;
@@ -959,7 +968,6 @@ header .colorlib-navbar-brand a img:hover {
   margin-bottom: 4em;
 }
 .services h3 {
-  font-family: "Karla", Arial, sans-serif;
   font-size: 16px;
   text-transform: uppercase;
   font-weight: 700;
@@ -1752,6 +1760,8 @@ input[type="text"] {
 }
 .colorlib-social-icons i {
   font-size: 28px;
+  -webkit-trasition: all ease-in-out 200ms;
+  transition: all ease-in-out 200ms;
 }
 .colorlib-social-icons i:hover {
   opacity: 0.7;

@@ -110,3 +110,9 @@
   color: rgba(255, 255, 255, 1);
   z-index: 0;
 }
+
+@media only screen and (max-width: 450px) {
+  .card .txt h1 {
+    font-size: 2rem;
+  }
+}
