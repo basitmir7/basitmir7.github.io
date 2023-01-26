@@ -50,7 +50,8 @@
       href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700"
       rel="stylesheet"
     />
-
+    <link rel="stylesheet" href="css/tablet.css" />
+    <link rel="stylesheet" href="css/mobile.css" />
     <!-- Animate.css -->
     <link rel="stylesheet" href="css/animate.css" />
     <!-- Icomoon Icon Fonts-->
@@ -72,92 +73,15 @@
       <script src="js/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
-    <nav id="colorlib-main-nav" role="navigation">
-      <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"
-        ><i id="menu-line"></i
-      ></a>
-      <div class="js-fullheight colorlib-table">
-        <div class="colorlib-table-cell js-fullheight">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="form-group">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="search"
-                  placeholder="Enter any key to search..."
-                />
-                <button type="submit" class="btn btn-primary">
-                  <i class="icon-search3"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12">
-              <ul>
-                <li><a href="index.html">Home</a></li>
-                <li class="active"><a href="services.html">Services</a></li>
-                <li><a href="work.html">Work</a></li>
-
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li style="margin-top: 9px; cursor: pointer" id="night-mode">
-                  Night Mode Off
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12">
-              <h2 class="head-title"></h2>
-              <a
-                href="images/work-1.jpg"
-                class="gallery image-popup-link text-center"
-                style="background-image: url(images/work-1.jpg)"
-              >
-                <span><i class="icon-search3"></i></span>
-              </a>
-              <a
-                href="images/work-2.jpg"
-                class="gallery image-popup-link text-center"
-                style="background-image: url(images/work-2.jpg)"
-              >
-                <span><i class="icon-search3"></i></span>
-              </a>
-              <a
-                href="images/work-3.jpg"
-                class="gallery image-popup-link text-center"
-                style="background-image: url(images/work-3.jpg)"
-              >
-                <span><i class="icon-search3"></i></span>
-              </a>
-              <a
-                href="images/work-4.jpg"
-                class="gallery image-popup-link text-center"
-                style="background-image: url(images/work-4.jpg)"
-              >
-                <span><i class="icon-search3"></i></span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
-
+  <body class="scrollbar">
     <div id="colorlib-page">
       <header>
-        <div class="container">
+        <div class="container nav-align">
           <div class="row">
             <div class="col-md-12 main-nav-header">
               <div class="colorlib-navbar-brand">
                 <a href="index.html">
-                  <img
-                    class="web-logo"
-                    src="./assets/weblogo.png"
-                    style="height: 50px; width: 96px"
-                  />
+                  <img class="web-logo" src="./assets/weblogo.png" />
                 </a>
               </div>
               <!-- navigation main -->
@@ -166,13 +90,9 @@
                   <li><a href="about.html">About</a></li>
                   <li><a href="services.html">Services</a></li>
                   <li><a href="work.html">Work</a></li>
-                  <li><a href="contact.html">Contact</a></li>
                 </ul>
               </nav>
               <!-- navigation main ends -->
-              <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"
-                ><i></i
-              ></a>
             </div>
           </div>
         </div>
@@ -253,9 +173,6 @@
 
       <div id="colorlib-progress">
         <div class="container">
-          <div class="row text-center">
-            <h2 class="bold">Skills</h2>
-          </div>
           <div class="row">
             <div
               class="col-md-12 col-md-offset-0 text-center animate-box intro-heading my-header"

@@ -1,0 +1,122 @@
+@media screen and (max-width: 1000px) {
+  .my-header h2 {
+    font-size: 50px !important;
+  }
+  .font-xl {
+    font-size: 75px !important;
+    line-height: 8rem;
+  }
+  .about-desc {
+    margin-top: 5rem;
+  }
+  .intro-heading h2 {
+    font-size: 55px;
+  }
+}
+
+/* services responsive css */
+@media screen and (max-width: 650px) {
+  .service-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .y-text p {
+    font-size: 16px;
+    margin-right: 20px;
+  }
+  .y-text p::after {
+    width: 55px;
+  }
+  .y-text p:hover::after {
+    width: 100px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #colorlib-services,
+  #colorlib-work,
+  #colorlib-testimony,
+  #colorlib-progress,
+  #colorlib-about {
+    padding: 5em 0;
+  }
+  #colorlib-page {
+    padding-top: 5em;
+  }
+  header {
+    padding: 2em 0;
+  }
+  #colorlib-work {
+    margin-top: 32px;
+  }
+
+  .services-flex .one-forth .one-third,
+  .services-flex .one-forth .one-forth {
+    height: 400px;
+  }
+  .services-flex .one-third,
+  .services-flex .one-forth {
+    width: 100%;
+    display: block;
+  }
+  .work-entry .work-img {
+    height: 400px;
+  }
+  .work-entry .work-img .display-t {
+    height: 400px;
+  }
+  .colorlib-nav-toggle {
+    top: 0px;
+  }
+  .sample-work-img {
+    width: 100%;
+  }
+
+  .service-name {
+    font-size: 26px;
+    top: 20%;
+  }
+  .overlay-text {
+    top: 52%;
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  .progress {
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .nav-align {
+    width: 85vw !important;
+  }
+  .services-container {
+    padding: 0 4rem;
+  }
+  .services-margin {
+    margin-left: 7rem;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  /* .youtube-video iframe {
+    width: calc(560px - 60px);
+  } */
+  .y-videos {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .youtube-video iframe {
+    width: 460px;
+    height: 265px;
+  }
+  .style-social a {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 560px) {
+  .style-social {
+    flex-direction: column;
+    align-items: center;
+  }
+}

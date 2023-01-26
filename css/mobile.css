@@ -1,0 +1,75 @@
+@media screen and (max-width: 480px) {
+  body {
+    box-sizing: border-box;
+
+    margin: 0;
+  }
+  #colorlib-page {
+    padding: 0 17px !important;
+  }
+  #colorlib-services {
+    padding: 0 17px;
+    padding-top: 7em !important;
+  }
+  #colorlib-testimony {
+    padding: 5em 17px;
+  }
+  .course {
+    margin: 0 !important;
+  }
+  .course h2 {
+    font-size: 17px;
+  }
+  .main-intro {
+    font-size: 22px;
+    line-height: 3.5rem;
+  }
+  .about-desc .desc {
+    padding-left: 0 !important;
+  }
+  .rotate {
+    display: none;
+  }
+  .font-xl {
+    font-size: 50px;
+  }
+  .info-section,
+  .info-section2 {
+    font-size: 14px;
+  }
+  .colorlib-social-icons i {
+    font-size: 24px;
+  }
+  .intro-heading h2 {
+    font-size: 35px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .work-entry .work-img .display-t .work-name {
+    padding: 4px;
+  }
+  .youtube-video iframe {
+    width: 400px;
+    height: 235px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .work-entry .work-img .display-t .work-name {
+    padding: 1px;
+  }
+  .work-entry .work-img .display-t .work-name h2 {
+    font-size: 10px;
+  }
+  .my-header h2 {
+    font-size: 45px;
+  }
+  .bold {
+    font-size: 45px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .youtube-video iframe {
+    width: 350px;
+    height: 215px;
+  }
+}

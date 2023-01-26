@@ -50,6 +50,8 @@
     <link rel="stylesheet" href="css/magnific-popup.css" />
 
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/tablet.css" />
+    <link rel="stylesheet" href="css/mobile.css" />
 
     <!-- Modernizr JS -->
     <script src="js/modernizr-2.6.2.min.js"></script>
@@ -58,61 +60,17 @@
       <script src="js/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
-    <nav id="colorlib-main-nav" role="navigation">
-      <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i id="menu-line"></i></a>
-      <div class="js-fullheight colorlib-table">
-        <div class="colorlib-table-cell js-fullheight">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="form-group">
-                <input type="text" class="form-control" id="search" placeholder="Enter any key to search...">
-                <button type="submit" class="btn btn-primary" ><i class="icon-search3"></i></button>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12">
-              <ul>
-                <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="work.html">Work</a></li>
-            
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li style="    margin-top: 9px; cursor: pointer;" id="night-mode"> Night Mode Off</li>
-              </ul>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12">
-              <h2 class="head-title"></h2>
-              <a href="images/work-1.jpg" class="gallery image-popup-link text-center" style="background-image: url(images/work-1.jpg);">
-                <span><i class="icon-search3"></i></span>
-              </a>
-              <a href="images/work-2.jpg" class="gallery image-popup-link text-center" style="background-image: url(images/work-2.jpg);">
-                <span><i class="icon-search3"></i></span>
-              </a>
-              <a href="images/work-3.jpg" class="gallery image-popup-link text-center" style="background-image: url(images/work-3.jpg);">
-                <span><i class="icon-search3"></i></span>
-              </a>
-              <a href="images/work-4.jpg" class="gallery image-popup-link text-center" style="background-image: url(images/work-4.jpg);">
-                <span><i class="icon-search3"></i></span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
+  <body class="scrollbar">
+  
 
     <div id="colorlib-page">
       <header>
-        <div class="container">
+        <div class="container nav-align">
           <div class="row">
             <div class="col-md-12 main-nav-header">
               <div class="colorlib-navbar-brand">
                 <a href="index.html">
-                  <img class="web-logo" src="./assets/weblogo.png" style="height:50px; width:96px"/>
+                  <img class="web-logo" src="./assets/weblogo.png" />
                   </a
                 >
               </div>
@@ -120,148 +78,73 @@
                   <nav class="nav-hero-main">
                     <ul>
                       <li><a href="about.html">About</a></li>
-                  <li><a href="services.html">Services</a></li>
-                  <li><a href="work.html">Work</a></li>
-                  <li><a href="contact.html">Contact</a></li>
+                      <li><a href="services.html">Services</a></li>
+                      <li><a href="work.html">Work</a></li>
+                     
                     </ul>
        
                   </nav>
                   <!-- navigation main ends -->
-              <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"
-                ><i></i
-              ></a>
+              
             </div>
           </div>
         </div>
       </header>
-      <div id="colorlib-about">
-        <div class="container">
-          <div class="row text-center">
-            <h2 class="bold">Hello!</h2>
-          </div>
-          <div class="row">
-            <!-- <div class="col-md-5 animate-box">
-              <div class="owl-carousel3">
-                <div class="item">
-                  <img
-                    class="img-responsive about-img"
-                    src="./images/3d4.png"
-                    alt="html5 bootstrap template by colorlib.com"
-                  />
-                </div>
-                <div class="item">
-                  <img
-                    class="img-responsive about-img"
-                    src="./images/3d2.png"
-                    alt="html5 bootstrap template by colorlib.com"
-                  />
-                </div>
-              </div>
-            </div> -->
-            <div class="col-md-5 animate-box profilepic">
-              <img src="./images/dp.jpg" /> 
-            </div>
-            <div class="col-md-6 col-md-push-1 animate-box">
-              <div class="about-desc">
-                <div class="owl-carousel3">
-                  <div class="item my-header">
-                    <h2><span>Hey</span><span>There !</span></h2>
-                  </div>
-                  <div class="item my-header">
-                    <h2 >
-                      <span>I am</span><span>Basit Mir</span>
-                    </h2>
-                  </div>
-                </div>
-                <div class="desc">
-                  <div class="rotate">
-                    <h2 class="heading">About Me</h2>
-                  </div>
-                  <p style="font-size:16px;">
-                    Hello! Welcome to my personal portfolio
-                    <a href="#">I am Basit Mir</a>,A tech enthusiast and a creative driven person with a passion for designing and development. I live in Srinagar, kashmir,
-                    India. I graduated
-                    as a Computer Science Engineer and looking forward to
-                    work and enhance my skills.
-                  </p>
-                  <p class="colorlib-social-icons">
-                    <a href="https://www.linkedin.com/in/basit-mehraj/"><i class="icon-linkedin" style="color: #0A66C2;"></i></a>
-                    <a href="www.basitmir0222@gmail.com"><i class="icon-google" style="color: #DB4437;"></i></a>
-                    <a href="https://github.com/basitmir7"><i class="icon-github" style="color: #333;"></i></a>
-                    <a href="https://www.youtube.com/@techbybasit"><i class="icon-youtube" style="color: #f92020;"></i></a>
-                  </p>
-                  <p>
-                  <p>
-                  
-                    <div class="scene">
-                      <a href="#footer">
-                        <div class="cube ">
-                          <div class="cube-face front-face">scroll down</div>
-                          <div class="cube-face top-face">Contact</div>
-                        </div>
-                      </a>
+        <!-- about section here -->
+        <div id="colorlib-about">
+          <div class="container">
+              <div class=" col-md-push-1 animate-box">
+                <div class="about-desc">
+                  <div style="width:85vw">
+                    <div class="item my-header">
+                      <h2 ><span class="font-xl">Hello !</div></span></h2>
                     </div>
-                  </p>
+                  
+                  </div>
+                  <div class="desc">
+                   
+                    <p  class="main-intro">
+                      <span >
+                      Thankyou for exploring this far 😉 to know about me. </span>I have always been intersted in technology and curious about how things work. Be it opening a television or a computer, reparing electronic items. As a late 90's born, I have had many interests in my life be it singing, parkour, drawing, sports etc. Having a quick learning ability has helped me to learn many skills over my lifetime. Currently I am working with software development technologies. You can visit the services to know more.</br>
+                      
+                    </p>
+                    
+                    <!-- music button -->
+                   
+                    <!-- music button ends -->
+                   
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-          <div class="row hobbies-div">
-            <div class="col-md-4 animate-box">
-              <p>
-                <b
-                  style="
-                    text-transform: uppercase;
-                    color: #000;
-                    font-size: 21px;
-                    margin-left: 10px;
-                  "
-                  >hobbies and interests</b
-                >
-                <br />
-                <ul style="list-style-type: none;">
-                  <li>Traveling and adventure</li>
-                  <li>Video games</li>
-                  <li>Technologies</li>
-                  <li>Fitness</li>
-                  <li>Endurance sports</li>
-                  <li>Art, Drawing</li>
-                  <li>Reading books</li>
-                  
-                </ul>
-                   
-                  
-              </p>
-            </div>
-            <div class="col-md-4 animate-box">
-              <p>
-                <b
-                  style="
-                    text-transform: uppercase;
-                    color: #000;
-                    font-size: 21px;
-                    margin-left: 10px;
-                  "
-                  >languages</b
-                >
-                <br />
-                <ul style="list-style-type: none;"><li>English</li>
-                  <li>Urdu</li>
-                  <li>Kashmiri</li>
-                </ul>
+          <!-- additional container -->
+          <div class="container">
+            <div class="col-md-push-1 animate-box info-section">
+              <div><span>Education</span>
+                <p>10th - Tyndale Biscoe</p>
+                <p>12th - Tyndale Biscoe</p>
+                <p>B.Tech - CSE<br/>Islamic University of Science and technology<br/><br/>CGPA:7.24</p>
+              </div>
+              <div><span>Location</span><p>Srinagar, Jammu and Kashmir,india</p></div>
+              <div><span>Socials</span><p class="colorlib-social-icons">
+                <a href="https://www.linkedin.com/in/basit-mehraj/"><i class="icon-linkedin" ></i></a>
                
-              </p>
+                <a href="https://github.com/basitmir7"><i class="icon-github"></i></a>
+                <a href="https://www.youtube.com/@techbybasit"><i class="icon-youtube"></i></a>
+                <a href="https://dribbble.com/Ab_BasitMir"><i class="icon-dribbble"></i></a>
+              </p></div>
+              
             </div>
+           
           </div>
+         <!-- about section ends -->
+         
         </div>
       </div>
       <div id="colorlib-services">
         <div class="container">
-          <div class="row text-center">
-            <h2 class="bold">Objectives</h2>
-          </div>
+       
           <div class="row">
             <div class="col-md-12">
               <div class="services-flex">
@@ -325,152 +208,23 @@
       </div>
 
       <!-- education -->
-      <div id="colorlib-blog">
-        <div class="container">
-          <div class="row text-center">
-          <h2 class="bold" bold-text>Education</h2>
-          </div>
-          <div class="row">
-          <div class="col-md-12 col-md-offset-0 text-center animate-box intro-heading my-header">
-            <span>Details</span>
-            <h2>My Education</h2>
-          </div>
-          </div>
-          <div class="row">
-          <div class="col-md-12">
-            <div class="rotate">
-            <h2 class="heading">Our Blog</h2>
-            </div>
-          </div>
-          </div>
-          <div class="row animate-box">
-          <div class="owl-carousel1">
-            <div class="item">
-            <div class="col-md-12">
-              <div class="article">
-              <a href="#" class="blog-img">
-                <img class="img-responsive" src="images/img1.jpg" alt="html5 bootstrap by colorlib.com">
-                <div class="overlay"></div>
-                <div class="link">
-                <span class="read">Read more</h2>
-                </div>
-              </a>
-              <div class="desc">
-                <span class="meta">Nov 2014</span>
-                <h2><a href="#">10th - School</a></h2>
-                <p>Tyndale Biscoe School | Marks = 91.8%</p>
-              </div>
-              </div>
-            </div>
-            </div>
-            <div class="item">
-            <div class="col-md-12">
-              <div class="article">
-              <a href="#" class="blog-img">
-                <img class="img-responsive" src="images/img2.jpg" alt="html5 bootstrap by colorlib.com">
-                <div class="overlay"></div>
-                <div class="link">
-                <span class="read">Read more</h2>
-                </div>
-              </a>
-              <div class="desc">
-                <span class="meta">Nov 2016</span>
-                <h2><a href="#">12th - High School </a></h2>
-                <p>Tyndale Biscoe School | Marks = 83.2%</p>
-              </div>
-              </div>
-            </div>
-            </div>
-            <div class="item">
-            <div class="col-md-12">
-              <div class="article">
-              <a href="#" class="blog-img">
-                <img class="img-responsive" src="images/img3.jpg" alt="html5 bootstrap by colorlib.com">
-                <div class="overlay"></div>
-                <div class="link">
-                <span class="read">Read more</h2>
-                </div>
-              </a>
-              <div class="desc">
-                <span class="meta">2017-2021</span>
-                <h2><a href="#">B.Tech Computer Science </a></h2>
-                <p>Islamic University of Science and technology | CGPA = 7.24</p>
-              </div>
-              </div>
-            </div>
-            </div>
-          </div>
-          </div>
-        </div>
-        </div>
+     
         <!-- education dic ends -->
-      <footer>
-        <div id="footer">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-4 col-pb-sm">
-                <div class="row">
-                  <div class="col-md-10">
-                    <h2>Let's Talk</h2>
-                    <p>
-                      A real conversation always contains an invitation. You are
-                      inviting another person to reveal herself or himself to
-                      you, to tell you who they are or what they want.
-                    </p>
-                    <p>
-                      <a href="https://gmail.com">basitmir0222@gmail.com</a>
-                    </p>
-                    <p class="colorlib-social-icons">
-                      <a href="https://www.twitter.com/_basitmir_"><i class="icon-twitter" style="color: #1DA1F2;"></i></a>
-                      <a href="https://www.linkedin.com/in/basit-mehraj/"><i class="icon-linkedin" style="color: #0A66C2;"></i></a>
-                      <a href="www.basitmir0222@gmail.com"><i class="icon-google" style="color: #DB4437;"></i></a>
-                      <a href="https://github.com/basitmir7"><i class="icon-github" style="color: #333;"></i></a>
-                    </p>
-                  </div>
-                </div>
+    
+        <footer>
+          <div id="footer" >
+            <div class="container footer-main" >
+              <div class="lets-talk"><span  style="color:rgb(219, 219, 219)">Let's Talk</span><p style="color:rgb(219, 219, 219);">Reach out: <a href="www.basitmir0222@gmail.com">basitmir0222@gmail.com</a></p></div>
+              <div class="style-social">
+                <a href=""><div class="social-data"><b>Linkedin</b><div><i class="icon-linkedin" ></i></div></div></a>
+                <a href=""><div class="social-data"><b>Github</b><div><i class="icon-github"></i></div></div></a>
+                <a href=""><div class="social-data"><b>youtube</b><div><i class="icon-youtube"></i></div></div></a>
+                <a href=""><div class="social-data"><b>dribbble</b><div><i class="icon-dribbble"></i></div></div></a>
               </div>
-
-              <div class="col-md-4 col-pb-sm">
-               
-                
-                
-                <div class="f-entry" style="margin-top: 94px;">
-                  <a
-                    href="#"
-                    class="featured-img"
-                    
-                  ></a>
-                  <div class="desc">
-                   
-                    <p>Want to learn More about me ? <br>Check out on :</p>
-                    <a href="https://www.linkedin.com/in/basit-mehraj/"><p class="linkedin-footer" style="font-size: 28px;font-weight:bold; color: #35628e; transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);">Linked In</p></a>
-                    
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 col-pb-sm" style="margin-top: 94px;">
-                
-                <p>Reach out.</p>
-                <div class="subscribe text-center">
-                  
-                  <input
-                    type="text"
-                    class="form-control text-center"
-                    placeholder="Enter Email address"
-                  />
-                  
-                  <div class="cube" >
-                    <div class="footer-cube-face front-face">Subscrible</div>
-                    <div class="footer-cube-face top-face">Contact</div>
-                  </div>
-               
-              </div>
-              </div>
+              <div class="credit"><p >Made with ❤️ by Basit </p><p>All rights reserved &copy;<script>document.write(new Date().getFullYear())</script></p></div>
             </div>
-            
           </div>
-        </div>
-      </footer>
+        </footer>
     </div>
 
     <!-- jQuery -->

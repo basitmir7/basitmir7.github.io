@@ -28,6 +28,7 @@
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link rel="shortcut icon" href="favicon.ico" />
+   
 
     <link
       href="https://fonts.googleapis.com/css?family=Karla:400,700"
@@ -37,6 +38,9 @@
       href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">
+  
 
     <!-- Animate.css -->
     <link rel="stylesheet" href="css/animate.css" />
@@ -51,6 +55,8 @@
     <link rel="stylesheet" href="css/magnific-popup.css" />
 
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/tablet.css" />
+    <link rel="stylesheet" href="css/mobile.css" />
  <link rel="stylesheet" href="./css/card.css"> 
  <link rel="stylesheet" href="./css/certificatecard.css">
  <link rel="stylesheet" href="./css/animation.css">
@@ -65,95 +71,20 @@
       <script src="js/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
-    <nav id="colorlib-main-nav" role="navigation">
-      <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"
-        id="menu-line" ><i></i
-      ></a>
-      <div class="js-fullheight colorlib-table">
-        <div class="colorlib-table-cell js-fullheight">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="form-group">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="search"
-                  placeholder="Enter any key to search..."
-                />
-                <button type="submit" class="btn btn-primary">
-                  <i class="icon-search3"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12">
-              <ul class="sidebar-list" id="sidebar-list">
-                <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="work.html">Work</a></li>
+  <body id="body" class="scrollbar">
+   
 
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li style="    margin-top: 9px; cursor: pointer;" id="night-mode"> Night Mode Off</li>
-                <!-- <li id="music-button" style="cursor: pointer;    margin-top: 9px; ">Music </li> -->
-              
-              </ul>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12">
-              <h2 class="head-title"></h2>
-              <a
-                href="images/work-1.jpg"
-                class="gallery image-popup-link text-center"
-                style="background-image: url(images/work-1.jpg)"
-              >
-                <span><i class="icon-search3"></i></span>
-              </a>
-              <a
-                href="images/work-2.jpg"
-                class="gallery image-popup-link text-center"
-                style="background-image: url(images/work-2.jpg)"
-              >
-                <span><i class="icon-search3"></i></span>
-              </a>
-              <a
-                href="images/work-3.jpg"
-                class="gallery image-popup-link text-center"
-                style="background-image: url(images/work-3.jpg)"
-              >
-                <span><i class="icon-search3"></i></span>
-              </a>
-              <a
-                href="images/work-4.jpg"
-                class="gallery image-popup-link text-center"
-                style="background-image: url(images/work-4.jpg)"
-              >
-                <span><i class="icon-search3"></i></span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
-
-    <div id="colorlib-page ">
+    <section id="colorlib-page ">
       <header id="header-top">
-        <div class="container">
+        <div class="container nav-align">
           <div class="row">
             <div class="col-md-12 main-nav-header">
               <div class="colorlib-navbar-brand" style="box-shadow:none;">
                 <a  href="index.html">
                   <!-- <img src="./images/dp.jpg"> -->
-                  <img class="web-logo" src="./assets/weblogo.png" style="height:50px; width:96px"/>
+                  <img class="web-logo" src="./assets/weblogo.png"/>
                   </a
                 >
-                
-                  
-                
-                
               </div>
               <!-- navigation main -->
               <nav class="nav-hero-main">
@@ -161,83 +92,48 @@
                   <li><a href="about.html">About</a></li>
                   <li><a href="services.html">Services</a></li>
                   <li><a href="work.html">Work</a></li>
-                  <li><a href="contact.html">Contact</a></li>
+                 
                 </ul>
    
               </nav>
               <!-- navigation main ends -->
-              <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"
-                ><i></i
-              ></a>
+             
             </div>
           </div>
         </div>
       </header>
       <div id="colorlib-about">
         <div class="container">
-          <div class="row text-center">
-            <h2 class="bold" id="bold-hello" bold-text >Hello!</h2>
-          </div>
-          <div class="row">
-            <div class="col-md-5 animate-box">
-              <div class="owl-carousel3">
-                <div class="item">
-                  <img
-                    class="img-responsive about-img"
-                    src="./images/3d5.png"
-                    alt="html5 bootstrap template by colorlib.com"
-                  />
-                </div>
-                <div class="item">
-                  <img
-                    class="img-responsive about-img"
-                    src="./images/3d1.png"
-                    alt="html5 bootstrap template by colorlib.com"
-                  />
-                </div>
-              </div>
-            </div>
             <div class="col-md-6 col-md-push-1 animate-box">
               <div class="about-desc">
-                <div class="owl-carousel3">
+                <div style="width:85vw">
                   <div class="item my-header">
-                    <h2><span>Hey</span><span>There !</span></h2>
+                    <h2 ><span class="font-xl">Welcome to my <div style="color:#fe5833ef">Portfolio</div></span></h2>
                   </div>
-                  <div class="item my-header">
-                    <h2 >
-                      <span>I am</span><span>Basit Mir</span>
-                    </h2>
-                  </div>
+                
                 </div>
                 <div class="desc">
                   <div class="rotate">
                     <h2 class="heading">About Me</h2>
                   </div>
-                  <p style="font-size:16px;">
+                  <p  class="main-intro">
+                    <span >
+                    Hello! Welcome to my personal website
+                    I am Basit Mir 🙂 </span>An innovative and a creative driven person with a passion for designing and development.</br>
                     
-                    Hello! Welcome to my personal portfolio
-                    <a href="#">I am Basit Mir</a>, A tech enthusiast and a creative driven person with a passion for designing and development. I live in Srinagar, kashmir,
-                    India. I graduated
-                    as a Computer Science Engineer and looking forward to
-                    work and enhance my skills.</br>
-                     <a href="./assets/Resume.pdf" download="Resume.pdf"><i class="fa fa-download"></i> Download CV</a>
                   </p>
-                  <p class="colorlib-social-icons">
-                    <a href="https://www.linkedin.com/in/basit-mehraj/"><i class="icon-linkedin" style="color: #0A66C2;"></i></a>
-                    <a href="www.basitmir0222@gmail.com"><i class="icon-google" style="color: #DB4437;"></i></a>
-                    <a href="https://github.com/basitmir7"><i class="icon-github" style="color: #333;"></i></a>
-                    <a href="https://www.youtube.com/@techbybasit"><i class="icon-youtube" style="color: #f92020;"></i></a>
-                  </p>
+                  
                   <!-- music button -->
-                  <div id="music-button"><i class="icon-music"></i></div>
+                 
                   <!-- music button ends -->
                   <p>
                   
                     <div class="scene">
                       <a href="#footer">
-                        <div class="cube ">
-                          <div class="cube-face front-face">scroll down</div>
-                          <div class="cube-face top-face">Contact</div>
+                        <div class="cube">
+                          <div class="cube-unit"><i class="las la-arrow-right" style="padding: 4px;
+                            font-size: 16px;"></i>contact &nbsp; &nbsp; &nbsp; &nbsp;scroll down</div>
+                          
                         </div>
                       </a>
                     </div>
@@ -247,218 +143,93 @@
             </div>
           </div>
         </div>
-      </div>
-      <!-- my aim -->
-      <div id="colorlib-services">
+        <!-- additional container -->
         <div class="container">
-          <div class="row text-center">
-            <h2 class="bold" bold-text >Objectives</h2>
+          <div class="col-md-5 col-md-push-1 animate-box info-section">
+            <div><span>Education</span><p>B.Tech - Computer Science and Engineering<br/>Islamic University of Science and technology</p></div>
+            <div><span>Location</span><p>Srinagar, Jammu and Kashmir,india</p></div>
+            <div><span>Socials</span><p class="colorlib-social-icons">
+              <a href="https://www.linkedin.com/in/basit-mehraj/"><i class="icon-linkedin" ></i></a>
+             
+              <a href="https://github.com/basitmir7"><i class="icon-github"></i></a>
+              <a href="https://www.youtube.com/@techbybasit"><i class="icon-youtube"></i></a>
+              <a href="https://dribbble.com/Ab_BasitMir"><i class="icon-dribbble"></i></a>
+            </p></div>
+            
           </div>
-          <div class="row">
-            <div class="col-md-12">
-              <div class="services-flex">
-                <div class="one-third">
-                  <div class="row">
-                    <div
-                      class="col-md-12 col-md-offset-0 animate-box intro-heading my-header"
-                    >
-                      <span>Target</span>
-                      <h2>Goals</h2>
-                      <p>
-                        A responsible, Innovative, passionate and committed individual with a get-it-done approach.
-                        
-                      </p>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-12">
-                      <div class="rotate">
-                        <h2 class="heading">Goals</h2>
-                      </div>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="services animate-box">
-                        <h3>1 - my aim</h3>
-                        <p>
-                          I am seeking opportunities to join an organisation that can
-                          help me in enhancing my skills, strengthening my knowledge
-                          and realising my potential. I am willing to explore a wide
-                          variety of opportunities that can help me gain perspective.
-                          where I can apply my knowledge and skills for continuous
-                          improvement.
-                        </p>
-                      </div>
-                      <div class="services animate-box">
-                        <h3>2 - High Quality </h3>
-                        <p>
-                         My goal is to provide high quality work. I seriously believe putting on more effort in a work to increase its value so that its not just a work but a piece of art. 
-                        </p>
-                      </div>
-                      
-                      <div class="services animate-box">
-                        <h3>3 - Being helpful</h3>
-                        <p>
-                         I look forward to help in any way possible. I want my work to be beneficial, not just for me but also for others. I would be glad if somehow my work helps the society in one way or another.
-                        </p>
-                      </div>
-                      
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="one-forth services-img animate-box"
-                  style="background-image: url(./images/goals11.gif);
-                  background-size: contain;"
-                ></div>
-              </div>
-            </div>
+          <div class="col-md-5 col-md-push-1 animate-box info-section2">
+            <span>A responsible, Innovative, passionate and committed individual with a get-it-done approach.</span><br/><br/><p>I am seeking opportunities to join an organisation that can help me in enhancing my skills, strengthening my knowledge and realising my potential. I am willing to explore a wide variety of opportunities that can help me gain perspective. where I can apply my knowledge and skills for continuous improvement.</p>
           </div>
         </div>
-      </div>
+<!-- additional container ends  -->
+    </section>
+     
+      
 
-<!-- my aim ends -->
-      <div id="colorlib-services" style="padding-bottom:35px;padding-top:7em;" >
-        <div class="container">
-          <div class="row text-center">
-            <h2 class="bold" bold-text>Services</h2>
-          </div>
+<!-- services start -->
+      <section id="colorlib-services" style="padding-bottom:35px;padding-top:9em;" >
+        <div class="container services-container">
+          
           <div class="row">
-            <div class="col-md-12 col-md-offset-0 text-center animate-box intro-heading my-header" style="margin-bottom:-3%;">
-              <h2> My services</h2>
+            <div style="margin: 0;" class="col-md-12 col-md-offset-0 animate-box intro-heading " >
+              <h2 class="services-margin">Services I can  help <br/>you with <i class="las la-arrow-right" style="font-size: 57px;
+                transform: rotate(46deg); color:rgb(41, 41, 41)"></i></h2>
             </div>
-            
+            <div class="col-md-12">
+              <div class="rotate">
+                <h2 class="heading">services</h2>
+              </div>
+            </div>
             <div class="col-md-12 animate-box">
               
               <!-- card bodu starts -->
 
-              <div class="container h-100">
-                <div class="row align-middle">
-                  <div class="col-md-6 col-lg-4 column">
-                    <div class="card gr-1">
-                      <div class="txt">
-                        <h1>BRANDING AND </br>
-              CORPORATE DESIGN</h1>
-                        <p>Visual communication and problem-solving</p>
-                      </div>
-                      <a href="./services.html">more</a>
-                      <div class="ico-card">
-                      <i class="fa fa-rebel"></i>
-                    </div>
-                    </div>
+              <div class="container service-container">
+                  <div class="frontend-service sr">
+                    
+                      <img src="./images/set 1/mohammad-rahmani-N5bT5RctFZ8-unsplash.jpg" alt="service-1"/>
+                   
+                    <div class="service-name">Front-End development</br>
+                      Solutions</div>
+                      <div class="overlay-block"></div>
+                      <div class="overlay-text">view work</div>
+                    
                   </div>
-                  <div class="col-md-6 col-lg-4 column">
-                    <div class="card gr-2">
-                      <div class="txt">
-                        <h1>Web Front-End </br>
-              SOLUTIONS</h1>
-                        <p>How design is implemented on the web.</p>
-                      </div>
-                      <a href="./services.html">more</a>
-                    <div class="ico-card">
-                      <i class="fa fa-codepen"></i>
-                    </div>
-                    </div>
+                  <div class="uiux-service sr">
+                
+                      <img src="./images/set 1/nikita-kachanovsky-g-YiX8ynmnY-unsplash.jpg" alt="service-2"/>
+                    
+                    <div class="service-name">UI & UX <br/> Design</div>
+                    <div class="overlay-block"></div>
+                    <div class="overlay-text">view work</div>
                   </div>
-                  <div class="col-md-6 col-lg-4 column">
-                    <div class="card gr-3">
-                      <div class="txt">
-                        <h1>UX/UI WEBsite </br>AND MOBILE app</h1>
-                        <p>User Interface and User Experience Design.</p>
-                      </div>
-                      <a href="./services.html">more</a>
-                    <div class="ico-card">
-                      <i class="fa fa-empire"></i>
-                    </div>
-                    </div>
+                  <div class="logo-service sr">
+                    
+                      <img src="./images/set 1/krisztian-tabori-IyaNci0CyRk-unsplash.jpg" alt="service-3"/>
+                    
+                    <div class="service-name">branding and </br>
+                      corporate design</div>
+                      <div class="overlay-block"></div>
+                      <div class="overlay-text">view work</div>
                   </div>
-                  
-                </div>
+              </div>
+                
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
       <!-- work starts here -->
-      <div id="colorlib-progress">
-        <div class="container">
-          <div class="row text-center">
-            <h2 class="bold" bold-text >Skills</h2>
-          </div>
-          <div class="row">
-            <div
-              class="col-md-12 col-md-offset-0 text-center animate-box intro-heading my-header"
-            >
-              <h2>My Skills</h2>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-3 col-sm-6 text-center">
-              <h2 class="progress-head">UI Design</h2>
-              <div class="progress blue">
-                <span class="progress-left">
-                  <span class="progress-bar"></span>
-                </span>
-                <span class="progress-right">
-                  <span class="progress-bar"></span>
-                </span>
-                <div class="progress-value">100%</div>
-              </div>
-            </div>
-
-            <div class="col-md-3 col-sm-6 text-center">
-              <h2 class="progress-head">Front-End development</h2>
-              <div class="progress yellow">
-                <span class="progress-left">
-                  <span class="progress-bar"></span>
-                </span>
-                <span class="progress-right">
-                  <span class="progress-bar"></span>
-                </span>
-                <div class="progress-value">85%</div>
-              </div>
-            </div>
-
-            <div class="col-md-3 col-sm-6 text-center">
-              <h2 class="progress-head">React Js</h2>
-              <div class="progress pink">
-                <span class="progress-left">
-                  <span class="progress-bar"></span>
-                </span>
-                <span class="progress-right">
-                  <span class="progress-bar"></span>
-                </span>
-                <div class="progress-value">70%</div>
-              </div>
-            </div>
-
-            <div class="col-md-3 col-sm-6 text-center">
-              <h2 class="progress-head">Data analytics</h2>
-              <div class="progress green">
-                <span class="progress-left">
-                  <span class="progress-bar"></span>
-                </span>
-                <span class="progress-right">
-                  <span class="progress-bar"></span>
-                </span>
-                <div class="progress-value">80%</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    
+     
       <!-- experience div stasrts here -->
-      <div id="colorlib-testimony">
+      <section id="colorlib-testimony">
         <div class="container">
-          <div class="row text-center">
-            <h2 class="bold" bold-text>Certifications</h2>
-          </div>
+       
           <div class="row">
             <div
-              class="col-md-12 col-md-offset-0 text-center animate-box intro-heading my-header"
+              class="col-md-12 col-md-offset-0 text-center animate-box intro-heading"
             >
-              <span>details</span>
-              <h2>My certifications</h2>
+              <h2 class="services-margin"><strong style="color: #fe5833ef;">Honors </strong>and Certifications</h2>
             </div>
           </div>
           <div class="row">
@@ -467,243 +238,105 @@
                 <h2 class="heading"> certifications</h2>
               </div>
                 <!-- test div  -->
-                <div class="course-container c-1">
-                  <div class="course">
-                    <div class="course-preview cp1">
-                      <h6>Udemy</h6>
-                      <h2>Web development</h2>
-                    
-                    </div>
-                    <div class="course-info">
-                   
-                      <h6>NOV 2019- JAN 2020</h6>
-                      <h2>Learned to create websites</h2>
-                    
-                    </div>
-
+                <div class="course-container">
+                  <div class="course">    
+                      <h2>Web development |<b>udemy</b></h2>
+                      <h6>NOV 2019- JAN 2020</h6>                    
+                    </div>               
                 </div>
-              </div>
-             <div class="course-container c-2">
-              <div class="course">
-                <div class="course-preview cp2">
-                  <h6>EduCBA</h6>
-                  <h2>Responsive Design</h2>
-                
+                <div class="course-container">
+                  <div class="course">    
+                      <h2>Responsive Web Design | <b>EduCBA</b></h2>
+                      <h6>MAR 2022</h6>                    
+                    </div>               
                 </div>
-                <div class="course-info">
-                 
-                  <h6>MAR 2022</h6>
-                  <h2>Responsive design created using HTMl,CSS Javascript and Bootstrap</h2>
-                
+                <div class="course-container">
+                  <div class="course">    
+                      <h2>Foundations of UX design | <b>GOOGLE</b></h2>
+                      <h6>MAY 2022</h6>                    
+                    </div>               
                 </div>
-              </div>
-             </div>
-              <div class="course-container c-3">
-                <div class="course">
-                  <div class="course-preview cp3">
-                    <h6>Coursera</h6>
-                    <h2>Front-end development in React Js</h2>
-                  
-                  </div>
-                  <div class="course-info">
-                   
-                    <h6>FEB 2022- APR 2022</h6>
-                    <h2>Using React Js to build frontend of Application</h2>
-                  
-                  </div>
+                <div class="course-container">
+                  <div class="course">    
+                      <h2>Front-end development in React Js | <b>Honk kong University</b></h2>
+                      <h6>FEB 2022- APR 2022</h6>                    
+                    </div>               
                 </div>
-              </div>
-              <div class="course-container c-4">
-                <div class="course">
-                  <div class="course-preview cp4">
-                    <h6>TestDome</h6>
-                    <h2>HTML,CSS and Javascript test</h2>
-                  
-                  </div>
-                  <div class="course-info">
-                 
-                    <h6>MAR 2022</h6>
-                    <h2>Ranked top 25% in test conducted by testdome</h2>
-                  
-                  </div>
+                <div class="course-container">
+                  <div class="course">    
+                      <h2>Ranked top 25% in website development test | <b>testDome</b></h2>
+                      <h6>MAR 2022</h6>                    
+                    </div>               
                 </div>
-              </div>
-              <div class="course-container c-5">
-                <div class="course">
-                  <div class="course-preview cp5">
-                    <h6>GOOGLE</h6>
-                    <h2>Foundations Of User Experience(UX) Design</h2>
-                  
-                  </div>
-                  <div class="course-info">
-                 
-                    <h6>MAy 2022</h6>
-                    <h2>Reseash design fundamentals for user experience  </h2>
-                  
-                  </div>
+               
+                <div class="course-container">
+                  <div class="course">    
+                      <h2>visual elements of UI design | <b>CAL ARTS</b></h2>
+                      <h6>AUG 2022</h6>                    
+                    </div>               
                 </div>
-              </div>
-              </div>
-              <div class="course-container c-6">
-                <div class="course">
-                  <div class="course-preview cp6">
-                    <h6>CAL ARTS</h6>
-                    <h2>Visual Elements of user Interface Design</h2>
-                  
-                  </div>
-                  <div class="course-info">
-                 
-                    <h6>Aug 2022</h6>
-                    <h2>Creating UI of the website with mod board and color palletes with wireframing </h2>
-                  
-                  </div>
+                <div class="course-container">
+                  <div class="course">    
+                      <h2>Databases and SQL | <b>IBM</b></h2>
+                      <h6>NOV 2022</h6>                    
+                    </div>               
                 </div>
-              </div>
-              <div class="course-container c-7">
-                <div class="course">
-                  <div class="course-preview cp7">
-                    <h6>IBM</h6>
-                    <h2>Databases and SQL for Data Science</h2>
-                  
-                  </div>
-                  <div class="course-info">
-                 
-                    <h6>Nov 2022</h6>
-                    <h2>creating and modifying databases with MySQL on IMDB cloud </h2>
-                  
-                  </div>
+                <div class="course-container">
+                  <div class="course">    
+                      <h2>Deep learning and neural network | <b>IBM</b></h2>
+                      <h6>AUG 2022</h6>                    
+                    </div>               
                 </div>
-              </div>
-              <div class="course-container c-6">
-                <div class="course">
-                  <div class="course-preview cp8">
-                    <h6>IBM</h6>
-                    <h2>Deep Learning and Neural Networks</h2>
-                  
-                  </div>
-                  <div class="course-info">
-                 
-                    <h6>Aug 2022</h6>
-                    <h2>Introduction to deep learning modela and neural networks using keras</h2>
-                  
-                  </div>
-                </div>
-              </div>
-              </div>
               <!-- ens exp gere -->
             </div>
            
           </div>
-          <!-- <div class="row animate-box">
-            <div class="owl-carousel">
-              <div class="item">
-                <div class="col-md-12 text-center">
-                  <div class="testimony">
-                    <blockquote>
-                      <p>
-                        I have worked as a C++ programming intern at Infotech,
-                        Srinagar.
-                      </p>
-                      <span> Dec 2020 - Jan 2021</span>
-                    </blockquote>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="col-md-12 text-center">
-                  <div class="testimony">
-                    <blockquote>
-                      <p>
-                        I had applied for web development course at Udemy and
-                        learnt many technologies such as Html, css, javascript
-                        ,node.js.
-                      </p>
-                      <span> Nov 2019 - Jan 2020</span>
-                    </blockquote>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> -->
-          <!-- certification card starts here -->
+          
          
         </div>
-      </div>
+      </section>
       <!-- experience div ends here -->
-	  
-      <footer>
-        <div id="footer">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-4 col-pb-sm">
-                <div class="row">
-                  <div class="col-md-10">
-                    <h2>Let's Talk</h2>
-                    <p>
-                      A real conversation always contains an invitation. You are
-                      inviting another person to reveal herself or himself to
-                      you, to tell you who they are or what they want.
-                    </p>
-                    <p>
-                      <a href="https://gmail.com">basitmir0222@gmail.com</a>
-                    </p>
-                    <p class="colorlib-social-icons">
-                      <a href="https://www.twitter.com/_basitmir_"><i class="icon-twitter" style="color: #1DA1F2;"></i></a>
-                      <a href="https://www.linkedin.com/in/basit-mehraj/"><i class="icon-linkedin" style="color: #0A66C2;"></i></a>
-                      <a href="www.basitmir0222@gmail.com"><i class="icon-google" style="color: #DB4437;"></i></a>
-                      <a href="https://github.com/basitmir7"><i class="icon-github" style="color: #333;"></i></a>
-                    </p>
-                  </div>
-                </div>
-              </div>
 
-              <div class="col-md-4 col-pb-sm">
-               
-                
-                
-                <div class="f-entry" style="margin-top: 94px;">
-                  <a
-                    href="#"
-                    class="featured-img"
-                   
-                  ></a>
-                  <div class="desc">
-                   
-                    <p>Want to learn More about me ? <br>Check out on :</p>
-                    <a href="https://www.linkedin.com/in/basit-mehraj/"><p class="linkedin-footer" style="font-size: 28px;font-weight:bold; color: #35628e; transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);">Linked In</p></a>
-                    
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4 col-pb-sm" style="margin-top: 94px;">
-                
-                <p>Reach out.</p>
-                <div class="subscribe text-center">
-                  
-                    <input
-                      type="text"
-                      class="form-control text-center"
-                      placeholder="Enter Email address"
-                    />
-                    
-                    <div class="cube" >
-                      <div class="footer-cube-face front-face">Subscrible</div>
-                      <div class="footer-cube-face top-face">Contact</div>
-                    </div>
-                 
-                </div>
-              </div>
+      <!-- youtube section  -->
+      <section id="colorlib-testimony">
+        <div class="container">
+       
+          <div class="row">
+            <div
+              class="col-md-12 col-md-offset-0 text-center animate-box intro-heading"
+            >
+            <span style="text-align: start; color: rgb(150, 150, 150);">whats new ?</span>
+              <h2 class="services-margin">Latest on my YouTube</h2>
             </div>
-           
+          </div>
+          <div class="row y-videos animate">
+
+                <div class="youtube-video"> <iframe  src="https://www.youtube.com/embed/DvFcTq0s_8o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                <div class="youtube-video"><iframe  src="https://www.youtube.com/embed/8c0asDEke9Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                
+             
+          </div>
+          <div class="y-text"><p><a href="https://www.youtube.com/@techbybasit">view more</a></p></div>
+          
+         
+        </div>
+      </section>
+      <!-- youutbe swcton ends	   -->
+      <footer>
+        <div id="footer" >
+          <div class="container footer-main" >
+            <div class="lets-talk"><span  style="color:rgb(219, 219, 219)">Let's Talk</span><p style="color:rgb(219, 219, 219);">Reach out: <a href="www.basitmir0222@gmail.com">basitmir0222@gmail.com</a></p></div>
+            <div class="style-social">
+              <a href=""><div class="social-data"><b>Linkedin</b><div><i class="icon-linkedin" ></i></div></div></a>
+              <a href=""><div class="social-data"><b>Github</b><div><i class="icon-github"></i></div></div></a>
+              <a href=""><div class="social-data"><b>youtube</b><div><i class="icon-youtube"></i></div></div></a>
+              <a href=""><div class="social-data"><b>dribbble</b><div><i class="icon-dribbble"></i></div></div></a>
+            </div>
+            <div class="credit"><p >Made with ❤️ by Basit </p><p>All rights reserved &copy;<script>document.write(new Date().getFullYear())</script></p></div>
           </div>
         </div>
       </footer>
       
-        <a href="#header-top" class="back-to-top">
-          
-            <i class="icon-up"></i>
-          
-        </a>
       
     </div>
 
