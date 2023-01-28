@@ -34,7 +34,6 @@
   #colorlib-services,
   #colorlib-work,
   #colorlib-testimony,
-  #colorlib-progress,
   #colorlib-about {
     padding: 5em 0;
   }
@@ -119,7 +118,23 @@
     flex-direction: column;
     align-items: center;
   }
-  .hobbies-div {
+  .hobbies-div,
+  .services-quick {
     font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .technologies-container,
+  .tools-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+  .technologies-container img,
+  .tools-container img {
+    margin: auto;
+    height: 80px;
+    width: 80px;
   }
 }
