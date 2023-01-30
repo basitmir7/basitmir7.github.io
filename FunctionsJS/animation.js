@@ -38,3 +38,9 @@
 // audio.onpause = function () {
 //   isPlaying = false;
 // };
+
+var onload_overlay = document.getElementById("onload-function");
+
+window.onload(() => {
+  onload_overlay.style.width = "0";
+});

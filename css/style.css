@@ -951,6 +951,7 @@ input[type="text"] {
   padding-right: 20px;
   float: right;
 }
+
 .nav-hero-main ul {
   list-style-type: none;
   color: var(--black-font);
@@ -1305,4 +1306,62 @@ input[type="text"] {
   height: 100px;
   width: 100px;
   margin: 15px;
+}
+
+/* CSS for functions on load animations */
+.on-func {
+  display: block;
+  position: absolute;
+  height: 100vh;
+  /* width: 100vw; */
+  animation: overlay ease-in-out 1.67s;
+  animation-delay: 100ms;
+  background: #fe5833;
+}
+
+/* anmation class for navbaf */
+.NavAnimation {
+  -webkit-animation: movenav 1s ease-in-out;
+  animation: movenav 1s ease-in-out;
+}
+.LogoAnimation {
+  -webkit-animation: movelogo 1s ease-in-out;
+  animation: movelogo 1s ease-in-out;
+}
+/* animations */
+@keyframes overlay {
+  0% {
+    width: 100vw;
+  }
+  60% {
+    width: 100vw;
+  }
+  100% {
+    width: 0;
+  }
+}
+@-webkit-keyframes movenav {
+  from {
+    transform: translateX(150%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes movenav {
+  from {
+    transform: translateX(150%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes movelogo {
+  from {
+    transform: translateX(-150%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
