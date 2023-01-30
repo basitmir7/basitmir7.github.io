@@ -45,28 +45,44 @@
 //   }
 // });
 
-var COLOR_one = document.getElementById("first-bg");
-var COLOR_two = document.getElementById("second-bg");
-var COLOR_three = document.getElementById("third-bg");
+// var COLOR_one = document.getElementById("first-bg");
+// var COLOR_two = document.getElementById("second-bg");
+// var COLOR_three = document.getElementById("third-bg");
 var Body = document.getElementById("body");
 
-COLOR_one.addEventListener("mouseover", () => {
-  Body.style.background = "rgb(189,190,238)";
-});
-COLOR_one.addEventListener("mouseout", () => {
-  Body.style.background = "#e8e5e2";
-});
+// COLOR_one.addEventListener("mouseover", () => {
+//   Body.style.background = "rgb(189,190,238)";
+// });
+// COLOR_one.addEventListener("mouseout", () => {
+//   Body.style.background = "#e8e5e2";
+// });
 
-COLOR_two.addEventListener("mouseover", () => {
-  Body.style.background = "rgb(245,151,148)";
-});
-COLOR_two.addEventListener("mouseout", () => {
-  Body.style.background = "#e8e5e2";
-});
+// COLOR_two.addEventListener("mouseover", () => {
+//   Body.style.background = "rgb(245,151,148)";
+// });
+// COLOR_two.addEventListener("mouseout", () => {
+//   Body.style.background = "#e8e5e2";
+// });
 
-COLOR_three.addEventListener("mouseover", () => {
-  Body.style.background = "rgb(208,148,234)";
-});
-COLOR_three.addEventListener("mouseout", () => {
-  Body.style.background = "#e8e5e2";
+// COLOR_three.addEventListener("mouseover", () => {
+//   Body.style.background = "rgb(208,148,234)";
+// });
+// COLOR_three.addEventListener("mouseout", () => {
+//   Body.style.background = "#e8e5e2";
+// });
+
+// var scrollY = window.scrollY();
+// function printMe() {
+//   console.log(scrollY);
+// }
+// printMe();
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 1350 && window.scrollY < 2550) {
+    Body.style.background = "#ffbbacef";
+  } else {
+    Body.style.background = "#e8e5e2";
+  }
+
+  console.log(window.scrollY);
 });

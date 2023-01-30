@@ -1365,3 +1365,11 @@ input[type="text"] {
     transform: translateX(0);
   }
 }
+@-webkit-keyframes movelogo {
+  from {
+    transform: translateX(-150%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
