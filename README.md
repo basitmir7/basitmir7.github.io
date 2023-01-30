@@ -1,3 +1,3 @@
 # basitmir7.github.io
-My portfolio
+My portfolio 🌐
 https://basitmir7.github.io
