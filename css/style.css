@@ -1014,6 +1014,17 @@ input[type="text"] {
 .info-section2 > span {
   line-height: 19px;
 }
+/* //experience container css */
+
+.exp-wrapper {
+  margin-bottom: 15rem;
+}
+.exp-wrapper .single-exp {
+  margin-bottom: 10rem;
+}
+.single-exp h3 {
+  margin: 0 !important;
+}
 
 .fontxl > div {
   color: var(--orangle-color) !important;
