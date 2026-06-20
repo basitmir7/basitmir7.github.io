@@ -1,70 +1,128 @@
-# Getting Started with Create React App
+# Portfolio — Alex Rivera
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A breathtaking personal portfolio built with React + Vite + CSS Modules.
 
-## Available Scripts
+## 🚀 Quick Start
 
-In the project directory, you can run:
+```bash
+# 1. Install dependencies
+npm install
 
-### `npm start`
+# 2. Start dev server (opens at http://localhost:3000)
+npm run dev
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# 3. Build for production
+npm run build
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# 4. Preview production build
+npm run preview
+```
 
-### `npm test`
+## ✏️ Customising Your Info
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Everything about you lives in one file:**
 
-### `npm run build`
+```
+src/data/portfolio.js
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Open it and update:
+- `PERSON` — your name, role, location, email, bio
+- `STATS` — your headline numbers
+- `TIMELINE` — your career milestones
+- `PROJECTS` — your work (title, desc, tech stack, impact)
+- `SKILLS` — your skill categories
+- `SOCIALS` — your social links
+- `TICKER_ITEMS` — the scrolling marquee text
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Adding a real photo
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Replace the initials placeholder in `src/sections/About.jsx`:
 
-### `npm run eject`
+```jsx
+// Change this block inside .portraitInner:
+<img
+  src="/your-photo.jpg"
+  alt="Your Name"
+  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+/>
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Put your photo in the `public/` folder.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📁 Project Structure
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+portfolio/
+├── public/
+│   └── favicon.svg          # Edit with your initials
+├── src/
+│   ├── components/
+│   │   ├── Cursor.jsx        # Custom cursor
+│   │   ├── Nav.jsx           # Sticky navigation
+│   │   ├── Nav.module.css
+│   │   ├── Ticker.jsx        # Scrolling marquee
+│   │   └── Ticker.module.css
+│   ├── sections/
+│   │   ├── Hero.jsx          # Landing section with ASCII bg
+│   │   ├── Hero.module.css
+│   │   ├── About.jsx         # About + timeline
+│   │   ├── About.module.css
+│   │   ├── Work.jsx          # Project cards
+│   │   ├── Work.module.css
+│   │   ├── Skills.jsx        # Skill grid
+│   │   ├── Skills.module.css
+│   │   ├── Contact.jsx       # Contact + footer
+│   │   └── Contact.module.css
+│   ├── hooks/
+│   │   └── useReveal.js      # Scroll reveal hook
+│   ├── data/
+│   │   └── portfolio.js      # ← ALL YOUR CONTENT HERE
+│   ├── styles/
+│   │   └── global.css        # Design tokens + base styles
+│   ├── App.jsx
+│   └── main.jsx
+├── index.html
+├── vite.config.js
+└── package.json
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🎨 Changing Colors
 
-## Learn More
+Open `src/styles/global.css` and edit the `:root` variables:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```css
+:root {
+  --ink:    #0D0D0F;   /* Main dark color */
+  --paper:  #F2EDE4;   /* Background warm white */
+  --orange: #FF3D00;   /* Accent color — change this! */
+}
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🌐 Deploying
 
-### Code Splitting
+**Netlify (drag & drop):**
+1. Run `npm run build`
+2. Drag the `dist/` folder to [netlify.com/drop](https://netlify.com/drop)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+**Vercel:**
+```bash
+npx vercel
+```
 
-### Analyzing the Bundle Size
+**GitHub Pages:**
+```bash
+npm install --save-dev gh-pages
+# Add to package.json scripts: "deploy": "gh-pages -d dist"
+npm run build && npm run deploy
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Tech Stack
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **React 18** — UI
+- **Vite 5** — Build tool
+- **CSS Modules** — Scoped styles
+- **Google Fonts** — Playfair Display + Space Grotesk + JetBrains Mono
+- **Canvas API** — ASCII background animation
+- **IntersectionObserver** — Scroll reveal
+- Zero external animation libraries — pure CSS + JS
