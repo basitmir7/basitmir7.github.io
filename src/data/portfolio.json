@@ -19,11 +19,13 @@
     { "label": "Mail", "url": "mailto:basitmir0222@gmail.com" }
   ],
   "ticker": [
-    { "label": "Node.js", "value": "v22 LTS" },
-    { "label": "React", "value": "19.0" },
-    { "label": "uptime", "value": "99.99%" },
-    { "label": "commits", "value": "4,200+" },
-    { "label": "open source", "value": "12 repos" }
+    { "label": "Certifications and Honors", "value": "13" },
+    { "label": "Merit", "value": "90%" },
+    { "label": "Clients", "value": "30+" },
+    { "label": "Uptime", "value": "99.99%" },
+    { "label": "Commits", "value": "5,000+" },
+    { "label": "Open source", "value": "10 repos" },
+    { "label": "Testimonies", "value": "10+" }
   ],
   "specializations": [
     "FULL-STACK",
@@ -36,8 +38,8 @@
     "OPEN SOURCE"
   ],
   "about": {
-    "heading": "I specialize in backend architecture, API design, and high-performance web applications",
-    "body": "I'm currently open to full-time Senior / Staff Engineer roles at product-driven companies. I care deeply about developer experience, system reliability, and shipping things that actually work.",
+    "heading": "Software Engineer with 4+ years of experience building scalable applications, robust systems, and cloud-native solutions.",
+    "body": "I've delivered solutions to over 30+ top clients of big industries, leading technical initiatives and delivering reliable software that scales with business growth. Passionate about clean architecture, performance optimization, and turning ambitious ideas into production-ready products.",
     "cta": [
       { "label": "EMAIL ME", "url": "mailto:basitmir0222@gmail.com" },
       { "label": "GITHUB", "url": "https://github.com/basitmir7" }
@@ -46,51 +48,67 @@
   "projects": [
     {
       "id": 1,
-      "tags": ["TypeScript", "Node.js", "PostgreSQL"],
-      "category": "Backend",
-      "title": "Distributed Task Queue",
-      "description": "A fault-tolerant, horizontally scalable task queue built on Redis and PostgreSQL. Supports retries, dead-letter queues, priorities, and real-time dashboard monitoring.",
-      "url": "#"
+      "tags": ["React Native", "Redux", "JavaScript", "CSS", "Android", "iOS", "Jest","Git","Firebase","Figma","Docker","postman"],
+      "category": "Mobile Application",
+      "title": "Wasalt - Real Estate (Associated with Quara Holding)",
+      "description": "An AI powered real estate b2b system based in Saudi Arabia.",
+      "url": "https://play.google.com/store/apps/details?id=com.wasalt.app&hl=en_IN"
     },
     {
       "id": 2,
-      "tags": ["React", "GraphQL"],
+      "tags": ["React","Redux","typeScript","Yaml","Jest", "postman", "Google Cloud Platform", "SQL","Python"],
       "category": "Full-Stack",
-      "title": "Dev Analytics Platform",
-      "description": "An internal platform for engineering teams to track deploy frequency, MTTR, lead time, and change failure rate — the four DORA metrics in one clean UI.",
+      "title": "SkuPe (Associated with Bluecore)",
+      "description": "An internal platform for engineering teams to handle the product SKU's SKN data for multiple clients.",
       "url": "#"
     },
     {
       "id": 3,
-      "tags": ["Go", "gRPC"],
-      "category": "Infrastructure",
-      "title": "API Gateway",
-      "description": "A lightweight, pluggable API gateway in Go with rate limiting, JWT auth, circuit breaking, and per-route observability built in.",
-      "url": "#"
+      "tags": ["AI","JavaScript", "API", "chrome","Dev Tools", "Grok AI"],
+      "category": "AI",
+      "title":"Smart Summary AI - chrome extension",
+      "description": "An AI-powered web extension that summarizes articles, research papers, and blog posts using the Gemini API, helping users quickly extract key insights and save time when consuming online content.",
+      "url": "https://github.com/basitmir7/AI-Smart-Summary---chrome-Extension"
     },
     {
       "id": 4,
-      "tags": ["Rust", "CLI"],
-      "category": "Tooling",
-      "title": "Schema Diff CLI",
-      "description": "A fast Rust CLI that diffs SQL schemas across environments, generates migration scripts, and validates against a set of codified conventions.",
-      "url": "#"
-    },
+      "tags": ["ReactJS", "Context API","tailwind CSS", "leaflet maps"],
+      "category": "ProtoType",
+      "title": "Visual Profile Pro",
+      "description": "Visual Profile Pro is a profile management and analytics platform that enables users to create, manage, and explore detailed user profiles through an intuitive dashboard. The application features embedded geolocation services and interactive maps, providing location-based insights and enhanced user discovery capabilities.",
+      "url": "https://wondrous-horse-148ec2.netlify.app/"
+    },   
     {
       "id": 5,
-      "tags": ["Next.js", "Stripe", "Prisma"],
-      "category": "Full-Stack",
-      "title": "SaaS Billing Engine",
-      "description": "A production billing engine integrating Stripe subscriptions, usage-based pricing, invoice generation, and a self-serve customer portal.",
-      "url": "#"
+      "tags": ["JavaScript", "Claude", "Fable 5","Mythos 5.0" ,"AI Agent"],
+      "category": "AI",
+      "title": "Claude Fable 5 - Prompt Generation 3D Game",
+      "description": "Evaluated Claude's Fable 5 AI model by generating Abyss Drift, A fully playable 3D browser game from a single prompt, showcasing AI-driven game development and code generation capabilities.",
+      "url": "https://github.com/basitmir7/claude-fable5-prompt-to-game"
     },
     {
       "id": 6,
-      "tags": ["Python", "ML", "FastAPI"],
-      "category": "AI / ML",
-      "title": "Semantic Code Search",
-      "description": "A semantic search engine for internal codebases using code embeddings, vector search, and a FastAPI backend — indexed 200k+ files in under 2 minutes.",
-      "url": "#"
+      "tags": ["HTML", "CSS", "ReactJS","typeScript","Routers"],
+      "category": "Frontend",
+      "title": "Impact Website",
+      "description": "A modern, responsive website designed to maximize user engagement through intuitive navigation, polished UI design",
+      "url": "https://incandescent-brigadeiros-9ac5d9.netlify.app/"
+    },
+    {
+      "id": 7,
+      "tags": ["EJS", "Node.js", "Express","MongoDB","Bootstrap"],
+      "category": "Backend",
+      "title": "Ecommerce Horticulture Store",
+      "description": "B2C horticulture eCommerce platform featuring Horticulture Products and seamless shopping experience for gardening enthusiasts and consumers",
+      "url": "https://github.com/basitmir7/store"
+    },
+    {
+      "id": 8,
+      "tags": ["Chart.js", "Material UI","ReactJS","Axios"],
+      "category": "Full_Stack",
+      "title": "COVID Tracker",
+      "description": "Covid-19 reports and tracking application which provides global data and data for each country",
+      "url": "https://github.com/basitmir7/covid-tracking-app"
     }
   ],
   "experience": [

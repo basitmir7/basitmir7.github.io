@@ -32,10 +32,10 @@
 }
 
 .about__body {
-  font-size: 14px;
+  font-size: 15px;
   color: var(--text-muted);
   margin-bottom: 36px;
-  max-width: 520px;
+  max-width: 570px;
   line-height: 1.7;
 }
 
