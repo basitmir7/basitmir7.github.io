@@ -1,6 +1,4 @@
-# Portfolio — Alex Chen
-
-A minimal, dark software engineer portfolio built with React + Vite. Inspired by [matveyan.com](https://matveyan.com/).
+# Portfolio 
 
 ## Getting Started
 
