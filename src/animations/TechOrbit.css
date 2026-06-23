@@ -1,0 +1,77 @@
+.tech-orbit {
+    position: fixed;
+    inset: 0;
+  
+    pointer-events: none;
+  
+    z-index: 0;
+  
+    opacity: 0.25;
+    mix-blend-mode: screen;
+  }
+  
+
+  
+  .orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  
+    transform-origin: center;
+  }
+  
+  .orbit-1 {
+    width: 600px;
+    height: 600px;
+  
+    margin-left: -300px;
+    margin-top: -300px;
+  
+    border-radius: 50%;
+  }
+  
+  .orbit-2 {
+    width: 900px;
+    height: 900px;
+  
+    margin-left: -450px;
+    margin-top: -450px;
+  
+    border-radius: 50%;
+  }
+  
+  .icon {
+    position: absolute;
+  
+    font-size: 3rem;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    width: 92px;
+    height: 92px;
+    top: 50%;
+    left: 50%;
+  
+    margin-left: -35px;
+    margin-top: -35px;
+  
+    border-radius: 50%;
+  
+  
+    background: rgba(255,255,255,0.05);
+  
+    transition: all 0.4s ease;
+  
+    pointer-events: auto;
+    opacity: 0.5;
+    filter: blur(0.5px);
+  
+    transition: all 0.5s ease;
+  }
+
+.orbit-1,
+.orbit-2 {
+  border: 1px solid rgba(255,255,255,0.04);
+}

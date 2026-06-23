@@ -1,0 +1,49 @@
+.loader {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: var(--bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    transition: opacity .6s var(--ease), transform .6s var(--ease);
+  }
+  .loader.out {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-8px);
+  }
+  
+  .pct {
+    font-family: var(--f-display);
+    font-size: clamp(5rem, 18vw, 14rem);
+    line-height: 1;
+    color: var(--text);
+    letter-spacing: -0.02em;
+    font-variant-numeric: tabular-nums;
+  }
+  
+  .bar {
+    width: 200px;
+    height: 1px;
+    background: var(--border-2);
+    position: relative;
+    overflow: hidden;
+  }
+  .fill {
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    background: var(--text);
+    transition: width .08s linear;
+  }
+  
+  .label {
+    font-family: var(--f-mono) ;
+    font-size: 0.85rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-3);
+  }
+  

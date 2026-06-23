@@ -1,0 +1,137 @@
+/* ── Reset & Base ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #0d0d0d;
+  --bg-2: #111111;
+  --border: rgba(255,255,255,0.08);
+  --text: #e8e8e8;
+  --text-muted: rgba(232,232,232,0.4);
+  --text-dim: rgba(232,232,232,0.2);
+  --accent: #e8e8e8;
+  --mono: 'JetBrains Mono', monospace;
+  --sans: 'Inter', -apple-system, sans-serif;
+  --max-w: 1100px;
+  --pad: clamp(24px, 5vw, 80px);
+  --f-sans:  'Inter', system-ui, sans-serif;
+  --f-display: 'Bebas Neue', 'Impact', sans-serif;
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --border-2:  rgba(255,255,255,0.1);
+  --text:      #e8e8e8;
+  --text-2:    #888888;
+  --text-3:    #444444;
+  --f-mono:  'JetBrains Mono', 'Fira Code', monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--f-sans);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 2px; }
+
+/* ── Utility ── */
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--pad);
+}
+
+.mono {
+  font-family: var(--mono);
+}
+.app,body {
+  cursor: none;
+}
+
+/* ── Cursor tracker (debug bar) ── */
+.status-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  border-top: 1px solid var(--border);
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  padding: 0 var(--pad);
+  gap: 32px;
+  z-index: 100;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--text-muted);
+}
+.c-dot {
+  position: fixed;
+  width: 6px; height: 6px;
+  background: #fff;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: width .15s var(--ease), height .15s var(--ease), background .15s;
+  mix-blend-mode: difference;
+}
+.c-ring {
+  position: fixed;
+  width: 36px; height: 36px;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: width .3s var(--ease), height .3s var(--ease), border-color .2s, border-radius .3s;
+}
+.c-dot.h  { width: 4px; height: 4px; }
+.c-ring.h { width: 50px; height: 50px; border-color: var(--accent); }
+.c-ring.sq { border-radius: 4px; }
+
+.status-bar span { display: flex; align-items: center; gap: 6px; }
+.status-dot { width: 5px; height: 5px; border-radius: 50%; background: #4ade80; animation: pulse 2s infinite; }
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(50px);
+
+  animation: fadeUp linear forwards;
+  animation-timeline: view();
+  animation-range: entry 20% cover 40%;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}

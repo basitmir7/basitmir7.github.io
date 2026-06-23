@@ -1,0 +1,184 @@
+{
+  "meta": {
+    "name": "Basit Mir",
+    "title": "Software Engineer",
+    "tagline": "I build scalable systems",
+    "heroHeading": ["Softw", "are", "Engin", "eer"],
+    "heroSubtitle": "For Performance, Reliability and Scale",
+    "heroDescription": "I engineer full-stack products, distributed systems, and developer tools for companies where uptime and speed are non-negotiable.",
+    "availability": "Open to Senior / Staff Engineer roles and selected contract work.",
+    "email": "basitmir0222@gmail.com",
+    "location": "Kashmir, IN",
+    "resumeUrl": "/resume.pdf"
+  },
+  "social": [  
+    { "label": "Github", "url": "https://github.com/basitmir7" },
+    { "label": "Linkedin", "url": "https://www.linkedin.com/in/basit-mehraj" },
+    { "label": "Youtube", "url": "https://www.youtube.com/@techbybasit" },
+    { "label": "Instagram", "url": "https://www.instagram.com/rtxnight.plays" },
+    { "label": "Mail", "url": "mailto:basitmir0222@gmail.com" }
+  ],
+  "ticker": [
+    { "label": "Certifications and Honors", "value": "13" },
+    { "label": "Merit", "value": "90%" },
+    { "label": "Clients", "value": "30+" },
+    { "label": "Uptime", "value": "99.99%" },
+    { "label": "Commits", "value": "5,000+" },
+    { "label": "Open source", "value": "10 repos" },
+    { "label": "Testimonies", "value": "10+" }
+  ],
+  "specializations": [
+    "FULL-STACK",
+    "FORWARD DEPLOYMENT",
+    "FRONTEND",
+    "MOBILE APPLICATION",
+    "AI/ML",
+    "APIS",
+    "CLOUD INFRA",
+    "OPEN SOURCE"
+  ],
+  "about": {
+    "heading": "Software Engineer with 4+ years of experience building scalable applications, robust systems, and cloud-native solutions.",
+    "body": "I've delivered solutions to over 30+ top clients of big industries, leading technical initiatives and delivering reliable software that scales with business growth. Passionate about clean architecture, performance optimization, and turning ambitious ideas into production-ready products.",
+    "cta": [
+      { "label": "EMAIL ME", "url": "mailto:basitmir0222@gmail.com" },
+      { "label": "GITHUB", "url": "https://github.com/basitmir7" }
+    ]
+  },
+  "projects": [
+    {
+      "id": 1,
+      "tags": ["React Native", "Redux", "JavaScript", "CSS", "Android", "iOS", "Jest","Git","Firebase","Figma","Docker","postman"],
+      "category": "Mobile Application",
+      "title": "Wasalt - Real Estate (Associated with Quara Holding)",
+      "description": "An AI powered real estate b2b system based in Saudi Arabia.",
+      "url": "https://play.google.com/store/apps/details?id=com.wasalt.app&hl=en_IN"
+    },
+    {
+      "id": 2,
+      "tags": ["React","Redux","typeScript","Yaml","Jest", "postman", "Google Cloud Platform", "SQL","Python"],
+      "category": "Full-Stack",
+      "title": "SkuPe (Associated with Bluecore)",
+      "description": "An internal platform for engineering teams to handle the product SKU's SKN data for multiple clients.",
+      "url": "#"
+    },
+    {
+      "id": 3,
+      "tags": ["AI","JavaScript", "API", "chrome","Dev Tools", "Grok AI"],
+      "category": "AI",
+      "title":"Smart Summary AI - chrome extension",
+      "description": "An AI-powered web extension that summarizes articles, research papers, and blog posts using the Gemini API, helping users quickly extract key insights and save time when consuming online content.",
+      "url": "https://github.com/basitmir7/AI-Smart-Summary---chrome-Extension"
+    },
+    {
+      "id": 4,
+      "tags": ["ReactJS", "Context API","tailwind CSS", "leaflet maps"],
+      "category": "ProtoType",
+      "title": "Visual Profile Pro",
+      "description": "Visual Profile Pro is a profile management and analytics platform that enables users to create, manage, and explore detailed user profiles through an intuitive dashboard. The application features embedded geolocation services and interactive maps, providing location-based insights and enhanced user discovery capabilities.",
+      "url": "https://wondrous-horse-148ec2.netlify.app/"
+    },   
+    {
+      "id": 5,
+      "tags": ["JavaScript", "Claude", "Fable 5","Mythos 5.0" ,"AI Agent"],
+      "category": "AI",
+      "title": "Claude Fable 5 - Prompt Generation 3D Game",
+      "description": "Evaluated Claude's Fable 5 AI model by generating Abyss Drift, A fully playable 3D browser game from a single prompt, showcasing AI-driven game development and code generation capabilities.",
+      "url": "https://github.com/basitmir7/claude-fable5-prompt-to-game"
+    },
+    {
+      "id": 6,
+      "tags": ["HTML", "CSS", "ReactJS","typeScript","Routers"],
+      "category": "Frontend",
+      "title": "Impact Website",
+      "description": "A modern, responsive website designed to maximize user engagement through intuitive navigation, polished UI design",
+      "url": "https://incandescent-brigadeiros-9ac5d9.netlify.app/"
+    },
+    {
+      "id": 7,
+      "tags": ["EJS", "Node.js", "Express","MongoDB","Bootstrap"],
+      "category": "Backend",
+      "title": "Ecommerce Horticulture Store",
+      "description": "B2C horticulture eCommerce platform featuring Horticulture Products and seamless shopping experience for gardening enthusiasts and consumers",
+      "url": "https://github.com/basitmir7/store"
+    },
+    {
+      "id": 8,
+      "tags": ["Chart.js", "Material UI","ReactJS","Axios"],
+      "category": "Full_Stack",
+      "title": "COVID Tracker",
+      "description": "Covid-19 reports and tracking application which provides global data and data for each country",
+      "url": "https://github.com/basitmir7/covid-tracking-app"
+    }
+  ],
+  "experience": [
+    {
+      "period": "March 2026 – Present",
+      "company": "Bluecore - by InsiderOne",
+      "role": "Forward Deployed Engineer",
+      "description": "Building reliability tooling for the Payments API. Contributed to latency reduction of core charge endpoints by 40%. Led a team of 4 on the internal observability platform."
+    },
+    {
+      "period": "May 2024 – Feb 2026",
+      "company": "Bluecore",
+      "role": "Software Developer",
+      "description": "Delivered end-to-end products for early-stage startups — from architecture through to production. Clients in fintech, developer tooling, and e-commerce."
+    },
+    {
+      "period": "Feb 2023 – May 2024",
+      "company": "Quara Holding",
+      "role": "Associate Software Engineer",
+      "description": "Worked on the edge network and deployment pipeline. Helped ship the monorepo support feature and improved cold start times for serverless functions."
+    },
+    {
+      "period": "Oct 2021 – Jan 2023",
+      "company": "Cuboid Media",
+      "role": "Sofware Engineer",
+      "description": "Consulted for enterprise clients on modernizing legacy Java systems, introduced CI/CD pipelines, and mentored junior developers."
+    },
+    {
+      "period": "Dec 2021 – Dec 2022",
+      "company": "Free Lance - Self Employed",
+      "role": "Frontend Engineer",
+      "description": "Consulted for enterprise clients on modernizing legacy Java systems, introduced CI/CD pipelines, and mentored junior developers."
+    }
+  ],
+  "skills": [
+    {
+      "title": "Languages",
+      "description": "TypeScript, JavaScript, Go, Python, Rust, SQL"
+    },
+    {
+      "title": "Frontend",
+      "description": "React, Next.js, Vite, TailwindCSS, GraphQL"
+    },
+    {
+      "title": "Backend & APIs",
+      "description": "Node.js, Express, Fastify, gRPC, REST, WebSockets"
+    },
+    {
+      "title": "Databases",
+      "description": "PostgreSQL, Redis, MongoDB, SQLite, Prisma, Drizzle"
+    },
+    {
+      "title": "Cloud & DevOps",
+      "description": "AWS, GCP, Docker, Kubernetes, Terraform, GitHub Actions"
+    },
+    {
+      "title": "Observability",
+      "description": "OpenTelemetry, Datadog, Grafana, Prometheus, Sentry"
+    }
+  ],
+  "personalProjects": [
+    {
+      "title": "openblocks",
+      "description": "An open-source UI component library for developer tools — minimal, accessible, dark-mode first.",
+      "url": "https://github.com"
+    },
+    {
+      "title": "sqlcraft (soon)",
+      "description": "A visual SQL query builder with type-safe TypeScript output and schema introspection.",
+      "url": null
+    }
+  ]
+}

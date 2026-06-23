@@ -1,0 +1,148 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid var(--border);
+}
+
+.hero__inner {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 80px;
+  padding-bottom: 60px;
+  gap: 40px;
+}
+
+/* Avatar row */
+.hero__avatar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.hero__avatar-ring {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: rgba(255,255,255,0.03);
+}
+
+.hero__avatar-initials {
+  font-size: 12px;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+}
+
+.hero__avatar-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.hero__name {
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+}
+
+.hero__title {
+  font-size: 11px;
+  color: var(--text-dim);
+  letter-spacing: 0.05em;
+}
+
+/* Main heading */
+.hero__heading {
+  font-size: clamp(52px, 10vw, 110px);
+  font-weight: 300;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  color: var(--text);
+  max-width: 900px;
+}
+
+.hero__heading em {
+  font-style: normal;
+  color: var(--text-dim);
+}
+
+.hero__heading strong {
+  font-weight: 600;
+}
+
+.hero__heading-sub {
+  display: block;
+  font-size: clamp(14px, 2vw, 20px);
+  font-weight: 300;
+  color: var(--text-muted);
+  letter-spacing: 0;
+  margin-top: 16px;
+  font-family: var(--mono);
+}
+
+/* Tags */
+.hero__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.hero__tag {
+  font-size: 10px;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  padding: 5px 12px;
+  border-radius: 2px;
+  letter-spacing: 0.1em;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.hero__tag:hover {
+  color: var(--text);
+  border-color: rgba(255,255,255,0.2);
+}
+
+/* CTA */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  padding: 12px 28px;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  background: transparent;
+  color: var(--text);
+}
+
+.btn--primary {
+  border-color: rgba(255,255,255,0.25);
+}
+
+.btn--primary:hover {
+  background: var(--text);
+  color: var(--bg);
+}
+
+/* Scroll indicator */
+.hero__scroll {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 10px;
+  font-family: var(--mono);
+  color: var(--text-dim);
+  letter-spacing: 0.1em;
+  transition: opacity 0.4s;
+}

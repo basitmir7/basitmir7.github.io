@@ -1,0 +1,122 @@
+.skills__grid-outer {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.skills__title {
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 300;
+  color: var(--text);
+  margin-bottom: 48px;
+}
+
+.skills__title strong {
+  font-weight: 600;
+}
+
+.skills__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 0;
+  border: 1px solid var(--border);
+  margin-bottom: 60px;
+}
+
+.skill-item {
+  padding: 24px 28px;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  transition: background 0.2s;
+}
+
+.skill-item:hover {
+  background: var(--bg-2);
+}
+
+.skill-item__title {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 8px;
+  letter-spacing: 0.02em;
+}
+
+.skill-item__desc {
+  font-size: 11px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+}
+
+/* Personal projects */
+.personal-projects__heading {
+  margin-bottom: 16px;
+}
+
+.personal-projects__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.personal-projects__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 24px 0;
+  border-top: 1px solid var(--border);
+  gap: 16px;
+}
+
+.personal-projects__item:last-child {
+  border-bottom: 1px solid var(--border);
+}
+
+.personal-projects__title {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 6px;
+  letter-spacing: 0.02em;
+}
+
+.personal-projects__desc {
+  font-size: 12px;
+  color: var(--text-muted);
+  max-width: 440px;
+  line-height: 1.6;
+}
+
+.personal-projects__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 10px;
+  color: var(--text-muted);
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+  margin-top: 4px;
+  transition: color 0.2s;
+}
+
+.personal-projects__link:hover {
+  color: var(--text);
+}
+
+@media (max-width: 800px) {
+  .skills__grid-outer {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .skills__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .skills__grid {
+    grid-template-columns: 1fr;
+  }
+}
