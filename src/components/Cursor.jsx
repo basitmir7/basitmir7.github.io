@@ -1,74 +1,50 @@
 import { useEffect, useRef, useState } from 'react';
 
 export default function Cursor() {
-  const dotRef  = useRef(null);
-  const ringRef = useRef(null);
-  const [hovered,  setHovered]  = useState(false);
-  const [clicking, setClicking] = useState(false);
+  const dot  = useRef(null);
+  const ring = useRef(null);
+  const [hov, setHov] = useState(false);
+  const [sq,  setSq]  = useState(false);
+  console.log("In Cursor Function ==>")
 
   useEffect(() => {
-    let mx = 0, my = 0, rx = 0, ry = 0;
+    let mx = 0, my = 0, rx = 0, ry = 0, raf;
 
-    const onMove = (e) => {
-      mx = e.clientX;
-      my = e.clientY;
-      if (dotRef.current) {
-        dotRef.current.style.left = mx + 'px';
-        dotRef.current.style.top  = my + 'px';
-      }
+    const move = e => {
+      mx = e.clientX; my = e.clientY;
+      if (dot.current) { dot.current.style.left = mx+'px'; dot.current.style.top = my+'px'; }
     };
 
-    let raf;
-    const animate = () => {
-      rx += (mx - rx) * 0.1;
-      ry += (my - ry) * 0.1;
-      if (ringRef.current) {
-        ringRef.current.style.left = rx + 'px';
-        ringRef.current.style.top  = ry + 'px';
-      }
-      raf = requestAnimationFrame(animate);
+    const tick = () => {
+      rx += (mx - rx) * .12; ry += (my - ry) * .12;
+      if (ring.current) { ring.current.style.left = rx+'px'; ring.current.style.top = ry+'px'; }
+      raf = requestAnimationFrame(tick);
     };
-    animate();
+    tick();
 
-    const onEnter = () => setHovered(true);
-    const onLeave = () => setHovered(false);
-    const onDown  = () => setClicking(true);
-    const onUp    = () => setClicking(false);
+    const onEnter = e => {
+        console.log("Enter==>")
+      setHov(true);
+      setSq(e.target.dataset.sq !== undefined);
+    };
+    const onLeave = () => { setHov(false); setSq(false); };
 
-    const interactives = document.querySelectorAll(
-      'a, button, [data-hover]'
-    );
-    interactives.forEach(el => {
+    window.addEventListener('mousemove', move);
+    document.querySelectorAll('a,button,[data-hover]').forEach(el => {
       el.addEventListener('mouseenter', onEnter);
       el.addEventListener('mouseleave', onLeave);
     });
 
-    window.addEventListener('mousemove', onMove);
-    window.addEventListener('mousedown', onDown);
-    window.addEventListener('mouseup',   onUp);
-
     return () => {
       cancelAnimationFrame(raf);
-      window.removeEventListener('mousemove', onMove);
-      window.removeEventListener('mousedown', onDown);
-      window.removeEventListener('mouseup',   onUp);
-      interactives.forEach(el => {
-        el.removeEventListener('mouseenter', onEnter);
-        el.removeEventListener('mouseleave', onLeave);
-      });
+      window.removeEventListener('mousemove', move);
     };
   }, []);
 
   return (
     <>
-      <div
-        ref={dotRef}
-        className={`cursor__dot${hovered ? ' hovered' : ''}`}
-      />
-      <div
-        ref={ringRef}
-        className={`cursor__ring${hovered ? ' hovered' : ''}${clicking ? ' clicking' : ''}`}
-      />
+      <div ref={dot}  className={`c-dot${hov?' h':''}`} />
+      <div ref={ring} className={`c-ring${hov?' h':''}${sq?' sq':''}`} />
     </>
   );
 }

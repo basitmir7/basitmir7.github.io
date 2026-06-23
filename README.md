@@ -1,128 +1,84 @@
-# Portfolio — Alex Rivera
+# Portfolio — Alex Chen
 
-A breathtaking personal portfolio built with React + Vite + CSS Modules.
+A minimal, dark software engineer portfolio built with React + Vite. Inspired by [matveyan.com](https://matveyan.com/).
 
-## 🚀 Quick Start
+## Getting Started
 
 ```bash
-# 1. Install dependencies
+# Install dependencies
 npm install
 
-# 2. Start dev server (opens at http://localhost:3000)
+# Start dev server
 npm run dev
 
-# 3. Build for production
+# Build for production
 npm run build
 
-# 4. Preview production build
+# Preview production build
 npm run preview
 ```
 
-## ✏️ Customising Your Info
-
-**Everything about you lives in one file:**
-
-```
-src/data/portfolio.js
-```
-
-Open it and update:
-- `PERSON` — your name, role, location, email, bio
-- `STATS` — your headline numbers
-- `TIMELINE` — your career milestones
-- `PROJECTS` — your work (title, desc, tech stack, impact)
-- `SKILLS` — your skill categories
-- `SOCIALS` — your social links
-- `TICKER_ITEMS` — the scrolling marquee text
-
-### Adding a real photo
-
-Replace the initials placeholder in `src/sections/About.jsx`:
-
-```jsx
-// Change this block inside .portraitInner:
-<img
-  src="/your-photo.jpg"
-  alt="Your Name"
-  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-/>
-```
-
-Put your photo in the `public/` folder.
-
-## 📁 Project Structure
+## Project Structure
 
 ```
 portfolio/
 ├── public/
-│   └── favicon.svg          # Edit with your initials
+│   └── favicon.svg
 ├── src/
 │   ├── components/
-│   │   ├── Cursor.jsx        # Custom cursor
-│   │   ├── Nav.jsx           # Sticky navigation
-│   │   ├── Nav.module.css
-│   │   ├── Ticker.jsx        # Scrolling marquee
-│   │   └── Ticker.module.css
-│   ├── sections/
-│   │   ├── Hero.jsx          # Landing section with ASCII bg
-│   │   ├── Hero.module.css
-│   │   ├── About.jsx         # About + timeline
-│   │   ├── About.module.css
-│   │   ├── Work.jsx          # Project cards
-│   │   ├── Work.module.css
-│   │   ├── Skills.jsx        # Skill grid
-│   │   ├── Skills.module.css
-│   │   ├── Contact.jsx       # Contact + footer
-│   │   └── Contact.module.css
-│   ├── hooks/
-│   │   └── useReveal.js      # Scroll reveal hook
+│   │   ├── Nav.jsx / Nav.css
+│   │   ├── Hero.jsx / Hero.css
+│   │   ├── Ticker.jsx / Ticker.css
+│   │   ├── About.jsx / About.css
+│   │   ├── Projects.jsx / Projects.css
+│   │   ├── Experience.jsx / Experience.css
+│   │   ├── Skills.jsx / Skills.css
+│   │   ├── Footer.jsx / Footer.css
+│   │   └── StatusBar.jsx / StatusBar.css
 │   ├── data/
-│   │   └── portfolio.js      # ← ALL YOUR CONTENT HERE
+│   │   └── portfolio.json   ← Edit all your content here
 │   ├── styles/
-│   │   └── global.css        # Design tokens + base styles
+│   │   └── global.css
 │   ├── App.jsx
 │   └── main.jsx
 ├── index.html
-├── vite.config.js
-└── package.json
+├── package.json
+└── vite.config.js
 ```
 
-## 🎨 Changing Colors
+## Customizing Your Portfolio
 
-Open `src/styles/global.css` and edit the `:root` variables:
+**All content lives in `src/data/portfolio.json`.**
+
+Edit these sections:
+
+| Key | What it controls |
+|-----|-----------------|
+| `meta` | Name, title, tagline, email, location |
+| `social` | Nav links (GitHub, LinkedIn, etc.) |
+| `ticker` | The scrolling tech ticker bar |
+| `specializations` | Tags on hero section |
+| `about` | About section heading + CTA buttons |
+| `projects` | Project cards with tags, category, description |
+| `experience` | Work history timeline |
+| `skills` | Technical skills grid |
+| `personalProjects` | Side projects at the bottom |
+
+### Adding your resume
+
+Drop your `resume.pdf` into the `public/` folder. The download button will auto-link to it.
+
+## Design Tokens
+
+Edit CSS variables in `src/styles/global.css`:
 
 ```css
 :root {
-  --ink:    #0D0D0F;   /* Main dark color */
-  --paper:  #F2EDE4;   /* Background warm white */
-  --orange: #FF3D00;   /* Accent color — change this! */
+  --bg: #0d0d0d;        /* page background */
+  --text: #e8e8e8;      /* primary text */
+  --text-muted: ...;    /* secondary text */
+  --border: ...;        /* subtle borders */
+  --mono: 'JetBrains Mono', monospace;
+  --sans: 'Inter', sans-serif;
 }
 ```
-
-## 🌐 Deploying
-
-**Netlify (drag & drop):**
-1. Run `npm run build`
-2. Drag the `dist/` folder to [netlify.com/drop](https://netlify.com/drop)
-
-**Vercel:**
-```bash
-npx vercel
-```
-
-**GitHub Pages:**
-```bash
-npm install --save-dev gh-pages
-# Add to package.json scripts: "deploy": "gh-pages -d dist"
-npm run build && npm run deploy
-```
-
-## Tech Stack
-
-- **React 18** — UI
-- **Vite 5** — Build tool
-- **CSS Modules** — Scoped styles
-- **Google Fonts** — Playfair Display + Space Grotesk + JetBrains Mono
-- **Canvas API** — ASCII background animation
-- **IntersectionObserver** — Scroll reveal
-- Zero external animation libraries — pure CSS + JS

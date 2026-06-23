@@ -1,45 +1,70 @@
+import Nav from './components/Nav'
+import Hero from './components/Hero'
+import About from './components/About'
+import Projects from './components/Projects'
+import Experience from './components/Experience'
+import Skills from './components/Skills'
+import Footer from './components/Footer'
+import StatusBar from './components/StatusBar'
+import Cursor from './components/cursor'
+import Loader from './components/loader'
+import { useState, useEffect, useCallback } from 'react';
 import './styles/global.css';
-import { useEffect } from 'react';
-import Cursor from './components/Cursor';
-import Nav from './components/Nav';
-import Ticker from './components/Ticker';
-import Hero from './sections/Hero';
-import About from './sections/About';
-import Work from './sections/Work';
-import Experience from './sections/Experience';
-import Skills from './sections/Skills';
-import Contact from './sections/Contact';
+import BackgroundAnimation from './animations/backgroundAnimation'
+import "./animations/backgroundAnimation.css";
+import TechOrbit from './animations/TechOrbit'
+import "./animations/TechOrbit.css";
+// import SoundManager from './components/SoundManager'
+import hoverMp3 from "./sounds/hover.mp3";
+
 
 export default function App() {
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) {
-            e.target.classList.add('in');
-            observer.unobserve(e.target);
-          }
-        });
-      },
-      { threshold: 0.08, rootMargin: '-24px 0px' }
-    );
-    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
-  }, []);
+  const [loaded, setLoaded] = useState(false);
 
+  const onLoaderDone = useCallback(() => setLoaded(true), []);
+
+  // Scroll-reveal observer — runs once loaded
+  useEffect(() => {
+    if (!loaded) return;
+    const obs = new IntersectionObserver(
+      entries => entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); }
+      }),
+      { threshold: 0.08, rootMargin: '-16px 0px' }
+    );
+    document.querySelectorAll('.r').forEach(el => obs.observe(el));
+    return () => obs.disconnect();
+  }, [loaded]);
+
+  const playSoundEffect = () => {
+    const audio = new Audio(hoverMp3);
+
+    audio.play()
+      .then(() => console.log("playing"))
+      .catch(err => console.error(err));
+  }
+  
   return (
     <>
-      <Cursor />
+      <Cursor/>
+      <Loader onDone={onLoaderDone} />
+      {/* <SoundManager /> */}
+      <BackgroundAnimation/>
+      <TechOrbit/>
+     {loaded &&  
+     <>
       <Nav />
       <main>
-        <Hero />
-        <Ticker />
+        <Hero playOnHover={playSoundEffect} />
         <About />
-        <Work />
+        <Projects />
         <Experience />
         <Skills />
-        <Contact />
+        <Footer />
       </main>
+      <StatusBar />
+    </>}
+      
     </>
-  );
+  )
 }

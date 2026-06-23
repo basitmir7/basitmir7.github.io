@@ -1,0 +1,41 @@
+.background-animation {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: -1;
+  }
+  
+  .orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    will-change: transform;
+  }
+  
+  .orb1 {
+    width: 500px;
+    height: 500px;
+    top: 10%;
+    left: 10%;
+  
+    background: rgba(0, 212, 255, 0.2);
+  }
+  
+  .orb2 {
+    width: 700px;
+    height: 700px;
+    top: 30%;
+    right: -100px;
+  
+    background: rgba(124, 58, 237, 0.18);
+  }
+  
+  .orb3 {
+    width: 450px;
+    height: 450px;
+    bottom: 5%;
+    left: 40%;
+  
+    background: rgba(0, 255, 136, 0.15);
+  }

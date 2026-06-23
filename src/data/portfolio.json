@@ -1,0 +1,157 @@
+{
+  "meta": {
+    "name": "Alex Chen",
+    "title": "Full-Stack Software Engineer",
+    "tagline": "I build scalable systems and elegant interfaces",
+    "heroHeading": ["Back", "end", "Front", "end"],
+    "heroSubtitle": "for performance, reliability and scale",
+    "heroDescription": "I engineer full-stack products, distributed systems, and developer tools for companies where uptime and speed are non-negotiable.",
+    "availability": "Open to Senior / Staff Engineer roles and selected contract work.",
+    "email": "alex@alexchen.dev",
+    "location": "San Francisco, CA",
+    "resumeUrl": "/resume.pdf"
+  },
+  "social": [
+    { "label": "resume", "url": "/resume.pdf" },
+    { "label": "github", "url": "https://github.com" },
+    { "label": "linkedin", "url": "https://linkedin.com" },
+    { "label": "twitter", "url": "https://twitter.com" },
+    { "label": "mail", "url": "mailto:alex@alexchen.dev" }
+  ],
+  "ticker": [
+    { "label": "Node.js", "value": "v22 LTS" },
+    { "label": "React", "value": "19.0" },
+    { "label": "uptime", "value": "99.99%" },
+    { "label": "commits", "value": "4,200+" },
+    { "label": "open source", "value": "12 repos" }
+  ],
+  "specializations": [
+    "FULL-STACK",
+    "BACKEND",
+    "APIS",
+    "CLOUD INFRA",
+    "OPEN SOURCE"
+  ],
+  "about": {
+    "heading": "I specialize in backend architecture, API design, and high-performance web applications",
+    "body": "I'm currently open to full-time Senior / Staff Engineer roles at product-driven companies. I care deeply about developer experience, system reliability, and shipping things that actually work.",
+    "cta": [
+      { "label": "EMAIL ME", "url": "mailto:alex@alexchen.dev" },
+      { "label": "DOWNLOAD RESUME", "url": "/resume.pdf" }
+    ]
+  },
+  "projects": [
+    {
+      "id": 1,
+      "tags": ["TypeScript", "Node.js", "PostgreSQL"],
+      "category": "Backend",
+      "title": "Distributed Task Queue",
+      "description": "A fault-tolerant, horizontally scalable task queue built on Redis and PostgreSQL. Supports retries, dead-letter queues, priorities, and real-time dashboard monitoring.",
+      "url": "#"
+    },
+    {
+      "id": 2,
+      "tags": ["React", "GraphQL"],
+      "category": "Full-Stack",
+      "title": "Dev Analytics Platform",
+      "description": "An internal platform for engineering teams to track deploy frequency, MTTR, lead time, and change failure rate — the four DORA metrics in one clean UI.",
+      "url": "#"
+    },
+    {
+      "id": 3,
+      "tags": ["Go", "gRPC"],
+      "category": "Infrastructure",
+      "title": "API Gateway",
+      "description": "A lightweight, pluggable API gateway in Go with rate limiting, JWT auth, circuit breaking, and per-route observability built in.",
+      "url": "#"
+    },
+    {
+      "id": 4,
+      "tags": ["Rust", "CLI"],
+      "category": "Tooling",
+      "title": "Schema Diff CLI",
+      "description": "A fast Rust CLI that diffs SQL schemas across environments, generates migration scripts, and validates against a set of codified conventions.",
+      "url": "#"
+    },
+    {
+      "id": 5,
+      "tags": ["Next.js", "Stripe", "Prisma"],
+      "category": "Full-Stack",
+      "title": "SaaS Billing Engine",
+      "description": "A production billing engine integrating Stripe subscriptions, usage-based pricing, invoice generation, and a self-serve customer portal.",
+      "url": "#"
+    },
+    {
+      "id": 6,
+      "tags": ["Python", "ML", "FastAPI"],
+      "category": "AI / ML",
+      "title": "Semantic Code Search",
+      "description": "A semantic search engine for internal codebases using code embeddings, vector search, and a FastAPI backend — indexed 200k+ files in under 2 minutes.",
+      "url": "#"
+    }
+  ],
+  "experience": [
+    {
+      "period": "2022 – Now",
+      "company": "Stripe",
+      "role": "Senior Software Engineer",
+      "description": "Building reliability tooling for the Payments API. Contributed to latency reduction of core charge endpoints by 40%. Led a team of 4 on the internal observability platform."
+    },
+    {
+      "period": "2019 – 2022",
+      "company": "Self-employed",
+      "role": "Freelance Engineer",
+      "description": "Delivered end-to-end products for early-stage startups — from architecture through to production. Clients in fintech, developer tooling, and e-commerce."
+    },
+    {
+      "period": "2017 – 2019",
+      "company": "Vercel",
+      "role": "Software Engineer",
+      "description": "Worked on the edge network and deployment pipeline. Helped ship the monorepo support feature and improved cold start times for serverless functions."
+    },
+    {
+      "period": "2015 – 2017",
+      "company": "Thoughtworks",
+      "role": "Junior Engineer",
+      "description": "Consulted for enterprise clients on modernizing legacy Java systems, introduced CI/CD pipelines, and mentored junior developers."
+    }
+  ],
+  "skills": [
+    {
+      "title": "Languages",
+      "description": "TypeScript, JavaScript, Go, Python, Rust, SQL"
+    },
+    {
+      "title": "Frontend",
+      "description": "React, Next.js, Vite, TailwindCSS, GraphQL"
+    },
+    {
+      "title": "Backend & APIs",
+      "description": "Node.js, Express, Fastify, gRPC, REST, WebSockets"
+    },
+    {
+      "title": "Databases",
+      "description": "PostgreSQL, Redis, MongoDB, SQLite, Prisma, Drizzle"
+    },
+    {
+      "title": "Cloud & DevOps",
+      "description": "AWS, GCP, Docker, Kubernetes, Terraform, GitHub Actions"
+    },
+    {
+      "title": "Observability",
+      "description": "OpenTelemetry, Datadog, Grafana, Prometheus, Sentry"
+    }
+  ],
+  "personalProjects": [
+    {
+      "title": "openblocks",
+      "description": "An open-source UI component library for developer tools — minimal, accessible, dark-mode first.",
+      "url": "https://github.com"
+    },
+    {
+      "title": "sqlcraft (soon)",
+      "description": "A visual SQL query builder with type-safe TypeScript output and schema introspection.",
+      "url": null
+    }
+  ]
+}
