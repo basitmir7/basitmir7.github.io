@@ -14,8 +14,6 @@ import BackgroundAnimation from './animations/backgroundAnimation'
 import "./animations/backgroundAnimation.css";
 import TechOrbit from './animations/TechOrbit'
 import "./animations/TechOrbit.css";
-// import SoundManager from './components/SoundManager'
-import hoverMp3 from "./sounds/hover.mp3";
 
 
 export default function App() {
@@ -36,26 +34,18 @@ export default function App() {
     return () => obs.disconnect();
   }, [loaded]);
 
-  const playSoundEffect = () => {
-    const audio = new Audio(hoverMp3);
-
-    audio.play()
-      .then(() => console.log("playing"))
-      .catch(err => console.error(err));
-  }
   
   return (
     <>
       <Cursor/>
       <Loader onDone={onLoaderDone} />
-      {/* <SoundManager /> */}
       <BackgroundAnimation/>
       <TechOrbit/>
      {loaded &&  
      <>
       <Nav />
       <main>
-        <Hero playOnHover={playSoundEffect} />
+        <Hero />
         <About />
         <Projects />
         <Experience />

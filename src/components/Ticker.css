@@ -1,9 +1,9 @@
 .ticker {
   position: absolute;
-  top: 60px;
+  top: 50px;
   border-bottom: 1px solid var(--border);
   overflow: hidden;
-  height: 34px;
+  height: 40px;
   display: flex;
   align-items: center;
   background: var(--bg);

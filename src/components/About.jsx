@@ -2,6 +2,7 @@ import data from '../data/portfolio.json'
 import './About.css'
 import { motion } from "framer-motion";
 import { fadeUp } from '../animations';
+import hoverMp3 from "../sounds/hover.mp3";
 
 export default function About() {
   const { about, meta } = data
@@ -26,6 +27,13 @@ export default function About() {
                   className={`btn ${i === 0 ? 'btn--primary' : 'btn--ghost'}`}
                   target={c.url.startsWith('http') ? '_blank' : '_self'}
                   rel="noreferrer"
+                  onMouseEnter={()=>{
+                    const audio = new Audio(hoverMp3);
+                
+                    audio.play()
+                      .then(() => console.log("playing"))
+                      .catch(err => console.error(err));
+                  }}
                 >
                   {c.label}
                 </a>

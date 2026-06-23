@@ -7,7 +7,7 @@ import { fadeUp } from '../animations';
 import hoverMp3 from "../sounds/hover.mp3";
 
 
-export default function Hero(props) {
+export default function Hero() {
   const arrowRef = useRef(null)
 
   useEffect(() => {
