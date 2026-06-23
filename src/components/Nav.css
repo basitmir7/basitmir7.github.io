@@ -34,7 +34,7 @@
   font-family: var(--mono);
   color: var(--text-muted);
   letter-spacing: 0.08em;
-  text-transform: lowercase;
+  text-transform: capitalize;
   transition: color 0.2s;
 }
 

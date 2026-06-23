@@ -1,22 +1,22 @@
 {
   "meta": {
-    "name": "Alex Chen",
-    "title": "Full-Stack Software Engineer",
-    "tagline": "I build scalable systems and elegant interfaces",
-    "heroHeading": ["Back", "end", "Front", "end"],
-    "heroSubtitle": "for performance, reliability and scale",
+    "name": "Basit Mir",
+    "title": "Software Engineer",
+    "tagline": "I build scalable systems",
+    "heroHeading": ["Softw", "are", "Engin", "eer"],
+    "heroSubtitle": "For Performance, Reliability and Scale",
     "heroDescription": "I engineer full-stack products, distributed systems, and developer tools for companies where uptime and speed are non-negotiable.",
     "availability": "Open to Senior / Staff Engineer roles and selected contract work.",
-    "email": "alex@alexchen.dev",
-    "location": "San Francisco, CA",
+    "email": "basitmir0222@gmail.com",
+    "location": "Kashmir, IN",
     "resumeUrl": "/resume.pdf"
   },
-  "social": [
-    { "label": "resume", "url": "/resume.pdf" },
-    { "label": "github", "url": "https://github.com" },
-    { "label": "linkedin", "url": "https://linkedin.com" },
-    { "label": "twitter", "url": "https://twitter.com" },
-    { "label": "mail", "url": "mailto:alex@alexchen.dev" }
+  "social": [  
+    { "label": "Github", "url": "https://github.com/basitmir7" },
+    { "label": "Linkedin", "url": "https://www.linkedin.com/in/basit-mehraj" },
+    { "label": "Youtube", "url": "https://www.youtube.com/@techbybasit" },
+    { "label": "Instagram", "url": "https://www.instagram.com/rtxnight.plays" },
+    { "label": "Mail", "url": "mailto:basitmir0222@gmail.com" }
   ],
   "ticker": [
     { "label": "Node.js", "value": "v22 LTS" },
@@ -27,7 +27,10 @@
   ],
   "specializations": [
     "FULL-STACK",
-    "BACKEND",
+    "FORWARD DEPLOYMENT",
+    "FRONTEND",
+    "MOBILE APPLICATION",
+    "AI/ML",
     "APIS",
     "CLOUD INFRA",
     "OPEN SOURCE"
@@ -36,8 +39,8 @@
     "heading": "I specialize in backend architecture, API design, and high-performance web applications",
     "body": "I'm currently open to full-time Senior / Staff Engineer roles at product-driven companies. I care deeply about developer experience, system reliability, and shipping things that actually work.",
     "cta": [
-      { "label": "EMAIL ME", "url": "mailto:alex@alexchen.dev" },
-      { "label": "DOWNLOAD RESUME", "url": "/resume.pdf" }
+      { "label": "EMAIL ME", "url": "mailto:basitmir0222@gmail.com" },
+      { "label": "GITHUB", "url": "https://github.com/basitmir7" }
     ]
   },
   "projects": [
@@ -92,27 +95,33 @@
   ],
   "experience": [
     {
-      "period": "2022 – Now",
-      "company": "Stripe",
-      "role": "Senior Software Engineer",
+      "period": "March 2026 – Present",
+      "company": "Bluecore - by InsiderOne",
+      "role": "Forward Deployed Engineer",
       "description": "Building reliability tooling for the Payments API. Contributed to latency reduction of core charge endpoints by 40%. Led a team of 4 on the internal observability platform."
     },
     {
-      "period": "2019 – 2022",
-      "company": "Self-employed",
-      "role": "Freelance Engineer",
+      "period": "May 2024 – Feb 2026",
+      "company": "Bluecore",
+      "role": "Software Developer",
       "description": "Delivered end-to-end products for early-stage startups — from architecture through to production. Clients in fintech, developer tooling, and e-commerce."
     },
     {
-      "period": "2017 – 2019",
-      "company": "Vercel",
-      "role": "Software Engineer",
+      "period": "Feb 2023 – May 2024",
+      "company": "Quara Holding",
+      "role": "Associate Software Engineer",
       "description": "Worked on the edge network and deployment pipeline. Helped ship the monorepo support feature and improved cold start times for serverless functions."
     },
     {
-      "period": "2015 – 2017",
-      "company": "Thoughtworks",
-      "role": "Junior Engineer",
+      "period": "Oct 2021 – Jan 2023",
+      "company": "Cuboid Media",
+      "role": "Sofware Engineer",
+      "description": "Consulted for enterprise clients on modernizing legacy Java systems, introduced CI/CD pipelines, and mentored junior developers."
+    },
+    {
+      "period": "Dec 2021 – Dec 2022",
+      "company": "Free Lance - Self Employed",
+      "role": "Frontend Engineer",
       "description": "Consulted for enterprise clients on modernizing legacy Java systems, introduced CI/CD pipelines, and mentored junior developers."
     }
   ],

@@ -26,7 +26,7 @@ export default function Hero() {
       <div className="hero__inner container">
         <div className="hero__avatar">
           <div className="hero__avatar-ring">
-            <div className="hero__avatar-initials mono">AC</div>
+            <div className="hero__avatar-initials mono">BM</div>
           </div>
           <div className="hero__avatar-info">
             <span className="mono hero__name">{data.meta.name}</span>

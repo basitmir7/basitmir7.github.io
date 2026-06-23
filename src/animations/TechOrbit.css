@@ -71,53 +71,7 @@
     transition: all 0.5s ease;
   }
 
-  /* .python {
-    top: 50px;
-    left: 180px;
-  }
-  
-  .sql {
-    top: 250px;
-    right: -35px;
-  }
-  
-  .gcs {
-    bottom: 180px;
-    left: 40px;
-  }
-  
-  .icon:hover {
-    transform: scale(1.3);
-  
-    box-shadow:
-      0 0 30px rgba(255,255,255,0.4);
-  }
-  
-  .react {
-    top: -40px;
-    left: 260px;
-  }
-  
-  .node {
-    bottom: -40px;
-    left: 260px;
-  }
-  
-  .aws {
-    top: 100px;
-    right: -40px;
-  }
-  
-  .docker {
-    bottom: 120px;
-    left: -40px;
-  }
-  
-  .git {
-    bottom: -40px;
-    left: 420px;
-  } */
-  .orbit-1,
+.orbit-1,
 .orbit-2 {
-  border: 1px solid rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.04);
 }

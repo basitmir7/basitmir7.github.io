@@ -7,7 +7,7 @@ export default function Nav() {
     <nav className="nav">
       <div className="nav__inner container">
         <div className="nav__left">
-          <span className="nav__logo mono">{data.meta.name.toLowerCase().replace(' ', '.')}</span>
+          <span className="nav__logo mono">{data.meta.name.replace(' ', '.')}</span>
         </div>
         <ul className="nav__links">
           {data.social.map((s) => (
