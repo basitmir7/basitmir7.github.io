@@ -6,8 +6,8 @@ import Experience from './components/Experience'
 import Skills from './components/Skills'
 import Footer from './components/Footer'
 import StatusBar from './components/StatusBar'
-import Cursor from './components/cursor'
-import Loader from './components/loader'
+import Cursor from './components/Cursor'
+import Loader from './components/Loader'
 import { useState, useEffect, useCallback } from 'react';
 import './styles/global.css';
 import BackgroundAnimation from './animations/backgroundAnimation'
