@@ -5,10 +5,12 @@ import './Hero.css'
 import { motion } from "framer-motion";
 import { fadeUp } from '../animations';
 import hoverMp3 from "../sounds/hover.mp3";
+import { useSound } from '../context/SoundContext';
 
 
 export default function Hero() {
   const arrowRef = useRef(null)
+  const { isSoundEnabled } = useSound();
 
   useEffect(() => {
     const onScroll = () => {
@@ -51,7 +53,7 @@ export default function Hero() {
           <a href={data.meta.email.replace('mailto:', '') ? `mailto:${data.meta.email}` : '#'} className="btn btn--primary"
            onMouseEnter={()=>{
             const audio = new Audio(hoverMp3);
-        
+            if(!isSoundEnabled) return;
             audio.play()
               .then(() => console.log("playing"))
               .catch(err => console.error(err));

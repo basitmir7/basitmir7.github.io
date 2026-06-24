@@ -3,7 +3,7 @@
     "name": "Basit Mir",
     "title": "Software Engineer",
     "tagline": "I build scalable systems",
-    "heroHeading": ["Softw", "are", "Engin", "eer"],
+    "heroHeading": ["Softw", "are", "Engine", "er"],
     "heroSubtitle": "For Performance, Reliability and Scale",
     "heroDescription": "I engineer full-stack products, distributed systems, and developer tools for companies where uptime and speed are non-negotiable.",
     "availability": "Open to Senior / Staff Engineer roles and selected contract work.",
@@ -25,7 +25,8 @@
     { "label": "Uptime", "value": "99.99%" },
     { "label": "Commits", "value": "5,000+" },
     { "label": "Open source", "value": "10 repos" },
-    { "label": "Testimonies", "value": "10+" }
+    { "label": "Testimonies", "value": "10+" },
+    { "label": "Integrations", "value": "100+" }
   ],
   "specializations": [
     "FULL-STACK",
@@ -51,7 +52,7 @@
       "tags": ["React Native", "Redux", "JavaScript", "CSS", "Android", "iOS", "Jest","Git","Firebase","Figma","Docker","postman"],
       "category": "Mobile Application",
       "title": "Wasalt - Real Estate (Associated with Quara Holding)",
-      "description": "An AI powered real estate b2b system based in Saudi Arabia.",
+      "description": "An AI powered b2b platform that introduces cutting-edge standards to the Kingdom's real estate market.",
       "url": "https://play.google.com/store/apps/details?id=com.wasalt.app&hl=en_IN"
     },
     {
@@ -146,28 +147,53 @@
   "skills": [
     {
       "title": "Languages",
-      "description": "TypeScript, JavaScript, Go, Python, Rust, SQL"
+      "description": "JavaScript, TypeScript, Python, SQL"
     },
     {
       "title": "Frontend",
-      "description": "React, Next.js, Vite, TailwindCSS, GraphQL"
+      "description": "React.js, Next.js, HTML5, CSS3 , Tailwind CSS , DOM Manipulation, Redux, GraphQL,  jinja"
+    },
+    {
+      "title": "Mobile Application",
+      "description": "React Native, Expo, iOS, Android"
     },
     {
       "title": "Backend & APIs",
-      "description": "Node.js, Express, Fastify, gRPC, REST, WebSockets"
+      "description": "Node.js, REST, JSON, YAML, REST, WebSockets, Postman"
     },
     {
       "title": "Databases",
-      "description": "PostgreSQL, Redis, MongoDB, SQLite, Prisma, Drizzle"
+      "description": "PostgreSQL, Redis, MongoDB, BigQuery"
     },
     {
       "title": "Cloud & DevOps",
-      "description": "AWS, GCP, Docker, Kubernetes, Terraform, GitHub Actions"
+      "description": "Google Cloud Platform (GCP), Google Cloud Functions, CI/CD Pipelines , Docker, Firebase, GitHub Actions"
     },
     {
       "title": "Observability",
-      "description": "OpenTelemetry, Datadog, Grafana, Prometheus, Sentry"
+      "description": "Datadog, Chronosphere"
+    },
+    {
+      "title": "Testing & Quality Assurance",
+      "description": "Jest, Mocha, WCAG Accessibility Standards"
+    },
+    {
+      "title": "Version Control & Collaboration",
+      "description": "Git, GitHub, GitLab"
+    },
+    {
+      "title": "AI & Developer Tools",
+      "description": "AI Integrations, GitHub Copilot, ChatGPT, Claude ,Gemini, Cursor"
+    },
+    {
+      "title": "Project Management & Collaboration",
+      "description": "Jira, Wrike, Monday"
+    },
+    {
+      "title": "Design & UI/UX",
+      "description": "Figma Photoshop Illustrator"
     }
+
   ],
   "personalProjects": [
     {

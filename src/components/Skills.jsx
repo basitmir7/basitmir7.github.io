@@ -1,10 +1,13 @@
 import data from '../data/portfolio.json'
 import './Skills.css'
 import { motion } from "framer-motion";
-import { fadeUp } from '../animations';
+import { fadeUp} from '../animations';
 import hoverMp3 from "../sounds/hover.mp3";
+import { useSound } from '../context/SoundContext';
 
 export default function Skills() {
+  const { isSoundEnabled } = useSound();
+
   return (
     <motion.section className="skills section" id="skills" {...fadeUp}>
       <div className="container">
@@ -20,7 +23,11 @@ export default function Skills() {
               {data.skills.map((s, i) => (
                 <div className="skill-item" key={i}>
                   <h4 className="skill-item__title">{s.title}</h4>
-                  <p className="skill-item__desc mono">{s.description}</p>
+                  <div className="skill-card__tags mono">
+                    {s.description.split(',').map((v, index)=>{
+                      return <p className='skill-card__tag' key={index}>{v}</p>
+                    })}
+                    </div>
                 </div>
               ))}
             </div>
@@ -38,8 +45,8 @@ export default function Skills() {
                       {p.url && (
                         <a href={p.url} className="personal-projects__link mono" target="_blank" rel="noreferrer"  onMouseEnter={()=>{
                           const audio = new Audio(hoverMp3);
-                      
-                          audio.play()
+                           if(!isSoundEnabled) return;
+                           audio.play()
                             .then(() => console.log("playing"))
                             .catch(err => console.error(err));
                         }}>
