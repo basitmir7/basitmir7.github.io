@@ -3,9 +3,11 @@ import './About.css'
 import { motion } from "framer-motion";
 import { fadeUp } from '../animations';
 import hoverMp3 from "../sounds/hover.mp3";
+import { useSound } from '../context/SoundContext';
 
 export default function About() {
   const { about, meta } = data
+  const { isSoundEnabled } = useSound();
 
   return (
     <motion.section className="about section" id="about" {...fadeUp}>
@@ -29,7 +31,7 @@ export default function About() {
                   rel="noreferrer"
                   onMouseEnter={()=>{
                     const audio = new Audio(hoverMp3);
-                
+                    if (!isSoundEnabled) return;
                     audio.play()
                       .then(() => console.log("playing"))
                       .catch(err => console.error(err));

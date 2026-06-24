@@ -3,9 +3,11 @@ import './Footer.css'
 import { motion } from "framer-motion";
 import { fadeUp } from '../animations';
 import hoverMp3 from "../sounds/hover.mp3";
+import { useSound } from '../context/SoundContext';
 
 export default function Footer() {
   const year = new Date().getFullYear()
+  const { isSoundEnabled } = useSound();
   return (
     <motion.footer className="footer" {...fadeUp}>
       <div className="container footer__inner">
@@ -20,7 +22,7 @@ export default function Footer() {
           <a href={`mailto:${data.meta.email}`} className="btn btn--primary footer__email"
            onMouseEnter={()=>{
             const audio = new Audio(hoverMp3);
-        
+            if(!isSoundEnabled) return;
             audio.play()
               .then(() => console.log("playing"))
               .catch(err => console.error(err));

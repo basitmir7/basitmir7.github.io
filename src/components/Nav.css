@@ -41,6 +41,10 @@
 .nav__links a:hover {
   color: var(--text);
 }
+.equalizer{    
+  position: relative;
+  top: 6px;
+  left: 10px;}
 
 @media (max-width: 600px) {
   .nav__links {

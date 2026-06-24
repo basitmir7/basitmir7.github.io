@@ -8,19 +8,45 @@ import Footer from './components/Footer'
 import StatusBar from './components/StatusBar'
 import Cursor from './components/Cursor'
 import Loader from './components/Loader'
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import './styles/global.css';
 import BackgroundAnimation from './animations/backgroundAnimation'
 import "./animations/backgroundAnimation.css";
 import TechOrbit from './animations/TechOrbit'
 import "./animations/TechOrbit.css";
+import backgroundmp3 from "./sounds/background.mp3";
+import { useSound } from './context/SoundContext'
 
 
 export default function App() {
   const [loaded, setLoaded] = useState(false);
 
   const onLoaderDone = useCallback(() => setLoaded(true), []);
+  const { isSoundEnabled } = useSound();
 
+  const backgroundAudio = useRef(
+    new Audio(backgroundmp3)
+  );
+
+  useEffect(() => {
+    const audio = backgroundAudio.current;
+
+    audio.loop = true;
+    audio.volume = 0.1;
+
+    if (isSoundEnabled) {
+      audio.play().catch(console.error);
+    } else {
+      audio.pause();
+      audio.currentTime = 0; // optional
+    }
+
+    return () => {
+      audio.pause();
+    };
+  }, [isSoundEnabled]);
+
+  
   // Scroll-reveal observer — runs once loaded
   useEffect(() => {
     if (!loaded) return;
@@ -34,7 +60,6 @@ export default function App() {
     return () => obs.disconnect();
   }, [loaded]);
 
-  
   return (
     <>
       <Cursor/>

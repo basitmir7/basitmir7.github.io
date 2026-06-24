@@ -18,3 +18,7 @@ export const fadeUp = {
       ease: [0.22, 1, 0.36, 1],
     },
   };
+
+  export var soundValue = JSON.parse(
+    localStorage.getItem("equalizerEnabled") || "false"
+  );
