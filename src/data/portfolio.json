@@ -40,7 +40,7 @@
   ],
   "about": {
     "heading": "Software Engineer with 4+ years of experience building scalable applications, robust systems, and cloud-native solutions.",
-    "body": "I've delivered solutions to over 30+ top clients of big industries, leading technical initiatives and delivering reliable software that scales with business growth. Passionate about clean architecture, performance optimization, and turning ambitious ideas into production-ready products.",
+    "body": "I've delivered solutions to over 30+ clients of top brands and industries, leading technical initiatives and delivering reliable software that scales with business growth. Passionate about clean architecture, performance optimization, and turning ambitious ideas into production-ready products.",
     "cta": [
       { "label": "EMAIL ME", "url": "mailto:basitmir0222@gmail.com" },
       { "label": "GITHUB", "url": "https://github.com/basitmir7" }
@@ -117,31 +117,82 @@
       "period": "March 2026 – Present",
       "company": "Bluecore - by InsiderOne",
       "role": "Forward Deployed Engineer",
-      "description": "Building reliability tooling for the Payments API. Contributed to latency reduction of core charge endpoints by 40%. Led a team of 4 on the internal observability platform."
+      "description": [
+        "I work as a Forward Deployed Engineer, delivering integration, data engineering, and technical solutions for 100+ enterprise clients across diverse industries and technical ecosystems, Contributing to Bluecore's AI-powered retail marketing platform, trusted by over 400 leading eCommerce brands to deliver personalized customer experiences and drive business growth.",
+        "Design, implement, and troubleshoot JavaScript-based integrations based on client's infrastructure and business requirements.",
+        "Build and maintain scalable ETL pipelines using Python, SQL, Jinja, YAML, SFTP, and related technologies to ingest, transform, and process data for GCP-hosted machine learning systems.",
+        "Develop and optimize event-tracking, API and data-processing workflows using JavaScript, Python, and advanced SQL, improved event collection efficiency by up to 30% and reduced execution times for complex queries by up to 200ms.",
+        "Partner closely with clients and stakeholders to architect seamless integration strategies, resolve technical challenges, and deliver reliable software solutions.",
+        "Work extensively with Google Cloud Platform (GCP), including BigQuery, Cloud Functions, and Node.js, to build, maintain, and optimize cloud-native data solutions.",
+        "Participate in Agile development processes, contributing to sprint planning, estimation, prioritization, and progress tracking through Jira.",
+        "Collaborate cross-functionally with Customer Success Managers, Engineering teams, Data teams, and client stakeholders to ensure successful project delivery and long-term customer success.",
+        "Leverage Git and GitHub for version control, code reviews, collaboration, and maintaining high engineering standards across projects.",
+        "Develop internal tools using React, Next.js, Python, and GCP to improve operational efficiency and developer productivity, including data analytics platforms, data synchronization systems, website event integration tools, and Jinja-based automation utilities.",
+        "Utilize observability and monitoring platforms such as Datadog and Chronosphere to monitor system performance, troubleshoot issues, and improve platform reliability.",
+        "Managed integrations for globally recognized brands including Michael Kors, Coach, Lenovo, Nordstrom, Carhartt, Ann Taylor, LOFT, Brilliant Earth, Foot Locker, Famous Footwear, Bloomingdale's, J.Crew, Backcountry, DXL, Alo Yoga, Tapestry, and many others."
+      ]
     },
     {
       "period": "May 2024 – Feb 2026",
       "company": "Bluecore",
       "role": "Software Developer",
-      "description": "Delivered end-to-end products for early-stage startups — from architecture through to production. Clients in fintech, developer tooling, and e-commerce."
+      "description": [
+        "Maintained and enhanced frontend applications and APIs for a marketing platform, ensuring alignment with business requirements and platform scalability.",
+        "Developed and supported internal applications such as SKUPE and Customer 360 using Next.js to manage and display product and customer data for over 300 partners.",
+        "Built and maintained client-facing campaigns and web experiences using JavaScript, React, HTML, and CSS through integrated marketing solutions.",
+        "Followed unit testing practices and WCAG accessibility guidelines to ensure quality, reliability, and accessibility of web content.",
+        "Applied a mobile-first approach to create responsive user interfaces that delivered consistent experiences across devices and screen sizes.",
+        "Implemented complex DOM manipulations and interactive frontend functionality to support dynamic user experiences.",
+        "Collaborated closely with clients and internal stakeholders to understand requirements and deliver effective technical solutions.",
+        "Utilized tools and platforms including Salesforce Marketing Cloud (SFMC), BigQuery, and Postman for campaign development, data management, and API testing.",
+        "Contributed to digital experiences for globally recognized brands including Nike, Michael Kors, Tapestry, Carhartt, and Lenovo."
+      ]
     },
     {
       "period": "Feb 2023 – May 2024",
       "company": "Quara Holding",
       "role": "Associate Software Engineer",
-      "description": "Worked on the edge network and deployment pipeline. Helped ship the monorepo support feature and improved cold start times for serverless functions."
+      "description" : [
+        "Developed and maintained scalable Android and iOS applications for a leading AI-powered real estate platform in Saudi Arabia using React Native and Redux.",
+        "The product has over 150,000+ downloads across Android and iOS platforms, ensuring performance, reliability, and an exceptional user experience.",
+        "Collaborated closely with Product Managers, QA Engineers, Designers, and Backend Developers to deliver seamless feature integrations and high-quality releases.",
+        "Integrated RESTful APIs and transformed Figma designs and prototypes into pixel-perfect, responsive, and production-ready user interfaces.",
+        "Actively participated in code reviews, providing constructive feedback and adopting engineering best practices to improve code quality.",
+        "Maintained high-quality, reusable, and well-documented codebases, improving application maintainability and development efficiency.",
+        "Reduced SonarQube issues and application bugs by 50% through targeted code quality improvements, significantly enhancing software stability and performance.",
+        "Implemented A/B testing and feature flagging using Firebase Remote Config, enabling data-driven product decisions and controlled feature rollouts.",
+        "Improved application reliability by writing comprehensive unit tests and increasing code coverage to over 75%.",
+        "Leveraged CI/CD pipelines to automate build, testing, and deployment workflows, accelerating release cycles and reducing manual effort.",
+        "Worked within Agile Scrum environments and followed SDLC best practices to ensure efficient project planning, execution, and delivery."
+      ]
     },
     {
       "period": "Oct 2021 – Jan 2023",
       "company": "Cuboid Media",
       "role": "Sofware Engineer",
-      "description": "Consulted for enterprise clients on modernizing legacy Java systems, introduced CI/CD pipelines, and mentored junior developers."
+      "description": [
+        "Developed visually engaging and high-performance web applications with a strong focus on user experience, accessibility, and modern frontend best practices.",
+        "Implemented responsive and mobile-first designs, ensuring seamless functionality and consistent user experiences across a wide range of devices and screen sizes.",
+        "Enhanced user engagement through the strategic use of animations, transitions, and interactive UI elements while maintaining optimal performance.",
+        "Integrated third-party and RESTful APIs to extend application functionality, streamline data flow, and support feature-rich user experiences.",
+        "Translated design concepts and requirements into intuitive, pixel-perfect interfaces by applying user-centered design principles and meticulous attention to detail.",
+        "Collaborated effectively with cross-functional teams to deliver scalable, maintainable, and innovative web solutions aligned with business objectives.",
+        "Leveraged modern frontend technologies and development practices to build reliable, performant, and future-ready applications.",
+        "Consistently delivered high-quality digital experiences by combining technical expertise, creative problem-solving, and a commitment to continuous improvement."
+      ]
     },
     {
       "period": "Dec 2021 – Dec 2022",
       "company": "Free Lance - Self Employed",
       "role": "Frontend Engineer",
-      "description": "Consulted for enterprise clients on modernizing legacy Java systems, introduced CI/CD pipelines, and mentored junior developers."
+      "description": [
+        "Designed and developed web applications using modern frontend technologies including React.js, Redux, Tailwind CSS, REST APIs, and GraphQL.",
+        "Built scalable, performant, and maintainable applications with a focus on usability, responsiveness, and code quality.",
+        "Integrated third-party APIs and services to extend application functionality and support business requirements.",
+        "Utilized Git and GitHub for version control, collaboration, and code review workflows.",
+        "Translated Figma and Photoshop designs into pixel-perfect, responsive user interfaces while ensuring consistency across devices and browsers.",
+        "Leveraged CI/CD pipelines to streamline development, testing, and deployment processes."
+      ]
     }
   ],
   "skills": [
@@ -178,20 +229,20 @@
       "description": "Jest, Mocha, WCAG Accessibility Standards"
     },
     {
-      "title": "Version Control & Collaboration",
-      "description": "Git, GitHub, GitLab"
+      "title": "Version Control, Collaboration & project Management",
+      "description": "Git, GitHub, GitLab, Jira, Wrike, Monday"
     },
     {
       "title": "AI & Developer Tools",
       "description": "AI Integrations, GitHub Copilot, ChatGPT, Claude ,Gemini, Cursor"
     },
     {
-      "title": "Project Management & Collaboration",
-      "description": "Jira, Wrike, Monday"
+      "title": "Design & UI/UX",
+      "description": "Figma, Photoshop, Illustrator"
     },
     {
-      "title": "Design & UI/UX",
-      "description": "Figma Photoshop Illustrator"
+      "title": "Soft skills",
+      "description": "Communication, Problem-solving, Adaptability, Teamwork ,Time management, Creativity"
     }
 
   ],
