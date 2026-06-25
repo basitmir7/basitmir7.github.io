@@ -26,7 +26,16 @@ export default function Experience() {
                   </div>
                   <div className="exp__detail">
                     <h3 className="exp__role">{e.role}</h3>
-                    <p className="exp__desc">{e.description}</p>
+                    <div>
+                    <ul>
+                      {
+                      e.description && e.description.length > 0 && e.description.map((v,i)=>{
+                        return <li key={i} className="exp__desc">{v}</li>
+                      })}
+                     
+                    </ul>
+                    </div>
+                    
                   </div>
                 </li>
               ))}
