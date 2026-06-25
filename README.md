@@ -44,23 +44,6 @@ portfolio/
 └── vite.config.js
 ```
 
-## Customizing Your Portfolio
-
-**All content lives in `src/data/portfolio.json`.**
-
-Edit these sections:
-
-| Key | What it controls |
-|-----|-----------------|
-| `meta` | Name, title, tagline, email, location |
-| `social` | Nav links (GitHub, LinkedIn, etc.) |
-| `ticker` | The scrolling tech ticker bar |
-| `specializations` | Tags on hero section |
-| `about` | About section heading + CTA buttons |
-| `projects` | Project cards with tags, category, description |
-| `experience` | Work history timeline |
-| `skills` | Technical skills grid |
-
 ## Design Tokens
 
 Edit CSS variables in `src/styles/global.css`:
