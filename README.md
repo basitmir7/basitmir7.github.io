@@ -34,7 +34,7 @@ portfolio/
 │   │   ├── Footer.jsx / Footer.css
 │   │   └── StatusBar.jsx / StatusBar.css
 │   ├── data/
-│   │   └── portfolio.json   ← Edit all your content here
+│   │   └── portfolio.json
 │   ├── styles/
 │   │   └── global.css
 │   ├── App.jsx
@@ -60,11 +60,6 @@ Edit these sections:
 | `projects` | Project cards with tags, category, description |
 | `experience` | Work history timeline |
 | `skills` | Technical skills grid |
-| `personalProjects` | Side projects at the bottom |
-
-### Adding your resume
-
-Drop your `resume.pdf` into the `public/` folder. The download button will auto-link to it.
 
 ## Design Tokens
 
