@@ -4,10 +4,19 @@ import { motion } from "framer-motion";
 import { fadeUp } from '../animations';
 import hoverMp3 from "../sounds/hover.mp3";
 import { useSound } from '../context/SoundContext';
+import { targetUrl } from '../Helpers';
 
 export default function About() {
   const { about, meta } = data
   const { isSoundEnabled } = useSound();
+
+  const playAudio = () => {
+    const audio = new Audio(hoverMp3);
+    if (!isSoundEnabled) return;
+    audio.play()
+      .then(() => console.log("playing"))
+      .catch(err => console.error(err));
+  }
 
   return (
     <motion.section className="about section" id="about" {...fadeUp}>
@@ -27,15 +36,9 @@ export default function About() {
                   key={i}
                   href={c.url}
                   className={`btn ${i === 0 ? 'btn--primary' : 'btn--ghost'}`}
-                  target={c.url.startsWith('http') ? '_blank' : '_self'}
+                  target={targetUrl(c.url)}
                   rel="noreferrer"
-                  onMouseEnter={()=>{
-                    const audio = new Audio(hoverMp3);
-                    if (!isSoundEnabled) return;
-                    audio.play()
-                      .then(() => console.log("playing"))
-                      .catch(err => console.error(err));
-                  }}
+                  onMouseEnter={playAudio}
                 >
                   {c.label}
                 </a>

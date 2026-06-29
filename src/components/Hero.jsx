@@ -12,6 +12,15 @@ export default function Hero() {
   const arrowRef = useRef(null)
   const { isSoundEnabled } = useSound();
 
+  const playAudio = () => {
+    const audio = new Audio(hoverMp3);
+    if (!isSoundEnabled) return;
+    audio.play()
+      .then(() => console.log("playing"))
+      .catch(err => console.error(err));
+  }
+  
+
   useEffect(() => {
     const onScroll = () => {
       if (arrowRef.current) {
@@ -51,13 +60,7 @@ export default function Hero() {
 
         <div className="hero__cta">
           <a href={data.meta.email.replace('mailto:', '') ? `mailto:${data.meta.email}` : '#'} className="btn btn--primary"
-           onMouseEnter={()=>{
-            const audio = new Audio(hoverMp3);
-            if(!isSoundEnabled) return;
-            audio.play()
-              .then(() => console.log("playing"))
-              .catch(err => console.error(err));
-          }}>
+           onMouseEnter={playAudio}>
             GET IN TOUCH
           </a>
         </div>
