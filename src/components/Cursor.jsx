@@ -5,7 +5,6 @@ export default function Cursor() {
   const ring = useRef(null);
   const [hov, setHov] = useState(false);
   const [sq,  setSq]  = useState(false);
-  console.log("In Cursor Function ==>")
 
   useEffect(() => {
     let mx = 0, my = 0, rx = 0, ry = 0, raf;
@@ -23,7 +22,6 @@ export default function Cursor() {
     tick();
 
     const onEnter = e => {
-        console.log("Enter==>")
       setHov(true);
       setSq(e.target.dataset.sq !== undefined);
     };
