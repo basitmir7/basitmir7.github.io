@@ -36,6 +36,7 @@ export default function Footer() {
               <li key={s.label}>
                 <a href={s.url} target={s.url.startsWith('http') ? '_blank' : '_self'} rel="noreferrer" className="mono"
                  onMouseEnter={()=>{
+                  if(!isSoundEnabled) return;
                   const audio = new Audio(hoverMp3);
               
                   audio.play()
