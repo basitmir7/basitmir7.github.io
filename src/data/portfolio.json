@@ -11,7 +11,7 @@
     "location": "Kashmir, IN",
     "resumeUrl": "/resume.pdf"
   },
-  "social": [  
+  "social": [
     { "label": "Github", "url": "https://github.com/basitmir7" },
     { "label": "Linkedin", "url": "https://www.linkedin.com/in/basit-mehraj" },
     { "label": "Youtube", "url": "https://www.youtube.com/@techbybasit" },
@@ -49,7 +49,20 @@
   "projects": [
     {
       "id": 1,
-      "tags": ["React Native", "Redux", "JavaScript", "CSS", "Android", "iOS", "Jest","Git","Firebase","Figma","Docker","postman"],
+      "tags": [
+        "React Native",
+        "Redux",
+        "JavaScript",
+        "CSS",
+        "Android",
+        "iOS",
+        "Jest",
+        "Git",
+        "Firebase",
+        "Figma",
+        "Docker",
+        "postman"
+      ],
       "category": "Mobile Application",
       "title": "Wasalt - Real Estate (Associated with Quara Holding)",
       "description": "An AI powered b2b platform that introduces cutting-edge standards to the Kingdom's real estate market.",
@@ -57,7 +70,17 @@
     },
     {
       "id": 2,
-      "tags": ["React","Redux","typeScript","Yaml","Jest", "postman", "Google Cloud Platform", "SQL","Python"],
+      "tags": [
+        "React",
+        "Redux",
+        "typeScript",
+        "Yaml",
+        "Jest",
+        "postman",
+        "Google Cloud Platform",
+        "SQL",
+        "Python"
+      ],
       "category": "Full-Stack",
       "title": "SkuPe (Associated with Bluecore)",
       "description": "An internal platform for engineering teams to handle the product SKU's SKN data for multiple clients.",
@@ -65,23 +88,23 @@
     },
     {
       "id": 3,
-      "tags": ["AI","JavaScript", "API", "chrome","Dev Tools", "Grok AI"],
+      "tags": ["AI", "JavaScript", "API", "chrome", "Dev Tools", "Grok AI"],
       "category": "AI",
-      "title":"Smart Summary AI - chrome extension",
+      "title": "Smart Summary AI - chrome extension",
       "description": "An AI-powered web extension that summarizes articles, research papers, and blog posts using the Gemini API, helping users quickly extract key insights and save time when consuming online content.",
       "url": "https://github.com/basitmir7/AI-Smart-Summary---chrome-Extension"
     },
     {
       "id": 4,
-      "tags": ["ReactJS", "Context API","tailwind CSS", "leaflet maps"],
+      "tags": ["ReactJS", "Context API", "tailwind CSS", "leaflet maps"],
       "category": "ProtoType",
       "title": "Visual Profile Pro",
       "description": "Visual Profile Pro is a profile management and analytics platform that enables users to create, manage, and explore detailed user profiles through an intuitive dashboard. The application features embedded geolocation services and interactive maps, providing location-based insights and enhanced user discovery capabilities.",
       "url": "https://wondrous-horse-148ec2.netlify.app/"
-    },   
+    },
     {
       "id": 5,
-      "tags": ["JavaScript", "Claude", "Fable 5","Mythos 5.0" ,"AI Agent"],
+      "tags": ["JavaScript", "Claude", "Fable 5", "Mythos 5.0", "AI Agent"],
       "category": "AI",
       "title": "Claude Fable 5 - Prompt Generation 3D Game",
       "description": "Evaluated Claude's Fable 5 AI model by generating Abyss Drift, A fully playable 3D browser game from a single prompt, showcasing AI-driven game development and code generation capabilities.",
@@ -89,7 +112,7 @@
     },
     {
       "id": 6,
-      "tags": ["HTML", "CSS", "ReactJS","typeScript","Routers"],
+      "tags": ["HTML", "CSS", "ReactJS", "typeScript", "Routers"],
       "category": "Frontend",
       "title": "Impact Website",
       "description": "A modern, responsive website designed to maximize user engagement through intuitive navigation, polished UI design",
@@ -97,7 +120,7 @@
     },
     {
       "id": 7,
-      "tags": ["EJS", "Node.js", "Express","MongoDB","Bootstrap"],
+      "tags": ["EJS", "Node.js", "Express", "MongoDB", "Bootstrap"],
       "category": "Backend",
       "title": "Ecommerce Horticulture Store",
       "description": "B2C horticulture eCommerce platform featuring Horticulture Products and seamless shopping experience for gardening enthusiasts and consumers",
@@ -105,7 +128,7 @@
     },
     {
       "id": 8,
-      "tags": ["Chart.js", "Material UI","ReactJS","Axios"],
+      "tags": ["Chart.js", "Material UI", "ReactJS", "Axios"],
       "category": "Full_Stack",
       "title": "COVID Tracker",
       "description": "Covid-19 reports and tracking application which provides global data and data for each country",
@@ -152,7 +175,7 @@
       "period": "Feb 2023 – May 2024",
       "company": "Quara Holding",
       "role": "Associate Software Engineer",
-      "description" : [
+      "description": [
         "Developed and maintained scalable Android and iOS applications for a leading AI-powered real estate platform in Saudi Arabia using React Native and Redux.",
         "The product has over 150,000+ downloads across Android and iOS platforms, ensuring performance, reliability, and an exceptional user experience.",
         "Collaborated closely with Product Managers, QA Engineers, Designers, and Backend Developers to deliver seamless feature integrations and high-quality releases.",
@@ -244,7 +267,6 @@
       "title": "Soft skills",
       "description": "Communication, Problem-solving, Adaptability, Teamwork ,Time management, Creativity"
     }
-
   ],
   "personalProjects": [
     {
@@ -327,6 +349,3 @@
     }
   ]
 }
-
-
-

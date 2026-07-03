@@ -1,35 +1,34 @@
-import { useEffect, useRef } from 'react'
-import data from '../data/portfolio.json'
-import Ticker from './Ticker'
-import './Hero.css'
-import { motion } from "framer-motion";
+import { useEffect, useRef } from 'react';
+import data from '../data/portfolio.json';
+import Ticker from './Ticker';
+import './Hero.css';
+import { motion } from 'framer-motion';
 import { fadeUp } from '../animations';
-import hoverMp3 from "../sounds/hover.mp3";
+import hoverMp3 from '../sounds/hover.mp3';
 import { useSound } from '../context/SoundContext';
 
-
 export default function Hero() {
-  const arrowRef = useRef(null)
+  const arrowRef = useRef(null);
   const { isSoundEnabled } = useSound();
 
   const playAudio = () => {
     const audio = new Audio(hoverMp3);
     if (!isSoundEnabled) return;
-    audio.play()
-      .then(() => console.log("playing"))
-      .catch(err => console.error(err));
-  }
-  
+    audio
+      .play()
+      .then(() => console.log('playing'))
+      .catch((err) => console.error(err));
+  };
 
   useEffect(() => {
     const onScroll = () => {
       if (arrowRef.current) {
-        arrowRef.current.style.opacity = window.scrollY > 60 ? '0' : '1'
+        arrowRef.current.style.opacity = window.scrollY > 60 ? '0' : '1';
       }
-    }
-    window.addEventListener('scroll', onScroll)
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
+    };
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   return (
     <motion.section className="hero" {...fadeUp}>
@@ -46,21 +45,27 @@ export default function Hero() {
         </div>
 
         <h1 className="hero__heading">
-          <em>{data.meta.heroHeading[0]}</em><strong>{data.meta.heroHeading[1]}</strong>{' '}
-          <em>{data.meta.heroHeading[2]}</em><strong>{data.meta.heroHeading[3]}</strong>
+          <em>{data.meta.heroHeading[0]}</em>
+          <strong>{data.meta.heroHeading[1]}</strong> <em>{data.meta.heroHeading[2]}</em>
+          <strong>{data.meta.heroHeading[3]}</strong>
           <br />
           <span className="hero__heading-sub">{data.meta.heroSubtitle}</span>
         </h1>
 
         <div className="hero__tags">
           {data.specializations.map((s, i) => (
-            <span className="hero__tag mono" key={i}>{s}</span>
+            <span className="hero__tag mono" key={i}>
+              {s}
+            </span>
           ))}
         </div>
 
         <div className="hero__cta">
-          <a href={data.meta.email.replace('mailto:', '') ? `mailto:${data.meta.email}` : '#'} className="btn btn--primary"
-           onMouseEnter={playAudio}>
+          <a
+            href={data.meta.email.replace('mailto:', '') ? `mailto:${data.meta.email}` : '#'}
+            className="btn btn--primary"
+            onMouseEnter={playAudio}
+          >
             GET IN TOUCH
           </a>
         </div>
@@ -68,10 +73,16 @@ export default function Hero() {
         <div className="hero__scroll" ref={arrowRef}>
           <span className="mono">scroll down</span>
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-            <path d="M8 2v12M2 9l6 6 6-6" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
+            <path
+              d="M8 2v12M2 9l6 6 6-6"
+              stroke="currentColor"
+              strokeWidth="1.2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
           </svg>
         </div>
       </div>
     </motion.section>
-  )
+  );
 }

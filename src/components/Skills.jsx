@@ -1,8 +1,8 @@
-import data from '../data/portfolio.json'
-import './Skills.css'
-import { motion } from "framer-motion";
-import { fadeUp} from '../animations';
-import hoverMp3 from "../sounds/hover.mp3";
+import data from '../data/portfolio.json';
+import './Skills.css';
+import { motion } from 'framer-motion';
+import { fadeUp } from '../animations';
+import hoverMp3 from '../sounds/hover.mp3';
 import { useSound } from '../context/SoundContext';
 
 export default function Skills() {
@@ -11,10 +11,11 @@ export default function Skills() {
   const playAudio = () => {
     const audio = new Audio(hoverMp3);
     if (!isSoundEnabled) return;
-    audio.play()
-      .then(() => console.log("playing"))
-      .catch(err => console.error(err));
-  }
+    audio
+      .play()
+      .then(() => console.log('playing'))
+      .catch((err) => console.error(err));
+  };
 
   return (
     <motion.section className="skills section" id="skills" {...fadeUp}>
@@ -32,10 +33,14 @@ export default function Skills() {
                 <div className="skill-item" key={i}>
                   <h4 className="skill-item__title">{s.title}</h4>
                   <div className="skill-card__tags mono">
-                    {s.description.split(',').map((v, index)=>{
-                      return <p className='skill-card__tag' key={index}>{v}</p>
+                    {s.description.split(',').map((v, index) => {
+                      return (
+                        <p className="skill-card__tag" key={index}>
+                          {v}
+                        </p>
+                      );
                     })}
-                    </div>
+                  </div>
                 </div>
               ))}
             </div>
@@ -51,10 +56,22 @@ export default function Skills() {
                         <p className="personal-projects__desc">{p.description}</p>
                       </div>
                       {p.url && (
-                        <a href={p.url} className="personal-projects__link mono" target="_blank" rel="noreferrer"  onMouseEnter={playAudio}>
+                        <a
+                          href={p.url}
+                          className="personal-projects__link mono"
+                          target="_blank"
+                          rel="noreferrer"
+                          onMouseEnter={playAudio}
+                        >
                           View
                           <svg width="10" height="10" viewBox="0 0 12 12" fill="none">
-                            <path d="M2 10L10 2M10 2H4M10 2v6" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
+                            <path
+                              d="M2 10L10 2M10 2H4M10 2v6"
+                              stroke="currentColor"
+                              strokeWidth="1.2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
                           </svg>
                         </a>
                       )}
@@ -67,5 +84,5 @@ export default function Skills() {
         </div>
       </div>
     </motion.section>
-  )
+  );
 }

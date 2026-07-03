@@ -1,28 +1,24 @@
-import data from "../data/portfolio.json";
-import "./Certifications.css";
-import { motion } from "framer-motion";
-import { fadeUp } from "../animations";
-import { useSound } from "../context/SoundContext";
-import hoverMp3 from "../sounds/hover.mp3";
+import data from '../data/portfolio.json';
+import './Certifications.css';
+import { motion } from 'framer-motion';
+import { fadeUp } from '../animations';
+import { useSound } from '../context/SoundContext';
+import hoverMp3 from '../sounds/hover.mp3';
 
 export default function Certifications() {
+  const { isSoundEnabled } = useSound();
 
-    const { isSoundEnabled } = useSound();
-
-    const playAudio = () => {
-      const audio = new Audio(hoverMp3);
-      if (!isSoundEnabled) return;
-      audio.play()
-        .then(() => console.log("playing"))
-        .catch(err => console.error(err));
-    }
+  const playAudio = () => {
+    const audio = new Audio(hoverMp3);
+    if (!isSoundEnabled) return;
+    audio
+      .play()
+      .then(() => console.log('playing'))
+      .catch((err) => console.error(err));
+  };
 
   return (
-    <motion.section
-      className="certifications section"
-      id="certifications"
-      {...fadeUp}
-    >
+    <motion.section className="certifications section" id="certifications" {...fadeUp}>
       <div className="container">
         <div className="cert__grid">
           <div className="cert__left">
@@ -38,13 +34,11 @@ export default function Certifications() {
               {data.certifications.map((cert, index) => (
                 <li className="cert__item" key={index}>
                   <div className="cert__meta">
-                    <span className="cert__date mono">
-                      {cert.date}
-                    </span>
+                    <span className="cert__date mono">{cert.date}</span>
 
                     {cert.issuer && (
                       <span className="cert__issuer">
-                         {` `}· {cert.issuer}
+                        {` `}· {cert.issuer}
                       </span>
                     )}
                   </div>
@@ -52,9 +46,7 @@ export default function Certifications() {
                   <div className="cert__detail">
                     <div className="cert__header">
                       <div className="cert__content">
-                        <h3 className="cert__name mono">
-                          {cert.title}
-                        </h3>
+                        <h3 className="cert__name mono">{cert.title}</h3>
                       </div>
 
                       <a

@@ -3,8 +3,9 @@
   display: grid;
   grid-template-columns: 160px 1fr;
   gap: 60px;
-  align-items: start;}
-  
+  align-items: start;
+}
+
 .projects__header {
   margin-bottom: 48px;
 }
@@ -55,7 +56,7 @@
 }
 
 .project-card:hover::after {
-  border-color: rgba(255,255,255,0.1);
+  border-color: rgba(255, 255, 255, 0.1);
 }
 
 .project-card__top {
