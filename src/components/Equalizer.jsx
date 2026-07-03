@@ -55,7 +55,7 @@ function EqualizerToggle(props) {
           transition: 'opacity 0.3s ease, transform 0.3s ease',
         }}
       >
-        {isSoundEnabled ? CONSTANTS.disableSound : CONSTANTS.disableSound}
+        {isSoundEnabled ? CONSTANTS.disableSound : CONSTANTS.enableSound}
       </span>
     </div>
   );
