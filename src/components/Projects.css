@@ -1,3 +1,10 @@
+.proj__grid {
+  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 60px;
+  align-items: start;}
+  
 .projects__header {
   margin-bottom: 48px;
 }
@@ -82,17 +89,17 @@
 }
 
 .project-card__title {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 500;
   color: var(--text);
   line-height: 1.2;
 }
 
 .project-card__desc {
-  font-size: 13px;
+  font-size: 11px;
   color: var(--text-muted);
-  line-height: 1.65;
-  flex: 1;
+  /* line-height: 1.65;
+  flex: 1; */
 }
 
 .project-card__link {

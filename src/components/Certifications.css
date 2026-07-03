@@ -1,6 +1,9 @@
 .cert__grid{
-    display: flex;
-    justify-content: space-between;}
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 60px;
+    align-items: start;}
 .cert__item {
     display: grid;
     grid-template-columns: 200px 1fr;

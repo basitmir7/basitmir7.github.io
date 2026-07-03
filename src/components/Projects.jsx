@@ -8,14 +8,21 @@ export default function Projects() {
   return (
     <motion.section className="projects section" id="projects" {...fadeUp}>
       <div className="container">
-        <div className="projects__header">
-          <span className="section-label mono">selected work</span>
+        <div className='proj__grid'>
+
+          <div className='proj__left'>
+          <span className="section-label mono">projects</span>
+          
+          </div>
+
+
+          <div className='proj__right'>
+          <div className="projects__header">
           <h2 className="projects__title">
             <strong>Selected</strong> projects
           </h2>
-        </div>
-
-        <div className="projects__grid">
+          </div>
+          <div className="projects__grid">
           {data.projects.map((p) => (
             <article className="project-card" key={p.id}>
               <div className="project-card__top">
@@ -28,7 +35,7 @@ export default function Projects() {
               </div>
 
               <h3 className="project-card__title">{p.title}</h3>
-              <p className="project-card__desc">{p.description}</p>
+              <p className="project-card__desc mono">{p.description}</p>
 
               <a href={p.url} className="project-card__link mono" target="_blank" rel="noreferrer">
                 VIEW PROJECT
@@ -39,6 +46,12 @@ export default function Projects() {
             </article>
           ))}
         </div>
+
+          </div>
+        </div>
+       
+
+        
       </div>
     </motion.section>
   )
