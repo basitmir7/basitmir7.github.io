@@ -76,3 +76,9 @@
     gap: 8px;
   }
 }
+
+@media (max-width: 500px) {
+  .exp__grid {
+    grid-template-columns: 1fr;
+  }
+}

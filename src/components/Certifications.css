@@ -59,7 +59,7 @@
 }
 
 .cert__meta {
-  font-size: 14px;
+  font-size: 13px;
   opacity: 0.9;
 }
 .cert__issuer {
@@ -69,6 +69,11 @@
   font-size: 12px;
   font-weight: lighter;
   opacity: 0.6;
+}
+
+.cert__date {
+  opacity: 0.6;
+  font-size: 11px;
 }
 
 @media (max-width: 800px) {
@@ -84,5 +89,11 @@
 
   .cert__btn {
     margin-top: 12px;
+  }
+}
+
+@media (max-width: 500px) {
+  .cert__grid {
+    grid-template-columns: 1fr;
   }
 }
