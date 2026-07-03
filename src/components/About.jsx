@@ -1,22 +1,23 @@
-import data from '../data/portfolio.json'
-import './About.css'
-import { motion } from "framer-motion";
+import data from '../data/portfolio.json';
+import './About.css';
+import { motion } from 'framer-motion';
 import { fadeUp } from '../animations';
-import hoverMp3 from "../sounds/hover.mp3";
+import hoverMp3 from '../sounds/hover.mp3';
 import { useSound } from '../context/SoundContext';
 import { targetUrl } from '../Helpers';
 
 export default function About() {
-  const { about, meta } = data
+  const { about, meta } = data;
   const { isSoundEnabled } = useSound();
 
   const playAudio = () => {
     const audio = new Audio(hoverMp3);
     if (!isSoundEnabled) return;
-    audio.play()
-      .then(() => console.log("playing"))
-      .catch(err => console.error(err));
-  }
+    audio
+      .play()
+      .then(() => console.log('playing'))
+      .catch((err) => console.error(err));
+  };
 
   return (
     <motion.section className="about section" id="about" {...fadeUp}>
@@ -48,5 +49,5 @@ export default function About() {
         </div>
       </div>
     </motion.section>
-  )
+  );
 }

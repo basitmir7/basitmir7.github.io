@@ -41,10 +41,16 @@
 }
 
 @keyframes ticker-scroll {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-33.333%); }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .ticker__track { animation: none; }
+  .ticker__track {
+    animation: none;
+  }
 }

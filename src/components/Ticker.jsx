@@ -1,8 +1,8 @@
-import data from '../data/portfolio.json'
-import './Ticker.css'
+import data from '../data/portfolio.json';
+import './Ticker.css';
 
 export default function Ticker() {
-  const items = [...data.ticker, ...data.ticker, ...data.ticker]
+  const items = [...data.ticker, ...data.ticker, ...data.ticker];
 
   return (
     <div className="ticker">
@@ -16,5 +16,5 @@ export default function Ticker() {
         ))}
       </div>
     </div>
-  )
+  );
 }

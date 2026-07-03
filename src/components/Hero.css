@@ -31,7 +31,7 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  background: rgba(255,255,255,0.03);
+  background: rgba(255, 255, 255, 0.03);
 }
 
 .hero__avatar-initials {
@@ -101,12 +101,14 @@
   padding: 5px 12px;
   border-radius: 2px;
   letter-spacing: 0.1em;
-  transition: color 0.2s, border-color 0.2s;
+  transition:
+    color 0.2s,
+    border-color 0.2s;
 }
 
 .hero__tag:hover {
   color: var(--text);
-  border-color: rgba(255,255,255,0.2);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 /* CTA */
@@ -121,13 +123,16 @@
   border: 1px solid var(--border);
   border-radius: 2px;
   cursor: pointer;
-  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    border-color 0.2s;
   background: transparent;
   color: var(--text);
 }
 
 .btn--primary {
-  border-color: rgba(255,255,255,0.25);
+  border-color: rgba(255, 255, 255, 0.25);
 }
 
 .btn--primary:hover {

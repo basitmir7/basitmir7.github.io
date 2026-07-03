@@ -1,10 +1,5 @@
-import { useEffect } from "react";
-import {
-  motion,
-  useMotionValue,
-  useScroll,
-  useTransform,
-} from "framer-motion";
+import { useEffect } from 'react';
+import { motion, useMotionValue, useScroll, useTransform } from 'framer-motion';
 
 export default function BackgroundAnimation() {
   const mouseX = useMotionValue(0);
@@ -25,10 +20,10 @@ export default function BackgroundAnimation() {
       mouseY.set(y);
     };
 
-    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener('mousemove', handleMouseMove);
 
     return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener('mousemove', handleMouseMove);
     };
   }, [mouseX, mouseY]);
 

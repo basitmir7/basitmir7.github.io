@@ -103,11 +103,6 @@
 .personal-projects__link:hover {
   color: var(--text);
 }
-/* .skills_span{
-  border-top: 1px solid var(--border);
-  padding : 2px;
-
-} */
 
 .skill-card__tags {
   display: flex;

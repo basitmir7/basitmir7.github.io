@@ -26,7 +26,7 @@ export default function Loader({ onDone }) {
 
   return (
     <div className={`${s.loader} ${out ? s.out : ''}`}>
-      <div className={s.pct}>{String(pct).padStart(2,'0')}%</div>
+      <div className={s.pct}>{String(pct).padStart(2, '0')}%</div>
       <div className={s.bar}>
         <div className={s.fill} style={{ width: pct + '%' }} />
       </div>
