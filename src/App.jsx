@@ -16,6 +16,7 @@ import TechOrbit from './animations/TechOrbit'
 import "./animations/TechOrbit.css";
 import backgroundmp3 from "./sounds/background.mp3";
 import { useSound } from './context/SoundContext'
+import Certifications from './components/Certifications'
 
 
 export default function App() {
@@ -75,6 +76,7 @@ export default function App() {
         <Experience />
         <Projects />
         <Skills />
+        <Certifications/>
         <Footer />
       </main>
       <StatusBar />

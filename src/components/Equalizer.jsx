@@ -2,6 +2,7 @@ import { easeInOut } from "motion-utils";
 import { useState } from "react";
 import { BiEqualizer } from "react-icons/bi";
 import { useSound } from "../context/SoundContext";
+import { CONSTANTS } from "../Helpers/constants";
 
 function EqualizerToggle(props) {
   const { size = 20, onClick, style } = props || {};
@@ -54,7 +55,7 @@ function EqualizerToggle(props) {
       transition: "opacity 0.3s ease, transform 0.3s ease",
     }}
   >
-    {isSoundEnabled ? "Disable sound" : "Enable sound"}
+    {isSoundEnabled ? CONSTANTS.disableSound: CONSTANTS.disableSound}
   </span>
 </div>
   );

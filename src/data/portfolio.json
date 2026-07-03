@@ -257,5 +257,76 @@
       "description": "A visual SQL query builder with type-safe TypeScript output and schema introspection.",
       "url": null
     }
+  ],
+  "certifications": [
+    {
+      "title": "Machine Learning With Python",
+      "issuer": "IBM",
+      "date": "Ongoing",
+      "link": ""
+    },
+    {
+      "title": "Databases and SQL for data science",
+      "issuer": "IBM",
+      "date": "2022",
+      "link": "https://coursera.org/verify/FE667WXV2L2K"
+    },
+    {
+      "title": "Introduction to Deep Learning and Neural Networks with Keras",
+      "issuer": "IBM",
+      "date": "2022",
+      "link": "https://www.coursera.org/verify/3F29C8T4CU99"
+    },
+    {
+      "title": "Foundations of User Experience (UX) Design",
+      "issuer": "GOOGLE",
+      "date": "2022",
+      "link": "https://coursera.org/verify/J6TYRRQV58ZK"
+    },
+    {
+      "title": "Front-End development with React",
+      "issuer": "HONK KONG UNIVERSITY",
+      "date": "2021",
+      "link": "https://coursera.org/verify/8H7QZJYPCK6G"
+    },
+    {
+      "title": "Web Development Competition Participation",
+      "issuer": "TestDome",
+      "date": "2021",
+      "link": "https://app.testdome.com/cert/d5ac6de9dde14c3ca3a282fbaece2ed1"
+    },
+    {
+      "title": "Basic Networking",
+      "issuer": "CISCO",
+      "date": "2021",
+      "link": "https://www.credly.com/badges/0f2c25d8-c45a-4b0f-8651-0d069edc86b5/public_url"
+    },
+    {
+      "title": "React Native",
+      "issuer": "Udemy",
+      "date": "2023",
+      "link": ""
+    },
+    {
+      "title": "Python - Workshop",
+      "issuer": "LUDIFU",
+      "date": "2022",
+      "link": "https://www.credly.com/badges/0f2c25d8-c45a-4b0f-8651-0d069edc86b5/public_url"
+    },
+    {
+      "title": "Visual Elements of User Interface Design",
+      "issuer": "CALIFORNIA INSITUTE OF ARTS",
+      "date": "2022",
+      "link": "https://coursera.org/verify/SNTTMRTKGS4F"
+    },
+    {
+      "title": "Responsive Design - Frontend",
+      "issuer": "EDUCBA",
+      "date": "2021",
+      "link": "https://www.educba.com/certificate/?c=WCZKJ2DRK"
+    }
   ]
 }
+
+
+
