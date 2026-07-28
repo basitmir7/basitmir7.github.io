@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { useScroll, useSpring } from 'framer-motion';
-import './BackgroundScene.css';
+import './backgroundScene.css';
 
 const VS = `
 attribute vec2 a_pos;

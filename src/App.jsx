@@ -64,7 +64,7 @@ export default function App() {
     <>
       <Cursor />
       <Loader onDone={onLoaderDone} />
-      <BackgroundAnimation />
+      {/* <BackgroundAnimation /> */}
       <BackgroundScene />
       {loaded && (
         <>
