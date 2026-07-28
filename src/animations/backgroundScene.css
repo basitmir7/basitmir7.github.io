@@ -1,0 +1,29 @@
+.bg-scene {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  z-index: 0;
+  pointer-events: none;
+}
+
+nav,
+main,
+.loader,
+.status-bar,
+.cursor-dot,
+.cursor-ring {
+  position: relative;
+  z-index: 1;
+}
+
+.hero,
+.about,
+.projects,
+.experience,
+.skills,
+.certifications,
+.footer {
+  background: transparent !important;
+}

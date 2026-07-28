@@ -12,11 +12,10 @@ import { useState, useEffect, useCallback, useRef } from 'react';
 import './styles/global.css';
 import BackgroundAnimation from './animations/backgroundAnimation';
 import './animations/backgroundAnimation.css';
-import TechOrbit from './animations/TechOrbit';
-import './animations/TechOrbit.css';
 import backgroundmp3 from './sounds/background.mp3';
 import { useSound } from './context/SoundContext';
 import Certifications from './components/Certifications';
+import BackgroundScene from './animations/backgroundScene';
 
 export default function App() {
   const [loaded, setLoaded] = useState(false);
@@ -66,7 +65,7 @@ export default function App() {
       <Cursor />
       <Loader onDone={onLoaderDone} />
       <BackgroundAnimation />
-      <TechOrbit />
+      <BackgroundScene />
       {loaded && (
         <>
           <Nav />

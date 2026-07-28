@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import { fadeUp } from '../animations';
 import hoverMp3 from '../sounds/hover.mp3';
 import { useSound } from '../context/SoundContext';
+import dp from '../assets/dp.png';
 
 export default function Hero() {
   const arrowRef = useRef(null);
@@ -36,7 +37,9 @@ export default function Hero() {
       <div className="hero__inner container">
         <div className="hero__avatar">
           <div className="hero__avatar-ring">
-            <div className="hero__avatar-initials mono">BM</div>
+            <div className="hero__avatar-initials">
+              <img src={dp} />
+            </div>
           </div>
           <div className="hero__avatar-info">
             <span className="mono hero__name">{data.meta.name}</span>

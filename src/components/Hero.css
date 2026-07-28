@@ -23,8 +23,8 @@
 }
 
 .hero__avatar-ring {
-  width: 44px;
-  height: 44px;
+  width: 54px;
+  height: 54px;
   border-radius: 50%;
   border: 1px solid var(--border);
   display: flex;
@@ -150,4 +150,10 @@
   color: var(--text-dim);
   letter-spacing: 0.1em;
   transition: opacity 0.4s;
+}
+
+.hero__avatar-initials img {
+  width: 53px;
+  height: 54px;
+  margin-top: 6px;
 }
