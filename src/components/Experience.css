@@ -47,8 +47,8 @@
 }
 
 .exp__company {
-  font-size: 12px;
-  color: var(--text-dim);
+  font-size: 13px;
+  color: var(--text-mid);
 }
 
 .exp__role {
@@ -59,7 +59,7 @@
 }
 
 .exp__desc {
-  font-size: 13px;
+  font-size: 12px;
   color: var(--text-muted);
   line-height: 1.65;
   list-style-type: disc;

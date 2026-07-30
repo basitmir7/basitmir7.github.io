@@ -30,7 +30,7 @@ export default function Experience() {
                           e.description.length > 0 &&
                           e.description.map((v, i) => {
                             return (
-                              <li key={i} className="exp__desc">
+                              <li key={i} className="exp__desc mono">
                                 {v}
                               </li>
                             );

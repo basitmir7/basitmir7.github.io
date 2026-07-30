@@ -12,8 +12,10 @@
   --bg-2: #111111;
   --border: rgba(255, 255, 255, 0.08);
   --text: #e8e8e8;
+  --text-op: #e0dedee9;
   --text-muted: rgba(232, 232, 232, 0.4);
   --text-dim: rgba(232, 232, 232, 0.2);
+  --text-mid: rgba(215, 215, 215, 0.747);
   --accent: #e8e8e8;
   --mono: 'JetBrains Mono', monospace;
   --sans: 'Inter', -apple-system, sans-serif;
