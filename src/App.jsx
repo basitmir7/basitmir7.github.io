@@ -12,7 +12,7 @@ import { useState, useEffect, useCallback, useRef } from 'react';
 import './styles/global.css';
 import BackgroundAnimation from './animations/backgroundAnimation';
 import './animations/backgroundAnimation.css';
-import backgroundmp3 from './sounds/background.mp3';
+import backgroundmp3 from './sounds/audio.mp3';
 import { useSound } from './context/SoundContext';
 import Certifications from './components/Certifications';
 import BackgroundScene from './animations/backgroundScene';
@@ -29,7 +29,7 @@ export default function App() {
     const audio = backgroundAudio.current;
 
     audio.loop = true;
-    audio.volume = 0.1;
+    audio.volume = 0.25;
 
     if (isSoundEnabled) {
       audio.play().catch(console.error);
