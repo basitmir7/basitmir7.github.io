@@ -29,7 +29,7 @@ export default function App() {
     const audio = backgroundAudio.current;
 
     audio.loop = true;
-    audio.volume = 0.1;
+    audio.volume = 0.2;
 
     if (isSoundEnabled) {
       audio.play().catch(console.error);
