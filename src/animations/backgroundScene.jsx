@@ -1,5 +1,4 @@
 import { useEffect, useRef } from 'react';
-import { useScroll, useSpring } from 'framer-motion';
 import './backgroundScene.css';
 
 const VS = `
@@ -25,7 +24,8 @@ float noise(vec2 p){
 }
 float fbm(vec2 p){
   float v=0.,a=.5;
-  for(int i=0;i<7;i++){v+=a*noise(p);p=p*2.03+vec2(1.7,9.2);a*=.52;}
+  mat2 m=mat2(.8,.6,-.6,.8);
+  for(int i=0;i<7;i++){v+=a*noise(p);p=m*p*2.02+vec2(1.9,7.3);a*=.52;}
   return v;
 }
 float fbm4(vec2 p){
@@ -34,8 +34,35 @@ float fbm4(vec2 p){
   return v;
 }
 
-/* ── 0: volumetric ink nebula ── */
-vec3 s0(vec2 uv,float t,vec2 m,float ms,float zp){
+/* ── shared stars — used by both scenes ── */
+float stars(vec2 uv, float t, float density){
+  vec2 gc1=floor(uv*260.);
+  vec2 jc1=vec2(hash(gc1+vec2(.31,.74)),hash(gc1+vec2(.82,.15)));
+  float sd1=length(fract(uv*260.)-jc1);
+  float st1=step(.993,hash(gc1+vec2(.55,.22)))*pow(hash(gc1+vec2(.11,.67)),2.2)
+            *(smoothstep(.36,.0,sd1)+smoothstep(.52,.0,sd1)*.5)
+            *(sin(hash(gc1+.3)*6.28+t*(1.1+hash(gc1+.5)*1.8))*.35+.65);
+
+  vec2 gc2=floor(uv*500.);
+  vec2 jc2=vec2(hash(gc2+vec2(.23,.61)),hash(gc2+vec2(.77,.44)));
+  float sd2=length(fract(uv*500.)-jc2);
+  float st2=step(.9965,hash(gc2+vec2(.38,.91)))*pow(hash(gc2+vec2(.66,.28)),2.8)
+            *(smoothstep(.26,.0,sd2)+smoothstep(.40,.0,sd2)*.4)
+            *(sin(hash(gc2+.4)*6.28+t*(1.6+hash(gc2+.6)*2.2))*.28+.72);
+
+  vec2 gc3=floor(uv*920.);
+  vec2 jc3=vec2(hash(gc3+vec2(.55,.18)),hash(gc3+vec2(.29,.83)));
+  float sd3=length(fract(uv*920.)-jc3);
+  float st3=step(.9978,hash(gc3+vec2(.72,.36)))*pow(hash(gc3+vec2(.44,.91)),3.5)
+            *(smoothstep(.16,.0,sd3)+smoothstep(.28,.0,sd3)*.3)
+            *(sin(hash(gc3+.7)*6.28+t*(2.2+hash(gc3+.8)*2.8))*.20+.80);
+
+  float vis=smoothstep(.54,.20,density);
+  return (st1*.65+st2*.42+st3*.26)*vis;
+}
+
+/* ── SCENE 0: smoke nebula ── */
+vec3 s0(vec2 uv,float t,vec2 m,float ms){
   vec2 p=uv*2.-1.; p.x*=u_res.x/u_res.y;
   vec2 mv=m*2.-1.; mv.x*=u_res.x/u_res.y;
   float md=length(p-mv);
@@ -58,48 +85,15 @@ vec3 s0(vec2 uv,float t,vec2 m,float ms,float zp){
   lum=mix(lum,.175,combined*combined*1.5);
   lum=mix(lum,.300,combined*combined*combined*1.1);
   lum+=fbm4(wp*4.+t*.08)*combined*.08;
-  lum+=zp*combined*.06;
-  float s1=pow(hash(floor(uv*480.)),30.)*step(.9940,hash(floor(uv*480.+.3)));
-  float s2=pow(hash(floor(uv*820.)),38.)*step(.9968,hash(floor(uv*820.+.7)));
-  lum+=s1*.55+s2*.30;
+  lum+=stars(uv,t,combined);
   lum+=exp(-md*md*2.0)*(.04+ms*.10);
   lum+=exp(-md*md*6.0)*ms*.06;
-  return vec3(lum);
+  float purp=smoothstep(.1,.35,lum);
+  return vec3(lum*(.92+purp*.06),lum*(.88+purp*.04),lum*(1.0+purp*.14));
 }
 
-/* ── 1: infinite grid tunnel ── */
-vec3 s1(vec2 uv,float t,vec2 m,float ms,float zp){
-  vec2 p=uv*2.-1.; p.x*=u_res.x/u_res.y;
-  vec2 mv=m*2.-1.; mv.x*=u_res.x/u_res.y;
-  float md=length(p-mv);
-  p+=mv*.08*(1.-length(p)*.5);
-  float r=length(p);
-  float a=atan(p.y,p.x);
-  float speed=.65+zp*.25;
-  vec2 tuv=vec2(a/6.2832+t*.028,1./(r+.008)-t*speed);
-  tuv+=vec2(fbm(tuv*.35+mv*.06+t*.018)-.5)*.12;
-  float lx=abs(fract(tuv.x*10.)-.5)*2.;
-  float ly=abs(fract(tuv.y*6.)-.5)*2.;
-  float grid=smoothstep(.84,1.,max(lx,ly));
-  float lx2=abs(fract(tuv.x*40.)-.5)*2.;
-  float ly2=abs(fract(tuv.y*24.)-.5)*2.;
-  float grid2=smoothstep(.92,1.,max(lx2,ly2))*.28;
-  float ld=abs(fract((tuv.x+tuv.y*2.)*7.)-.5)*2.;
-  float diag=smoothstep(.92,1.,ld)*.18;
-  float fade=smoothstep(2.4,.0,r)*smoothstep(.0,.06,r);
-  float g=max(max(grid,grid2),diag)*fade;
-  float lum=mix(.010,.28,g);
-  lum=mix(lum,.010,smoothstep(.5,2.4,r));
-  float ring=smoothstep(.012,.0,abs(fract(1./(r+.01)*.18-t*.3)-.5))*.15*fade;
-  lum+=ring;
-  lum+=exp(-md*md*3.5)*(.030+ms*.09)*max(g,.15);
-  lum+=exp(-md*md*8.)*(.015+ms*.04);
-  lum+=zp*exp(-r*r*1.5)*.08;
-  return vec3(lum);
-}
-
-/* ── 2: terrain contour lines ── */
-vec3 s2(vec2 uv,float t,vec2 m,float ms,float zp){
+/* ── SCENE 1: terrain contour ── */
+vec3 s1(vec2 uv,float t,vec2 m,float ms){
   vec2 p=uv*2.-1.; p.x*=u_res.x/u_res.y;
   vec2 mv=m*2.-1.; mv.x*=u_res.x/u_res.y;
   float md=length(p-mv);
@@ -116,87 +110,58 @@ vec3 s2(vec2 uv,float t,vec2 m,float ms,float zp){
   float line3=smoothstep(.025,.0,cont3*.5)*.12;
   float allL=max(max(line,line2),line3);
   float lum=mix(.010,mix(.12,.24,line),allL);
-  lum+=line*line*.05+zp*line*.04;
-  lum*=smoothstep(.78,.05,length(uv-.5));
+  lum+=line*line*.05;
+  lum+=stars(uv,t,allL);
   lum+=exp(-md*md*2.8)*(.022+ms*.07);
-  return vec3(lum);
-}
-
-/* ── 3: vortex with animated rings ── */
-vec3 s3(vec2 uv,float t,vec2 m,float ms,float zp){
-  vec2 p=uv*2.-1.; p.x*=u_res.x/u_res.y;
-  vec2 mv=m*2.-1.; mv.x*=u_res.x/u_res.y;
-  float md=length(p-mv);
-  vec2 rp=p-mv*.22;
-  float r=length(rp);
-  float a=atan(rp.y,rp.x);
-  float swirl=a+log(max(r,.001))*2.4-t*(.20+zp*.18);
-  float fn=fbm(vec2(swirl*.32,r*1.0)+t*.04);
-  float arms =(sin(swirl*2.+fn*6.)*.5+.5);
-  float arms2=(sin(swirl*3.+fn*4.+1.2)*.5+.5);
-  float fade=exp(-r*r*.65)*(1.-exp(-r*r*9.));
-  float combined=(arms*.7+arms2*.3)*fade;
-  float rOff=zp*.02;
-  float rings=smoothstep(.016,.0,abs(r-(.22+rOff)))*.75
-             +smoothstep(.012,.0,abs(r-(.40+rOff)))*.55
-             +smoothstep(.010,.0,abs(r-(.58+rOff)))*.38
-             +smoothstep(.008,.0,abs(r-(.74+rOff)))*.22
-             +smoothstep(.006,.0,abs(r-(.88+rOff)))*.12;
-  rings*=.8+(sin(t*.9+r*6.)*.5+.5)*.2;
-  float lum=combined*.14+rings;
-  lum+=fbm(rp*2.8+t*.07)*.028;
-  lum=mix(.010,.26,lum);
-  lum+=exp(-md*md*2.0)*(.020+ms*.06);
-  lum+=zp*exp(-r*r*3.)*.07;
-  return vec3(lum);
+  float purp=smoothstep(.05,.22,lum)*line;
+  return vec3(lum*(.91+purp*.05),lum*(.87+purp*.03),lum*(1.0+purp*.16));
 }
 
 void main(){
   vec2 uv=v_uv;
-  float sc=u_scroll;
+  float sc=u_scroll; /* 0-1, guaranteed to start at 0 */
   float t=u_t;
-  float prog=sc*3.;
-  int   si=int(min(prog,2.999));
-  float sf=fract(prog);
 
-  /* zoom: base + per-section pulse + slow breathe */
-  float zoom=1.0+sc*.55+sin(sf*3.14159)*.22+sin(t*.28)*.04+sin(t*.17)*.025;
+  /* scene split: first half of scroll = nebula, second = terrain */
+  float prog=sc*2.0;
+  float sf=clamp(prog,0.,1.);            /* 0→1 blend across full first half */
+  float sf2=clamp(prog-1.0,0.,1.);      /* terrain phase (second half) */
 
-  /* pan drifts + mouse parallax */
+  /* zoom: breathes independently of scroll scenes */
+  float zoom=1.0+sc*.35+sin(t*.28)*.04+sin(t*.17)*.025;
+
+  /* pan */
   vec2 pan=vec2(
-    sin(sc*6.2832*.5)*.06+sin(t*.12)*.015,
-   -sc*.18+sin(t*.09)*.010
+    sin(t*.12)*.015,
+    -sc*.12+sin(t*.09)*.010
   )+(u_mouse-.5)*.032;
 
-  /* slow rotation */
-  float rot=sc*.055+sin(t*.15)*.008;
+  float rot=sc*.04+sin(t*.15)*.008;
   vec2 center=uv-.5;
   float cr=cos(rot),sr=sin(rot);
   center=vec2(cr*center.x-sr*center.y,sr*center.x+cr*center.y);
   vec2 tuv=center/zoom+pan+.5;
 
-  float zp=sin(sf*3.14159); /* 0→1→0 within each section */
-  float blend=smoothstep(.22,.78,sf);
-  float dip  =1.-sin(sf*3.14159)*.52;
+  /* blend: nebula fades out, terrain fades in — clean crossfade */
+  float blend=smoothstep(.20,.80,sf);
+  /* dip to black exactly at the midpoint */
+  float dip=1.-sin(clamp(sf,0.,1.)*3.14159)*.50;
 
-  vec3 curr,next_;
-  if(si==0){curr=s0(tuv,t,u_mouse,u_mspeed,zp);next_=s1(tuv,t,u_mouse,u_mspeed,zp);}
-  else if(si==1){curr=s1(tuv,t,u_mouse,u_mspeed,zp);next_=s2(tuv,t,u_mouse,u_mspeed,zp);}
-  else{curr=s2(tuv,t,u_mouse,u_mspeed,zp);next_=s3(tuv,t,u_mouse,u_mspeed,zp);}
+  vec3 c0=s0(tuv,t,u_mouse,u_mspeed);
+  vec3 c1=s1(tuv,t,u_mouse,u_mspeed);
+  vec3 col=mix(c0,c1,blend)*dip;
 
-  vec3 col=mix(curr,next_,blend)*dip;
-
-  /* double vignette */
+  /* strong side vignette */
   vec2 vig=uv-.5;
-  col*=1.-dot(vig,vig)*2.6;
-  col*=smoothstep(.9,.1,length(vig)*1.4);
+  col*=1.-dot(vig,vig)*3.1;
+
+  /* subtle purple centre ambient */
+  float radial=1.-smoothstep(.0,.85,length(vig*vec2(1.,.8)));
+  col+=vec3(.010,.006,.022)*radial;
 
   /* grain */
   col+=(hash(uv+fract(t*.073))-.5)*.026;
-
-  /* cap at .35 — brighter but never blows out */
-  col=clamp(col,vec3(0.),vec3(.35));
-
+  col=clamp(col,vec3(0.),vec3(.40));
   gl_FragColor=vec4(col,1.);
 }
 `;
@@ -206,7 +171,7 @@ function compile(gl, type, src) {
   gl.shaderSource(s, src);
   gl.compileShader(s);
   if (!gl.getShaderParameter(s, gl.COMPILE_STATUS))
-    console.error('Shader error:', gl.getShaderInfoLog(s));
+    console.error('Shader:', gl.getShaderInfoLog(s));
   return s;
 }
 
@@ -222,12 +187,11 @@ export default function BackgroundScene() {
     mvx: 0,
     mvy: 0,
     mspd: 0,
+    rawScroll: 0,
+    rScroll: 0,
     startT: null,
     raf: null,
   });
-
-  const { scrollYProgress } = useScroll();
-  const smoothScroll = useSpring(scrollYProgress, { stiffness: 36, damping: 24 });
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -268,16 +232,26 @@ export default function BackgroundScene() {
     const onMove = (e) => {
       const nx = e.clientX / window.innerWidth;
       const ny = 1 - e.clientY / window.innerHeight;
-      s.mvx = (nx - s.mx) * 8;
-      s.mvy = (ny - s.my) * 8;
+      s.mvx = (nx - s.mx) * 10;
+      s.mvy = (ny - s.my) * 10;
       s.mx = nx;
       s.my = ny;
     };
     window.addEventListener('mousemove', onMove);
 
+    /* Read scroll directly — no spring, no framer-motion, no overshooting */
+    const onScroll = () => {
+      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+      s.rawScroll = maxScroll > 0 ? window.scrollY / maxScroll : 0;
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+
     const loop = (now) => {
       if (!s.startT) s.startT = now;
       const t = (now - s.startT) * 0.001;
+
+      /* manual lerp — starts at 0, moves only when user actually scrolls */
+      s.rScroll = lerp(s.rScroll, s.rawScroll, 0.04);
 
       s.rmx = lerp(s.rmx, s.mx, 0.07);
       s.rmy = lerp(s.rmy, s.my, 0.07);
@@ -286,11 +260,9 @@ export default function BackgroundScene() {
       s.mvx *= 0.78;
       s.mvy *= 0.78;
 
-      const sc = smoothScroll.get();
-
       gl.uniform2f(U.res, canvas.width, canvas.height);
       gl.uniform1f(U.t, t);
-      gl.uniform1f(U.scroll, sc);
+      gl.uniform1f(U.scroll, s.rScroll);
       gl.uniform2f(U.mouse, s.rmx, s.rmy);
       gl.uniform1f(U.mspeed, Math.min(s.mspd * 0.4, 1));
       gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
@@ -303,10 +275,11 @@ export default function BackgroundScene() {
       cancelAnimationFrame(s.raf);
       window.removeEventListener('resize', resize);
       window.removeEventListener('mousemove', onMove);
+      window.removeEventListener('scroll', onScroll);
       gl.deleteProgram(prog);
       gl.deleteBuffer(buf);
     };
-  }, [smoothScroll]);
+  }, []);
 
   return <canvas ref={canvasRef} className="bg-scene" />;
 }

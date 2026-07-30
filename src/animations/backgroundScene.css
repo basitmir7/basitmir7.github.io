@@ -7,7 +7,6 @@
   z-index: 0;
   pointer-events: none;
 }
-
 nav,
 main,
 .loader,
@@ -17,7 +16,6 @@ main,
   position: relative;
   z-index: 1;
 }
-
 .hero,
 .about,
 .projects,
