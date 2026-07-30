@@ -30,7 +30,7 @@ export default function About() {
             <h2 className="about__heading">
               <strong>{about.heading}</strong>
             </h2>
-            <p className="about__body">{about.body}</p>
+            <p className="about__body mono">{about.body}</p>
             <div className="about__cta">
               {about.cta.map((c, i) => (
                 <a
